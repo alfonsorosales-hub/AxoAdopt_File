@@ -1,0 +1,3444 @@
+fileFormatVersion: 2
+guid: 4300c5fa4f333714db8ac6d99eee4aaa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: reloj-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc5f55c383fa4443b2ff03aaafde955
+      internalID: 1690652889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee837d9bb7703ec45b6af65f404f7957
+      internalID: -1245676408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ea6a83d6adb094fb2c4d3d833b8a5d
+      internalID: -761914836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8b9dc42cdeb3d4b993b2c415489d19
+      internalID: 866132739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6f1a74c8d5c3648b04f1b7d736ab75
+      internalID: 1585993156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8e4ad94e2b65c43bfb5b0e39cde87f
+      internalID: -674368440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5749ef820ce2f0a48b0bb75bfcd6623e
+      internalID: -2006763698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5999fe58aa57b34e91d5da90d8ec808
+      internalID: 1319814401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf0cfa3e3b572b43addf2f6e9020490
+      internalID: -1879820152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b01e843bdff094ca551d5bbfc557f0
+      internalID: 1203359724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf33a6f9c4ff8a4c90c35ac2389fe77
+      internalID: -1044509547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 506
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006f024ffa29afa48862e6d61bfada41
+      internalID: -1919509794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6829e1667f84e114d9700b6226d3b97a
+      internalID: -629221382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0031124bd964d4540944cac3f0ea1e3a
+      internalID: 776348506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fc9f35941629748b2a563ff5030e01
+      internalID: 1529963552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75aa0f34f44c7e84cad27758e7189de7
+      internalID: 433416934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6561a99b012abea4f8a41fbc9e5444b9
+      internalID: -1823769780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118fe87eec074c34d88f9d131797a12f
+      internalID: -958675133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2772fbbe47e414409317bb78f00eefd
+      internalID: 1357448560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fec2d930ee04244a8b3aeabe6b89063
+      internalID: 273596786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0371b4dd2987c84d922dd9c0cc65c2a
+      internalID: 291964832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ddb505b2fb0cc4cade63be24cfb60d
+      internalID: -1967730062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaccc25527085b43be0a59a3f46972d
+      internalID: -1591571903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 460
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a704bd4e149324abaa41cf5d338324
+      internalID: -694515510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2323c7ab59ef0b640b2bafb67ccebb89
+      internalID: 1756654336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c0386486002c142aa549a79a439408
+      internalID: -1441903741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31263f891ca251645914d403d56177d2
+      internalID: 1137919346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee6f6d9e9f892f4b828a37d73d434e4
+      internalID: -1139458896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a03c56170f0e346ad6e44ae170ff08
+      internalID: 280172980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54e19b0e8a227c4ab54ca2477738afa
+      internalID: 1605091792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd591eddf747be54d8fde385d9ea170a
+      internalID: -1994891168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0a1e7357a05bc47b911fc21805f899
+      internalID: -1258112995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72884937549f486459c51cf7a35fd9aa
+      internalID: 947053485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3d4ebedabf6d64aabe642af9406fc2
+      internalID: 1140128174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e96582e86aa1f43bc8a32255874326
+      internalID: -1427188477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 414
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70af61a76093bab4280b33f176dc5d0e
+      internalID: -303883496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd044f6483b18864fb5acdf4e89355cd
+      internalID: 1616930929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d17b5a4ed9fa554aa643ef3dcc41611
+      internalID: -1215991516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f386295b9bcd20244a145e7777d004a2
+      internalID: -252802407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d826207360aaa94b93519a067ab9575
+      internalID: -379686270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca96c7caab145049a0f5759560844f7
+      internalID: -691198431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2878677a24903246b3538778dd6d773
+      internalID: -2033136219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccde79099853901459022332300494f0
+      internalID: 559710711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d00c4a1f65dd34c9f576e55592a8b2
+      internalID: -1553908663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d4cfb3ce7dd12469070afe89194561
+      internalID: -1200372626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b268c7a5e29e7724883ed8e9f1570ea2
+      internalID: 1912795486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c615a1f96b82b249b8b0a30292aa8ff
+      internalID: 350819503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 368
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bde26187a37e0a4e89add1cdee1a384
+      internalID: 1231025996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa4b207368a47f4990713beb922a82b
+      internalID: -924517194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7231e889e57e5d345b9e39893d8e6d2e
+      internalID: 345711639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f8cf7cc1514e2478982fffb188fb9e
+      internalID: 2137743860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18922c2b52f1058439f67d1d9ad92a37
+      internalID: 609249014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9a2fb413acaa449835da7b89c0b742
+      internalID: 178482217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2756582ab15be4b83de94742d655ff
+      internalID: 813016420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cef9a7efa733824ebbabcad078005b9
+      internalID: -96396719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6c0077aa865394b8a600fc0bbcad6c
+      internalID: 538248445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64467c193a3c197448c159e2b3157e46
+      internalID: 1261418066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0212f7fa1f5773740bcdac3a9d283ee4
+      internalID: -449448176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fa267bb84c1d34c9079b934e251729
+      internalID: -1554905966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 322
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd727c0c0da2df459a8cecb00ca5d3a
+      internalID: -904043014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c280faa1ccef28443aa1f6302b5876c0
+      internalID: 1151078981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518307efdfffdfd40b49aaceb3cce250
+      internalID: 212702823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4b386b5bd63ae428173ec0d13c6973
+      internalID: 287605200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7357b5aff758034586a965c53b56ced
+      internalID: 1469489909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4844c4bb156e1724cb196b128ff5f9ac
+      internalID: -818123647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ec5a73f1c84c84db519485d36345d0
+      internalID: -339282246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f89c8faa3d1264f8639862b6c6ad31
+      internalID: 808775119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cea7c73d9b077d4d9247c989a09f88d
+      internalID: -1843441407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac8c33cdc9da024dbc8b6182ad87d2a
+      internalID: 1338118434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57aacba9fdc0cd14b8aaa5befa55c69d
+      internalID: -517993578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b862bd40a61c74c92e87aaf0007859
+      internalID: 1509766421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 276
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a574b125d84d6042b2774562aabdde0
+      internalID: -1746270977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae91c1cdfbadb44bb6e404791f9dbed
+      internalID: -1777364412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47cbceba56e2ef41bf196cdd6f34abf
+      internalID: -208588392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664b951b32666774aa2c79f8edc6b2b8
+      internalID: -264764935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2795d7c9398b4546af475d7ec4199c8
+      internalID: 670683728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f27a5ef25d6ba43b2b7651299a10c4
+      internalID: 1777611925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11128b5e2c305ce4e940c85a2a114e71
+      internalID: -1656570997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74940ac05e1afff4099d9b0831695133
+      internalID: -552501523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec82644d669ab7748a8a4349d1436eb6
+      internalID: 281656325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d5c0209540e3649be0eabfe611ad53
+      internalID: 579394858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc7c14d0132d3647a304ec37c1ff846
+      internalID: 1072527586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18816fdc5b1a8a948837c4684eea795e
+      internalID: -425358988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 230
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf1217ca0cd2af499d2d4805c7bbd8d
+      internalID: -907751480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732aeb10fdb9aaa43b6cc9a755a822a7
+      internalID: -948850146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30f51d648277b44d8f5dc680e7c954e
+      internalID: -286997782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4612231dd0a5583418261f1aa514cc96
+      internalID: -1224019410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69796ffc6f9275a408c57638e4f74aa6
+      internalID: 1238976102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff671a242c959943a8800ae5d3e6008
+      internalID: -986594179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777a4e2602ecc1b4d9f46d0463343f0f
+      internalID: -912581060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7ae7c3b307e654c89d1649869f11a6
+      internalID: 1011551221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eced09351313a948aeafcf90afccc42
+      internalID: -807234257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4aa0a57a96885a419ba7ff6369e0f8d
+      internalID: 343688048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64730b218aa0b749a6175f600c583f3
+      internalID: -1939474986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f4c04d6557f0942a2f74df70ecbb8d
+      internalID: -1852888970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 184
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb06ded1d5018f4ba2133911df723ea
+      internalID: -1757051710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bf271e99f93d64eb19508d3d4a4c9f
+      internalID: 1139720725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d069165a25b3b8346a8d7f9012958f46
+      internalID: -393163548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e155d0a98a61c214a9a1e6f2ff2384bb
+      internalID: -530302813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71f3774513d51a469734ec5a2749931
+      internalID: -996636195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443897740fc7b774eb0d1d3f2d926fc9
+      internalID: 2065133136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4248e1f4d6e067348829b671cfa2c418
+      internalID: -275785483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b960881a4a00243b3700ad7af8d9b9
+      internalID: 1527327940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc03a05b7d2e66547ab65521e3ab27a7
+      internalID: -1502238791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a163ff82d961349b7e2391ea4427d2
+      internalID: 879564754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecff4e7c8f07004c99157a29204d83e
+      internalID: -862434179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23c116713c93134d9e8c7c217358fee
+      internalID: 21905072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 138
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e62841ca202c79498b17c2d7adaaa4c
+      internalID: -1720996715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae6436d945e11a418b0199b066e1998
+      internalID: -1772094551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855301d86df5240419c4de3d50ce799d
+      internalID: -728722146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724f5f217cf36b44d97909269c6f08d3
+      internalID: -1068256876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974905af644b99342af10f2e9af7ced0
+      internalID: -261599160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e09521f0b079ad4183d080e1a3f61e4
+      internalID: 934156742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b826a36b7b142ed43a0c85ee9f577c03
+      internalID: -1906927290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c36632a648b7e94b99a4295cc406556
+      internalID: 1718217445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d74c04e2cb8f67478327e469bee1439
+      internalID: -1039314679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f5bff3787a69e43923ffce605ad7a4
+      internalID: 1056941740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e894684b6df67842a93a7996f011224
+      internalID: 34775473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7374cf9b52dcf24aa12e99351321a68
+      internalID: -241401114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3363282f3eabc104383ca1df84c10f35
+      internalID: 1062873203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad9b82d397c8cc45942590610c90117
+      internalID: 1657420227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90531551b6ac6cd4791486027db75a3f
+      internalID: -778345718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_122
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb62567881ad6747b9fc6490825337b
+      internalID: 717330485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b7e8154a6e92049bd56068487b28bf
+      internalID: 1363874838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_124
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0518e757bffd2774283aa03e35ae8a64
+      internalID: -1881887014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0be19568acbb2c46a673fccf912e8c3
+      internalID: -911493243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67efdf70c8b70ee4a98162c3660e27f4
+      internalID: 123384694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b8b4c5c306ef241946879c84b341cc
+      internalID: 754942276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_128
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8002c52456668fa4690aa01e8bfd0e57
+      internalID: -2077329013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_129
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64ceb78a591d3644aa5796c47463936
+      internalID: 1756155062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_130
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c35946101c3bd94ba6a0bce8b9c681f
+      internalID: 1582586136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_131
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 46
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b7d89b4e0c7b04189abc1f4cd44cfb
+      internalID: 1874334021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c238e5bb8c3e744f851449140291b0e
+      internalID: -2053410039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_133
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea4ce62c48b39043953cc6e82e2eff9
+      internalID: -328305721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_134
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcb27ad7df26044790eb86e48c053ad
+      internalID: 778596253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_135
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6313624779e3b0049a453eb28ccd4421
+      internalID: -1669810492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_136
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4dac3a3ca535ba489140f8201ee82d9
+      internalID: 1264725158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_137
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1f5468b98571343bf168fb992eae03
+      internalID: 1248434150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_138
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e650dff835e814b9610d703aa97a68
+      internalID: 46117501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_139
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecf7ec60b95d6246a7e52a6a5715f63
+      internalID: 455043984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_140
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332b4404d84b4264fa2ce0815980beea
+      internalID: -1422362036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_141
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bd04e7934fe8c47b81ea867c9f8b46
+      internalID: -64811572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_142
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f751905a83dd3544f8c036aa1a279b3c
+      internalID: 1228721121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reloj-Sheet_143
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12c96eb5e73f084cbfee6f246b6f822
+      internalID: -745453285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cf53c6e87a9396048b48081135a4315b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":12.0,"y":12.0},"gridSpriteSize":{"x":47.0,"y":46.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      reloj-Sheet_0: 1690652889
+      reloj-Sheet_1: -1245676408
+      reloj-Sheet_10: -1044509547
+      reloj-Sheet_100: 2065133136
+      reloj-Sheet_101: -275785483
+      reloj-Sheet_102: 1527327940
+      reloj-Sheet_103: -1502238791
+      reloj-Sheet_104: 879564754
+      reloj-Sheet_105: -862434179
+      reloj-Sheet_106: 21905072
+      reloj-Sheet_107: -1720996715
+      reloj-Sheet_108: -1772094551
+      reloj-Sheet_109: -728722146
+      reloj-Sheet_11: -1919509794
+      reloj-Sheet_110: -1068256876
+      reloj-Sheet_111: -261599160
+      reloj-Sheet_112: 934156742
+      reloj-Sheet_113: -1906927290
+      reloj-Sheet_114: 1718217445
+      reloj-Sheet_115: -1039314679
+      reloj-Sheet_116: 1056941740
+      reloj-Sheet_117: 34775473
+      reloj-Sheet_118: -241401114
+      reloj-Sheet_119: 1062873203
+      reloj-Sheet_12: -629221382
+      reloj-Sheet_120: 1657420227
+      reloj-Sheet_121: -778345718
+      reloj-Sheet_122: 717330485
+      reloj-Sheet_123: 1363874838
+      reloj-Sheet_124: -1881887014
+      reloj-Sheet_125: -911493243
+      reloj-Sheet_126: 123384694
+      reloj-Sheet_127: 754942276
+      reloj-Sheet_128: -2077329013
+      reloj-Sheet_129: 1756155062
+      reloj-Sheet_13: 776348506
+      reloj-Sheet_130: 1582586136
+      reloj-Sheet_131: 1874334021
+      reloj-Sheet_132: -2053410039
+      reloj-Sheet_133: -328305721
+      reloj-Sheet_134: 778596253
+      reloj-Sheet_135: -1669810492
+      reloj-Sheet_136: 1264725158
+      reloj-Sheet_137: 1248434150
+      reloj-Sheet_138: 46117501
+      reloj-Sheet_139: 455043984
+      reloj-Sheet_14: 1529963552
+      reloj-Sheet_140: -1422362036
+      reloj-Sheet_141: -64811572
+      reloj-Sheet_142: 1228721121
+      reloj-Sheet_143: -745453285
+      reloj-Sheet_15: 433416934
+      reloj-Sheet_16: -1823769780
+      reloj-Sheet_17: -958675133
+      reloj-Sheet_18: 1357448560
+      reloj-Sheet_19: 273596786
+      reloj-Sheet_2: -761914836
+      reloj-Sheet_20: 291964832
+      reloj-Sheet_21: -1967730062
+      reloj-Sheet_22: -1591571903
+      reloj-Sheet_23: -694515510
+      reloj-Sheet_24: 1756654336
+      reloj-Sheet_25: -1441903741
+      reloj-Sheet_26: 1137919346
+      reloj-Sheet_27: -1139458896
+      reloj-Sheet_28: 280172980
+      reloj-Sheet_29: 1605091792
+      reloj-Sheet_3: 866132739
+      reloj-Sheet_30: -1994891168
+      reloj-Sheet_31: -1258112995
+      reloj-Sheet_32: 947053485
+      reloj-Sheet_33: 1140128174
+      reloj-Sheet_34: -1427188477
+      reloj-Sheet_35: -303883496
+      reloj-Sheet_36: 1616930929
+      reloj-Sheet_37: -1215991516
+      reloj-Sheet_38: -252802407
+      reloj-Sheet_39: -379686270
+      reloj-Sheet_4: 1585993156
+      reloj-Sheet_40: -691198431
+      reloj-Sheet_41: -2033136219
+      reloj-Sheet_42: 559710711
+      reloj-Sheet_43: -1553908663
+      reloj-Sheet_44: -1200372626
+      reloj-Sheet_45: 1912795486
+      reloj-Sheet_46: 350819503
+      reloj-Sheet_47: 1231025996
+      reloj-Sheet_48: -924517194
+      reloj-Sheet_49: 345711639
+      reloj-Sheet_5: -674368440
+      reloj-Sheet_50: 2137743860
+      reloj-Sheet_51: 609249014
+      reloj-Sheet_52: 178482217
+      reloj-Sheet_53: 813016420
+      reloj-Sheet_54: -96396719
+      reloj-Sheet_55: 538248445
+      reloj-Sheet_56: 1261418066
+      reloj-Sheet_57: -449448176
+      reloj-Sheet_58: -1554905966
+      reloj-Sheet_59: -904043014
+      reloj-Sheet_6: -2006763698
+      reloj-Sheet_60: 1151078981
+      reloj-Sheet_61: 212702823
+      reloj-Sheet_62: 287605200
+      reloj-Sheet_63: 1469489909
+      reloj-Sheet_64: -818123647
+      reloj-Sheet_65: -339282246
+      reloj-Sheet_66: 808775119
+      reloj-Sheet_67: -1843441407
+      reloj-Sheet_68: 1338118434
+      reloj-Sheet_69: -517993578
+      reloj-Sheet_7: 1319814401
+      reloj-Sheet_70: 1509766421
+      reloj-Sheet_71: -1746270977
+      reloj-Sheet_72: -1777364412
+      reloj-Sheet_73: -208588392
+      reloj-Sheet_74: -264764935
+      reloj-Sheet_75: 670683728
+      reloj-Sheet_76: 1777611925
+      reloj-Sheet_77: -1656570997
+      reloj-Sheet_78: -552501523
+      reloj-Sheet_79: 281656325
+      reloj-Sheet_8: -1879820152
+      reloj-Sheet_80: 579394858
+      reloj-Sheet_81: 1072527586
+      reloj-Sheet_82: -425358988
+      reloj-Sheet_83: -907751480
+      reloj-Sheet_84: -948850146
+      reloj-Sheet_85: -286997782
+      reloj-Sheet_86: -1224019410
+      reloj-Sheet_87: 1238976102
+      reloj-Sheet_88: -986594179
+      reloj-Sheet_89: -912581060
+      reloj-Sheet_9: 1203359724
+      reloj-Sheet_90: 1011551221
+      reloj-Sheet_91: -807234257
+      reloj-Sheet_92: 343688048
+      reloj-Sheet_93: -1939474986
+      reloj-Sheet_94: -1852888970
+      reloj-Sheet_95: -1757051710
+      reloj-Sheet_96: 1139720725
+      reloj-Sheet_97: -393163548
+      reloj-Sheet_98: -530302813
+      reloj-Sheet_99: -996636195
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
