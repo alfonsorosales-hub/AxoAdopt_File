@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hola Mundo
+  m_text: Holis
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 286b2af3667340a4e954a5138e891e56, type: 2}
   m_sharedMaterial: {fileID: -5266291160363751255, guid: 286b2af3667340a4e954a5138e891e56, type: 2}
