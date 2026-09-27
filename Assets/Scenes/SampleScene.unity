@@ -996,7 +996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 212, y: -34}
+  m_AnchoredPosition: {x: 212, y: -58}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126084577
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Holis
+  m_text: Hola Mundo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 286b2af3667340a4e954a5138e891e56, type: 2}
   m_sharedMaterial: {fileID: -5266291160363751255, guid: 286b2af3667340a4e954a5138e891e56, type: 2}
