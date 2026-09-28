@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25338227c0dc87c44b73f13a93537350, type: 3}
+  m_Name: NewAdoptableDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::AdoptableData
+  petName: 
+  photo: {fileID: 0}
+  ageStat: 
+  loveStat: 
+  homeStat: 
+  bowlStat: 
+  starStat: 
+  petsList:
+  - petName: "Perro beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: "Cari\xF1oso, juguet\xF3n y sociable"
+    homeStat: "Compa\xF1ia, juegos y paseos diarios"
+    bowlStat: Alimento para cachorro
+    starStat: "Necesita atenci\xF3n y actividad frecuente"
+  - petName: "Gato beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 5 meses
+    loveStat: "Curioso, independiente y cari\xF1oso."
+    homeStat: Un espacio seguro, juegos y momentos de tranquilidad.
+    bowlStat: Alimento para gatitos.
+    starStat: Necesita momentos de independencia y un ambiente tranquilo.
+  - petName: "Conejo beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 3 Meses
+    loveStat: Dulce, tranquilo y sensible.
+    homeStat: Un espacio seguro, tranquilidad y cuidados constantes.
+    bowlStat: 'Heno, verduras y alimento adecuado para conejos.  '
+    starStat: Es sensible a los ambientes ruidosos y al manejo brusco.
+  - petName: "Cobaya beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 2 Meses
+    loveStat: Sociable, tranquila y curiosa
+    homeStat: "Compa\xF1\xEDa, espacio protegido y atenci\xF3n diaria."
+    bowlStat: Heno, verduras y alimento para cobayas.
+    starStat: "Se adapta mejor cuando tiene compa\xF1\xEDa y una rutina estable."
+  - petName: "H\xE1mster Beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 2 Meses
+    loveStat: Curioso, activo y reservado.
+    homeStat: Un espacio propio, seguro y tranquilo.
+    bowlStat: "Semillas, alimento especializado y peque\xF1as porciones de vegetales."
+    starStat: Mayor actividad durante la noche.
+  - petName: "Hur\xF3n beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: "Curioso, juguet\xF3n y energ\xE9tico."
+    homeStat: "Espacio para explorar, juegos y supervisi\xF3n."
+    bowlStat: Alimento especializado para hurones.
+    starStat: "Necesita mucha estimulaci\xF3n y actividad."
+  - petName: "Erizo beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 3 Meses
+    loveStat: Reservado, curioso y tranquilo.
+    homeStat: Un ambiente tranquilo, seguro y con escondites.
+    bowlStat: Alimento especializado para erizos.
+    starStat: Necesita tiempo y paciencia para acostumbrarse a las personas.
+  - petName: "Zorro beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: Curioso, inteligente e independiente.
+    homeStat: "Mucho espacio y est\xEDmulos para explorar."
+    bowlStat: "Alimentaci\xF3n variada y adecuada para su especie."
+    starStat: Requiere cuidados y condiciones especiales.
+  - petName: "Mapache beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: Inteligente, curioso e inquieto.
+    homeStat: "Espacio, juegos y est\xEDmulos constantes."
+    bowlStat: "Alimentaci\xF3n variada y equilibrada."
+    starStat: 'Puede ser muy destructivo si se aburre o no tiene suficiente actividad.  '
+  - petName: "Capibara Beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 5 Meses
+    loveStat: Tranquilo, sociable y amigable.
+    homeStat: "Espacio amplio, compa\xF1\xEDa y un ambiente adecuado."
+    bowlStat: Vegetales, hierbas y alimento adecuado para su especie.
+    starStat: "Necesita compa\xF1\xEDa y un entorno tranquilo."
+  - petName: "Chimpac\xE9 beb\xE9"
+    photo: {fileID: 0}
+    ageStat: "1 a\xF1o"
+    loveStat: Inteligente, curioso y muy sociable.
+    homeStat: "Mucha interacci\xF3n, espacio y est\xEDmulos constantes."
+    bowlStat: "Frutas, vegetales y alimentaci\xF3n especializada."
+    starStat: "Requiere mucha atenci\xF3n y cuidados especializados."
+  - petName: "Mono beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 10 Meses
+    loveStat: "Activo, curioso y juguet\xF3n."
+    homeStat: "Juegos, interacci\xF3n y mucho enriquecimiento."
+    bowlStat: "Frutas, vegetales y alimentaci\xF3n especializada."
+    starStat: Necesita actividad constante para mantenerse estimulado.
+  - petName: "Perezoso beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 6 Meses
+    loveStat: Tranquilo, reservado y paciente.
+    homeStat: Un ambiente tranquilo y cuidados especializados.
+    bowlStat: "Hojas, vegetales y alimentaci\xF3n adecuada para su especie"
+    starStat: "Tiene movimientos lentos y necesita un ambiente sin estr\xE9s."
+  - petName: "Castor beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 5 Meses
+    loveStat: Curioso, activo y trabajador.
+    homeStat: Espacio para explorar y materiales para desarrollar su comportamiento
+      natural.
+    bowlStat: Vegetales, cortezas y alimento adecuado para su especie.
+    starStat: 'Necesita actividades que le permitan explorar y construir.  '
+  - petName: "Ardilla beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 3 Meses
+    loveStat: "Energ\xE9tica, curiosa e inquieta."
+    homeStat: Espacio, actividad y lugares donde esconderse.
+    bowlStat: Frutos secos, semillas, frutas y vegetales.
+    starStat: Necesita mantenerse activa y explorar su entorno.
+  - petName: "Zarig\xFCeya beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 3 Meses
+    loveStat: Tranquila, curiosa y reservada.
+    homeStat: Refugios, tranquilidad y un ambiente seguro.
+    bowlStat: Frutas, vegetales e insectos adecuados para su dieta.
+    starStat: Mayor actividad durante la noche.
+  - petName: "Huemul beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 6 Meses
+    loveStat: "T\xEDmido, tranquilo y sensible."
+    homeStat: "Espacio, tranquilidad y poca intervenci\xF3n"
+    bowlStat: "Hierbas, hojas y vegetaci\xF3n."
+    starStat: "Se estresa f\xE1cilmente en ambientes ruidosos o con demasiada actividad."
+  - petName: "Alce beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 8 Meses
+    loveStat: Tranquilo, curioso y sensible.
+    homeStat: "Mucho espacio y un ambiente adecuado para su tama\xF1o."
+    bowlStat: "Hierbas, hojas y vegetaci\xF3n."
+    starStat: "Su tama\xF1o requiere un espacio amplio y seguro."
+  - petName: "Pony beb\xE9"
+    photo: {fileID: 0}
+    ageStat: "1 a\xF1o"
+    loveStat: "Cari\xF1oso, activo y juguet\xF3n."
+    homeStat: Espacio para moverse, ejercicio y cuidados diarios.
+    bowlStat: Heno, pasto y alimento para equinos.
+    starStat: "Necesita actividad f\xEDsica y espacio suficiente."
+  - petName: "Cabra beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: "Juguetona, curiosa y energ\xE9tica."
+    homeStat: Espacio para moverse, explorar y jugar.
+    bowlStat: Pasto, hojas, heno y vegetales.
+    starStat: Es muy activa y curiosa; necesita un entorno preparado.
+  - petName: "Oveja beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: "Tranquila, d\xF3cil y sociable."
+    homeStat: "Compa\xF1\xEDa, espacio y un ambiente seguro."
+    bowlStat: Pasto, heno y vegetales.
+    starStat: "Se siente mejor acompa\xF1ada y con una rutina estable."
+  - petName: "Cerdo beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 3 Meses
+    loveStat: Inteligente, curioso y sociable.
+    homeStat: "Espacio, estimulaci\xF3n y una rutina estable."
+    bowlStat: Vegetales, frutas y alimento adecuado para cerdos.
+    starStat: Es muy inteligente y necesita actividades para mantenerse estimulado.
+  - petName: "Vaca beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 5 Meses
+    loveStat: "Tranquila, d\xF3cil y sociable."
+    homeStat: "Espacio amplio, compa\xF1\xEDa y cuidados diarios."
+    bowlStat: Pasto, heno y alimento para bovinos.
+    starStat: Necesita espacio suficiente para desarrollarse.
+  - petName: "Burro beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 6 Meses
+    loveStat: "Paciente, tranquilo y cari\xF1oso."
+    homeStat: "Espacio, compa\xF1\xEDa y cuidados constantes."
+    bowlStat: Heno, pasto y vegetales.
+    starStat: Se adapta mejor a rutinas estables y ambientes tranquilos.
+  - petName: "Llama beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 5 Meses
+    loveStat: Curiosa, tranquila e independiente.
+    homeStat: Espacio y un ambiente adecuado para desenvolverse.
+    bowlStat: Pasto, heno y vegetales.
+    starStat: Necesita espacio suficiente y una rutina tranquila.
+  - petName: "Elefante beb\xE9"
+    photo: {fileID: 0}
+    ageStat: "1 A\xF1o"
+    loveStat: Muy sociable, curiosa y afectuosa
+    homeStat: "Much\xEDsimo espacio, compa\xF1\xEDa y cuidados especializados."
+    bowlStat: "Vegetaci\xF3n, frutas y alimentaci\xF3n especializada."
+    starStat: "Depende mucho de la compa\xF1\xEDa y requiere cuidados especiales."
+  - petName: "Jirafa beb\xE9"
+    photo: {fileID: 0}
+    ageStat: "1 A\xF1o"
+    loveStat: Tranquila, curiosa y sensible.
+    homeStat: Espacio amplio y condiciones adecuadas.
+    bowlStat: "Hojas, ramas y vegetaci\xF3n."
+    starStat: "Necesita un espacio amplio debido a su tama\xF1o."
+  - petName: "Ping\xFCino beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: Sociable, curioso y activo.
+    homeStat: "Condiciones ambientales espec\xEDficas y cuidados especializados."
+    bowlStat: "Alimentaci\xF3n especializada para su especie."
+    starStat: Requiere condiciones ambientales controladas.
+  - petName: "Flamenco beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 5 Meses
+    loveStat: Sociable, curioso y sensible.
+    homeStat: Un ambiente adecuado y cuidados especializados.
+    bowlStat: "Alimentaci\xF3n especializada para su especie."
+    starStat: Sensible a los cambios de ambiente.
+  - petName: "Buho beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 4 Meses
+    loveStat: Observador, tranquilo y reservado.
+    homeStat: Tranquilidad, espacio y lugares seguros para descansar.
+    bowlStat: "Alimentaci\xF3n especializada para aves rapaces."
+    starStat: "H\xE1bitos principalmente nocturnos."
+  - petName: "Gallina beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 2 Meses
+    loveStat: Curiosa, activa y sociable.
+    homeStat: "Espacio seguro para explorar y compa\xF1\xEDa."
+    bowlStat: Granos, semillas y alimento para aves.
+    starStat: Necesita un espacio protegido y una rutina estable
+  - petName: "Panda beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 6 Meses
+    loveStat: Tranquilo, curioso y reservado.
+    homeStat: Un ambiente tranquilo, espacio adecuado y una rutina estable.
+    bowlStat: "Vegetales, hojas y alimentaci\xF3n especializada."
+    starStat: Se estresa con ambientes demasiado ruidosos o cambios constantes
+  - petName: "Koala beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 6 Meses
+    loveStat: Tranquilo, reservado y afectuoso.
+    homeStat: Un ambiente tranquilo, estable y con lugares seguros para descansar
+    bowlStat: "Hojas y alimentaci\xF3n especializada."
+    starStat: "Necesita una rutina estable y poco estr\xE9s."
+  - petName: "Canguro beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 7 Meses
+    loveStat: Activo, curioso y sociable.
+    homeStat: "Espacio para moverse, explorar y realizar actividad f\xEDsica."
+    bowlStat: "Vegetales, hierbas y alimentaci\xF3n adecuada para su especie."
+    starStat: Necesita espacio suficiente para mantenerse activo.
+  - petName: "Avestruz beb\xE9"
+    photo: {fileID: 0}
+    ageStat: 5 meses
+    loveStat: Curioso, activo y alerta.
+    homeStat: Mucho espacio exterior, seguridad y una zona amplia para desplazarse.
+    bowlStat: "Vegetales, semillas y alimentaci\xF3n adecuada para su especie."
+    starStat: Necesita un espacio amplio y correctamente protegido.

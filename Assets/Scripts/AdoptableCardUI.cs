@@ -11,6 +11,7 @@ public class AdoptableCardUI : MonoBehaviour
     [SerializeField] private TMP_Text petNameText;
 
     [Header("Filas de stats (en orden: corazón, casa, plato, estrella)")]
+    [SerializeField] private TMP_Text ageValueText;
     [SerializeField] private TMP_Text loveValueText;
     [SerializeField] private TMP_Text homeValueText;
     [SerializeField] private TMP_Text bowlValueText;
