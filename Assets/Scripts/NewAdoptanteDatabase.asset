@@ -559,283 +559,283 @@ MonoBehaviour:
     speciesStat: Vacas
     photo: {fileID: 0}
     compositionStat: Familia rural
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    homeStat: Terreno amplio
+    timeStat: Alto
+    lifestyleStat: Tranquilo
+    experienceStat: Mucha experiencia con animales de campo
+    commentStat: Buscan un animal que pueda desarrollarse en un espacio amplio
   - id: 51
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Poblete
+    speciesStat: Burros
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja de adultos mayores
+    homeStat: Parcela
+    timeStat: Alto
+    lifestyleStat: Tranquilo
+    experienceStat: Mucha experencia rural
+    commentStat: "Quieren compa\xF1ia y disfrutan del cuidado de animales"
   - id: 52
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Escobar
+    speciesStat: Jirafas
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Familia de cuatro integrantes
+    homeStat: Terreno muy amplio
+    timeStat: Alto
+    lifestyleStat: Tranquilo
+    experienceStat: Buena
+    commentStat: Buscan un animal tranquilo
   - id: 53
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Carrasco
+    speciesStat: Elefantes
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Familia Numerosa
+    homeStat: Terreno amplio
+    timeStat: Alto
+    lifestyleStat: Familiar y tranquilo
+    experienceStat: Experiencia con animales grandes
+    commentStat: Buscan un animal sociable
   - id: 54
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Vera
+    speciesStat: Rinocerontes
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Terreno amplio y cerrado
+    timeStat: Medio
+    lifestyleStat: Tranquilo
+    experienceStat: Buena
+    commentStat: Buscan un animal que necesite espacio
   - id: 55
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: "Los Oyarz\xFAn"
+    speciesStat: "Hipop\xF3tamos"
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja con dos hijos
+    homeStat: Parcela grande
+    timeStat: Alto
+    lifestyleStat: Media
+    experienceStat: Experiencia con animales grandes
+    commentStat: Buscan un animal independiente
   - id: 56
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Sanhueza
+    speciesStat: Camellos
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Terreno amplio
+    timeStat: Alto
+    lifestyleStat: Tranquilo y organizado
+    experienceStat: Experiencia con animales grandes
+    commentStat: Han investigado previamente sus necesidades
   - id: 57
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Mora
+    speciesStat: Llamas
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja con una hija
+    homeStat: Parcela
+    timeStat: Alto
+    lifestyleStat: Rural y tranquilo
+    experienceStat: Buena experiencia con animales de campo
+    commentStat: Buscan un animal sociable
   - id: 58
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Mora
+    speciesStat: Tigres
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Casa grande con terreno
+    timeStat: Medio
+    lifestyleStat: Activo
+    experienceStat: Poca
+    commentStat: Les gustan los animales grandes y activos
   - id: 59
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Vidal
+    speciesStat: Leopardos
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Dos hermano
+    homeStat: Casa amplia
+    timeStat: Alto
+    lifestyleStat: Activo y organizado
+    experienceStat: Buena
+    commentStat: Buscan un animal que necesite actividad
   - id: 60
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: "Los Cort\xE9s"
+    speciesStat: Hienas
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja con dos hijos
+    homeStat: Casa con patio
+    timeStat: Medio
+    lifestyleStat: Ruidoso y muy activo
+    experienceStat: Media
+    commentStat: "Buscan un animal sociable y juguet\xF3n"
   - id: 61
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Bustamante
+    speciesStat: Orangutanes
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Casa grande
+    timeStat: Alto
+    lifestyleStat: Tranquilo
+    experienceStat: Buena
+    commentStat: Buscan un animal inteligente y sociable
   - id: 62
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Coronado
+    speciesStat: Suricatas
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja joven
+    homeStat: Casa con patio
+    timeStat: Alto
+    lifestyleStat: Muy activo
+    experienceStat: Media
+    commentStat: Buscan un animal curioso y activo
   - id: 63
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Mansilla
+    speciesStat: Mofetas
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Persona Sola
+    homeStat: "Casa peque\xF1a con patio"
+    timeStat: Allto
+    lifestyleStat: Tranquilo
+    experienceStat: "Ha tenido animales peque\xF1os"
+    commentStat: "Busca compa\xF1ia y disfruta de los animales tranquilos"
   - id: 64
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Baeza
+    speciesStat: Topos
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Casa con patio
+    timeStat: Alto
+    lifestyleStat: Tranquilo
+    experienceStat: Poca
+    commentStat: "Buscan un animal peque\xF1o y tranquilo"
   - id: 65
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Rojas
+    speciesStat: Armadillos
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja aventurera
+    homeStat: Casa con patio
+    timeStat: Medio
+    lifestyleStat: Activo
+    experienceStat: Media
+    commentStat: Buscan un animal curioso
   - id: 66
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Zamora
+    speciesStat: Avestruces
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja con dos hijos
+    homeStat: Terreno amplio
+    timeStat: Alto
+    lifestyleStat: Activo
+    experienceStat: Experiencia con aves
+    commentStat: Buscan un animal activo
   - id: 67
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Orellana
+    speciesStat: Flamencos
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Casa con patio amplio
+    timeStat: Alto
+    lifestyleStat: Tranquilo y ordenado
+    experienceStat: Media
+    commentStat: Buscan un animal sociable
   - id: 68
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Salazar
+    speciesStat: "B\xFAhos"
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Persona sola
+    homeStat: Casa tranquila
+    timeStat: Alto
+    lifestyleStat: Nocturno y tranquilo
+    experienceStat: Ha cuidado aves anteriormente
+    commentStat: Busca un animal tranquilo
   - id: 69
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Miranda
+    speciesStat: Lechuzas
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Casa tranquila
+    timeStat: Alto
+    lifestyleStat: "Hogare\xF1o"
+    experienceStat: Buena experiencia con aves
+    commentStat: Buscan un animal reservado
   - id: 70
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Carrillo
+    speciesStat: Cuervos
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Dos hermanos adultos
+    homeStat: Casa grande
+    timeStat: Alto
+    lifestyleStat: Activo e interesado en aprender
+    experienceStat: media
+    commentStat: Les interesan los animales inteligentes
   - id: 71
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Pizarro
+    speciesStat: Loros
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja con una hija
+    homeStat: Casa con patio
+    timeStat: Alto
+    lifestyleStat: Social y familiar
+    experienceStat: Han tenido aves
+    commentStat: Buscan un animal sociable
   - id: 72
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Figueroa
+    speciesStat: Tucanes
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: Casa amplia
+    timeStat: Alto
+    lifestyleStat: Tranquilo
+    experienceStat: Buena experiencia con aves
+    commentStat: Buscan un animal tranquilo y sociable
   - id: 73
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Navarro
+    speciesStat: Pavos
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja con dos hijos
+    homeStat: Casa grande con patio
+    timeStat: Medio
+    lifestyleStat: Social y familiar
+    experienceStat: Poca
+    commentStat: Buscan un animal llamativo y sociable
   - id: 74
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Espinoza
+    speciesStat: "\xC1guilas"
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Pareja
+    homeStat: casa amplia con espacio exterior
+    timeStat: Alto
+    lifestyleStat: Tranquilo y organizado
+    experienceStat: Experiencia con aves
+    commentStat: Buscan un animal que requiera cuidados especializados
   - id: 75
     modelPrefab: {fileID: 0}
-    adopterName: 
-    speciesStat: 
+    adopterName: Los Godoy
+    speciesStat: Gallinas
     photo: {fileID: 0}
-    compositionStat: 
-    homeStat: 
-    timeStat: 
-    lifestyleStat: 
-    experienceStat: 
-    commentStat: 
+    compositionStat: Familia con tres integrantes
+    homeStat: Casa con patio protegido
+    timeStat: Alto
+    lifestyleStat: Tranquilo y familiar
+    experienceStat: Han cuidado aves de corral
+    commentStat: Buscan un animal tranquilo para incorporar a su hogar
