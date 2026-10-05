@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 14bbbef1a49132c41ba883981c878539
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - adoptanteDB: {fileID: 11400000, guid: 9917ae554419a154eb383f1b5b9fd872, type: 2}
+  - preguntasDB: {fileID: 11400000, guid: 202b902710efefa49bab60ba35e3e07a, type: 2}
+  - textoRespuestaNPC: {instanceID: 0}
+  - layoutStandard3: {instanceID: 0}
+  - layoutEspecial4: {instanceID: 0}
+  - botonCuartaEspecial: {instanceID: 0}
+  - textoBotonCuartaEspecial: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

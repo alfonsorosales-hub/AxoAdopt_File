@@ -1,0 +1,1136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644d1d16821d08c44adb4d84e415ea37, type: 3}
+  m_Name: PreguntasDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::PreguntasDatabase
+  adoptantesPreguntas:
+  - idAdoptante: 01
+    etiquetaEditor: Adoptante NPC #1 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "No mucho, puesto que pasamos medio d\xEDa fuera de casa."
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: Si, tuvimos varios perros antes
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Pues, nuestro patio es peque\xF1o, pero podr\xE1 ser c\xF3modo
+        para el animal"
+      esEspecial: 0
+  - idAdoptante: 02
+    etiquetaEditor: Adoptante NPC #2 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: Pues, Mientras nuestra hija va a la escuela, nosotros cuidamos
+        la casa
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: Si, ya hemos cuidado animales anteriormente
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "El patio de nuestra casa es grande, perfecto para que nuestra
+        hija y el beb\xE9 jueguen"
+      esEspecial: 0
+  - idAdoptante: 03
+    etiquetaEditor: Adoptante NPC #3 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suele tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Yo trabajo desde casa, as\xED que no tendr\xE9 problema alguno"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHa tenido antes un animal con necesidades similares?"
+      respuestaNPC: Ya he tenido gatos antes
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Mi departamento no es muy grande ni muy peque\xF1o, ojal\xE1
+        se acomode bien"
+      esEspecial: 0
+  - idAdoptante: 04
+    etiquetaEditor: Adoptante NPC #4 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Mi esposa trabaja como ni\xF1era, yo estoy desempleado, as\xED
+        que tenemos mucho tiempo"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "Ya hemos cuidado gatos antes. As\xED que ya sabemos como cuidarlos"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: Nuestro hogar es grande, perfecto para la comodidad de todos
+      esEspecial: 0
+  - idAdoptante: 05
+    etiquetaEditor: Adoptante NPC #5 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "No mucho. Con mi pareja de vez en cuando pasamos el d\xEDa fuera
+        de casa"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "Pues, nos enfocamos m\xE1s en el tipo de cuidados que requiere
+        el animal."
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Tenemos ya una habitaci\xF3n disponible para el animal. Ya queremos
+        que lo vea"
+      esEspecial: 0
+  - idAdoptante: 06
+    etiquetaEditor: Adoptante NPC #6 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: Mucho, ya que mi hermano y yo no salimos frecuentemente de nuestro
+        hogar
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "Aprendimos del cuidado de animales peque\xF1os gracias a nuestros
+        padres"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: Nuestra casa es lo suficientemente grande para que el animal
+        pueda jugar
+      esEspecial: 0
+  - idAdoptante: 07
+    etiquetaEditor: Adoptante NPC #7 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: Nosotros solo nos movemos por el terreno de nuestro hermoso campo
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "Los animales que ya tenemos estar\xEDan orgullosos de ver a
+        un nuevo integrante en la familia"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Vivir en la zona rural de la ciudad es c\xF3mo. Adem\xE1s, el
+        terreno es grande y perfecto para el animal"
+      esEspecial: 0
+  - idAdoptante: 08
+    etiquetaEditor: Adoptante NPC #8 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Prefeririamos quedarnos en nuestra casa m\xE1s que salir"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: Si, ya hemos cuidado animales antes
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Nuestra casa es grande y c\xF3moda para el animal"
+      esEspecial: 0
+  - idAdoptante: 09
+    etiquetaEditor: Adoptante NPC #9 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suele tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: Esta es la primera vez que salgo de mi departamento
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHa tenido antes un animal con necesidades similares?"
+      respuestaNPC: "He tenido animales peque\xF1os antes"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Por donde vivo es muy tranquilo, as\xED que mi departamento
+        es adecuado para el animal"
+      esEspecial: 0
+  - idAdoptante: 10
+    etiquetaEditor: Adoptante NPC #10 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Mientras nuestro hijo est\xE1 en la escuela, nosotros pasamos
+        medio dia en el trabajo"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "Pues, no mucho, ya que se nos hace algo dificil cuidar a animales
+        peque\xF1os"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Nuestro patio es acogedor, asi que creemos que le gustar\xE1"
+      esEspecial: 0
+  - idAdoptante: 11
+    etiquetaEditor: Adoptante NPC #11 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Mi hermana y yo as\xFAn estamos buscando empleo"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "Desde peque\xF1as que hemos cuidado roedores, como si fueran
+        nuestros hermanitos"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Vivimos en un departamento. No es mucho, pero sabemos que puede
+        ser c\xF3modo"
+      esEspecial: 0
+  - idAdoptante: 12
+    etiquetaEditor: Adoptante NPC #12 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Pues, pasamos m\xE1s tiempo en nuestros trabajos que en casa"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "No, ser\xEDa nuestra primera vez cuidando un animal"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Nuestro departamento es peque\xF1o, eso puede ser un problema"
+      esEspecial: 0
+  - idAdoptante: 13
+    etiquetaEditor: Adoptante NPC #13 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: Desde que nos jubilamos que nuestros hijos nos ayudan monetariamente
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: Si, ya hemos cuidado aves antes. Obviamente hablo de mis hijos
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Nuestra casa es c\xF3moda y nuestro patio es agradable"
+      esEspecial: 0
+  - idAdoptante: 14
+    etiquetaEditor: Adoptante NPC #14 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "No pasamos todo el d\xEDa fuera de casa, adem\xE1s nuestros
+        hijos pasan algunas horas con sus abuelos de vez en cuando"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: Si. Hemos tenido aves antes
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: Tenemos un patio no tangrande, pero bien protegido
+      esEspecial: 0
+  - idAdoptante: 15
+    etiquetaEditor: Adoptante NPC #15 (3 Preguntas)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Nos la pasamos m\xE1s tiempo cultivando en nuestro campo que
+        salir a la gran ciudad"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: Por su puesto. Nadie cuida animales de campo mejor que nosotros
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: "Nuestra parcela en el campo en c\xF3moda y amplia. Perfecta
+        para cualquiera"
+      esEspecial: 0
+  - idAdoptante: 16
+    etiquetaEditor: Adoptante NPC #16 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Pues si, pasamos m\xE1s tiempo en casa que afuera"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: Si, ya hemos cuidado animales antes
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: Nuestra casa es grande. Es perfecta para el animal
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFQui\xE9n estar\xEDa habitualmente en casa durante el
+        d\xEDa?"
+      respuestaNPC: Pues, solo dos de nosotros tenemos empleo, a uno de mis hermanos
+        le da flojera conseguir empleo
+      esEspecial: 1
+  - idAdoptante: 17
+    etiquetaEditor: Adoptante NPC #18 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #18 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #18 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #18 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #18 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 18
+    etiquetaEditor: Adoptante NPC #17 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
+        d\xEDa para cuidar al animal?"
+      respuestaNPC: "Pues, durante la ma\xF1ana y la tarde estamos fuera de casa"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
+      respuestaNPC: "No, esta ser\xEDa la primera vez"
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
+      respuestaNPC: Nuestro terreno es amplio. Perfecto para el animal
+      esEspecial: 0
+    - enunciadoPregunta: " \xBFHan considerado cu\xE1nto tiempo requieren sus cuidados
+        diarios?"
+      respuestaNPC: La verdad es que no. Pero creemos que lo haremos bien
+      esEspecial: 1
+  - idAdoptante: 19
+    etiquetaEditor: Adoptante NPC #19 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #19 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #19 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #19 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #19 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 20
+    etiquetaEditor: Adoptante NPC #20 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #20 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #20 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #20 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #20 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 21
+    etiquetaEditor: Adoptante NPC #21 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #21 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #21 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #21 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #21 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 22
+    etiquetaEditor: Adoptante NPC #22 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #22 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #22 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #22 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #22 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 23
+    etiquetaEditor: Adoptante NPC #23 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #23 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #23 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #23 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #23 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 24
+    etiquetaEditor: Adoptante NPC #24 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #24 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #24 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #24 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #24 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 25
+    etiquetaEditor: Adoptante NPC #25 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #25 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #25 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #25 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #25 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 26
+    etiquetaEditor: Adoptante NPC #26 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #26 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #26 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #26 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #26 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 27
+    etiquetaEditor: Adoptante NPC #27 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #27 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #27 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #27 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #27 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 28
+    etiquetaEditor: Adoptante NPC #28 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #28 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #28 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #28 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #28 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 29
+    etiquetaEditor: Adoptante NPC #29 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #29 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #29 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #29 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #29 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 30
+    etiquetaEditor: Adoptante NPC #30 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #30 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #30 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #30 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #30 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 31
+    etiquetaEditor: Adoptante NPC #31 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #31 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #31 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #31 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #31 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 32
+    etiquetaEditor: Adoptante NPC #32 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #32 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #32 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #32 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #32 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 33
+    etiquetaEditor: Adoptante NPC #33 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #33 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #33 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #33 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #33 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 34
+    etiquetaEditor: Adoptante NPC #34 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #34 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #34 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #34 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #34 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 35
+    etiquetaEditor: Adoptante NPC #35 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #35 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #35 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #35 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #35 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 36
+    etiquetaEditor: Adoptante NPC #36 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #36 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #36 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #36 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #36 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 37
+    etiquetaEditor: Adoptante NPC #37 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #37 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #37 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #37 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #37 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 38
+    etiquetaEditor: Adoptante NPC #38 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #38 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #38 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #38 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #38 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 39
+    etiquetaEditor: Adoptante NPC #39 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #39 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #39 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #39 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #39 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 40
+    etiquetaEditor: Adoptante NPC #40 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #40 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #40 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #40 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #40 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 41
+    etiquetaEditor: Adoptante NPC #41 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #41 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #41 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #41 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #41 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 42
+    etiquetaEditor: Adoptante NPC #42 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #42 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #42 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #42 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #42 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 43
+    etiquetaEditor: Adoptante NPC #43 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #43 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #43 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #43 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #43 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 44
+    etiquetaEditor: Adoptante NPC #44 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #44 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #44 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #44 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #44 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 45
+    etiquetaEditor: Adoptante NPC #45 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #45 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #45 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #45 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #45 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 46
+    etiquetaEditor: Adoptante NPC #46 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #46 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #46 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #46 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #46 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 47
+    etiquetaEditor: Adoptante NPC #47 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #47 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #47 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #47 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #47 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 48
+    etiquetaEditor: Adoptante NPC #48 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #48 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #48 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #48 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #48 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 49
+    etiquetaEditor: Adoptante NPC #49 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #49 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #49 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #49 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #49 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 50
+    etiquetaEditor: Adoptante NPC #50 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #50 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #50 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #50 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #50 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 51
+    etiquetaEditor: Adoptante NPC #51 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #51 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #51 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #51 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #51 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 52
+    etiquetaEditor: Adoptante NPC #52 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #52 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #52 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #52 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #52 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 53
+    etiquetaEditor: Adoptante NPC #53 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #53 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #53 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #53 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #53 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 54
+    etiquetaEditor: Adoptante NPC #54 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #54 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #54 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #54 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #54 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 55
+    etiquetaEditor: Adoptante NPC #55 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #55 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #55 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #55 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #55 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 56
+    etiquetaEditor: Adoptante NPC #56 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #56 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #56 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #56 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #56 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 57
+    etiquetaEditor: Adoptante NPC #57 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #57 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #57 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #57 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #57 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 58
+    etiquetaEditor: Adoptante NPC #58 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #58 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #58 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #58 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #58 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 59
+    etiquetaEditor: Adoptante NPC #59 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #59 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #59 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #59 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #59 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 60
+    etiquetaEditor: Adoptante NPC #60 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #60 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #60 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #60 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #60 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 61
+    etiquetaEditor: Adoptante NPC #61 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #61 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #61 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #61 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #61 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 62
+    etiquetaEditor: Adoptante NPC #62 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #62 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #62 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #62 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #62 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 63
+    etiquetaEditor: Adoptante NPC #63 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #63 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #63 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #63 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #63 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 64
+    etiquetaEditor: Adoptante NPC #64 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #64 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #64 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #64 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #64 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 65
+    etiquetaEditor: Adoptante NPC #65 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #65 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #65 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #65 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #65 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 66
+    etiquetaEditor: Adoptante NPC #66 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #66 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #66 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #66 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #66 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 67
+    etiquetaEditor: Adoptante NPC #67 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #67 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #67 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #67 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #67 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 68
+    etiquetaEditor: Adoptante NPC #68 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #68 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #68 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #68 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #68 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 69
+    etiquetaEditor: Adoptante NPC #69 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #69 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #69 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #69 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #69 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 70
+    etiquetaEditor: Adoptante NPC #70 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #70 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #70 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #70 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #70 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 71
+    etiquetaEditor: Adoptante NPC #71 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #71 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #71 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #71 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #71 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 72
+    etiquetaEditor: Adoptante NPC #72 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #72 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #72 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #72 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #72 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 73
+    etiquetaEditor: Adoptante NPC #73 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #73 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #73 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #73 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #73 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 74
+    etiquetaEditor: Adoptante NPC #74 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #74 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #74 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #74 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #74 sobre la pregunta clave.
+      esEspecial: 1
+  - idAdoptante: 75
+    etiquetaEditor: Adoptante NPC #75 (4 Preguntas - Especial)
+    preguntas:
+    - enunciadoPregunta: "\xBFPregunta 1 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #75 a la pregunta 1.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 2 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #75 a la pregunta 2.
+      esEspecial: 0
+    - enunciadoPregunta: "\xBFPregunta 3 para el adoptante?"
+      respuestaNPC: Respuesta del Adoptante #75 a la pregunta 3.
+      esEspecial: 0
+    - enunciadoPregunta: "[PREGUNTA ESPECIAL] \xBFCaso o situaci\xF3n clave?"
+      respuestaNPC: Respuesta especial del Adoptante #75 sobre la pregunta clave.
+      esEspecial: 1
