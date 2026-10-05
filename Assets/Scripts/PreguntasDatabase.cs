@@ -1,85 +1,84 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// Estructura para almacenar la pregunta que hace el jugador y la respuesta que da el NPC
 [System.Serializable]
 public class PreguntaData
 {
-    public string enunciadoPregunta; // Texto del botón (lo que pregunta el jugador)
+    public string enunciadoPregunta; // Texto del botón / Pregunta del jugador
     [TextArea(2, 5)]
-    public string respuestaNPC;      // Texto de diálogo (lo que responde el NPC)
-    public bool esEspecial;         // Identifica si es la 4ª pregunta especial
+    public string respuestaNPC;      // Diálogo / Respuesta del adoptante
+    public bool esEspecial;
 }
 
-/// Grupo de preguntas y respuestas para un Adoptante específico
 [System.Serializable]
 public class PreguntasAdoptanteGroup
 {
-    public string idAdoptante; // ID del NPC (ej: "ADOPT_01")
-    [HideInInspector] public string etiquetaEditor;
+    public string idAdoptante;       // ID exacta: "01", "02", ..., "75"
+    public bool viveSolo;            // Indicador si el adoptante vive solo
     public List<PreguntaData> preguntas = new List<PreguntaData>();
 }
 
-/// ScriptableObject que actúa como Base de Datos para los 75 Adoptantes NPCs
 [CreateAssetMenu(fileName = "PreguntasDatabase", menuName = "Adoptantes/Preguntas Database")]
 public class PreguntasDatabase : ScriptableObject
 {
-    [Header("Base de Datos para los 75 Adoptantes (NPCs)")]
+    [Header("Base de Datos para los 75 Adoptantes")]
     public List<PreguntasAdoptanteGroup> adoptantesPreguntas = new List<PreguntasAdoptanteGroup>();
 
-    private void OnValidate()
+    // Conjunto de números de adoptantes que viven solos (3, 20, 33, 38, 42, 63, 68)
+    private readonly HashSet<int> adoptantesSolos = new HashSet<int> { 3, 20, 33, 38, 42, 63, 68 };
+
+    /// Se ejecuta automáticamente al pulsar "Reset" o crear el asset en Unity
+    private void Reset()
     {
-        if (adoptantesPreguntas.Count != 75)
-        {
-            GenerarEstructura75Adoptantes();
-        }
+        GenerarEstructura75Adoptantes();
     }
 
-    [ContextMenu("Regenerar 75 Adoptantes")]
+    /// Regenera completamente los 75 elementos borrando cualquier dato previo
+    [ContextMenu("Regenerar 75 Adoptantes Automático")]
     public void GenerarEstructura75Adoptantes()
     {
-        adoptantesPreguntas.Clear();
+        adoptantesPreguntas = new List<PreguntasAdoptanteGroup>();
 
         for (int i = 0; i < 75; i++)
         {
             int numeroNPC = i + 1;
-            PreguntasAdoptanteGroup grupo = new PreguntasAdoptanteGroup();
-            grupo.idAdoptante = $"ADOPT_{numeroNPC:D2}"; // IDs: ADOPT_01, ADOPT_02 ... ADOPT_75
+            bool viveSolo = adoptantesSolos.Contains(numeroNPC);
 
-            // Adoptantes 1 al 15 -> 3 preguntas
-            if (numeroNPC <= 15)
+            // Formato de ID numérico sin prefijos: "01", "02", ..., "75"
+            string idLimpia = numeroNPC < 10 ? $"0{numeroNPC}" : $"{numeroNPC}";
+
+            PreguntasAdoptanteGroup grupo = new PreguntasAdoptanteGroup
             {
-                grupo.etiquetaEditor = $"Adoptante NPC #{numeroNPC} (3 Preguntas)";
-                for (int p = 0; p < 3; p++)
-                {
-                    grupo.preguntas.Add(new PreguntaData 
-                    { 
-                        enunciadoPregunta = $"¿Pregunta {p + 1} para el adoptante?", 
-                        respuestaNPC = $"Respuesta del Adoptante #{numeroNPC} a la pregunta {p + 1}.",
-                        esEspecial = false 
-                    });
-                }
-            }
-            // Adoptantes 16 al 75 -> 4 preguntas (la 4ª es especial)
-            else
+                idAdoptante = idLimpia,
+                viveSolo = viveSolo
+            };
+
+            // --- Cargar las 3 Preguntas Generales (Adaptadas si vive solo) ---
+            string p1 = viveSolo 
+                ? "¿Al vivir solo/a, cuánto tiempo sueles tener disponible durante el día para cuidar al animal?"
+                : "¿Cuánto tiempo suelen tener disponible durante el día para cuidar al animal?";
+
+            string p2 = viveSolo
+                ? "¿Has tenido antes un animal con necesidades similares haciéndote cargo tú solo/a?"
+                : "¿Han tenido antes un animal con necesidades similares?";
+
+            string p3 = viveSolo
+                ? "¿Cómo es el espacio donde viviría el animal siendo tu residencia única?"
+                : "¿Cómo es el espacio donde viviría el animal?";
+
+            // Agregar las 3 preguntas generales
+            grupo.preguntas.Add(new PreguntaData { enunciadoPregunta = p1, respuestaNPC = $"Respuesta P1 del Adoptante {grupo.idAdoptante}", esEspecial = false });
+            grupo.preguntas.Add(new PreguntaData { enunciadoPregunta = p2, respuestaNPC = $"Respuesta P2 del Adoptante {grupo.idAdoptante}", esEspecial = false });
+            grupo.preguntas.Add(new PreguntaData { enunciadoPregunta = p3, respuestaNPC = $"Respuesta P3 del Adoptante {grupo.idAdoptante}", esEspecial = false });
+
+            // --- Del Adoptante 16 al 75: Añadir la 4ª Pregunta Especial ---
+            if (numeroNPC >= 16)
             {
-                grupo.etiquetaEditor = $"Adoptante NPC #{numeroNPC} (4 Preguntas - Especial)";
-                for (int p = 0; p < 3; p++)
+                grupo.preguntas.Add(new PreguntaData
                 {
-                    grupo.preguntas.Add(new PreguntaData 
-                    { 
-                        enunciadoPregunta = $"¿Pregunta {p + 1} para el adoptante?", 
-                        respuestaNPC = $"Respuesta del Adoptante #{numeroNPC} a la pregunta {p + 1}.",
-                        esEspecial = false 
-                    });
-                }
-                
-                // 4ª Pregunta Especial
-                grupo.preguntas.Add(new PreguntaData 
-                { 
-                    enunciadoPregunta = $"[PREGUNTA ESPECIAL] ¿Caso o situación clave?", 
-                    respuestaNPC = $"Respuesta especial del Adoptante #{numeroNPC} sobre la pregunta clave.",
-                    esEspecial = true 
+                    enunciadoPregunta = $"[ESPECIAL] Pregunta clave sobre el caso del adoptante {grupo.idAdoptante}",
+                    respuestaNPC = $"Respuesta especial del Adoptante {grupo.idAdoptante}.",
+                    esEspecial = true
                 });
             }
 
@@ -87,9 +86,11 @@ public class PreguntasDatabase : ScriptableObject
         }
     }
 
-    /// Obtiene la lista de preguntas/respuestas buscando por ID de adoptante
+    /// Busca las preguntas por la ID ("01" a "75")
     public List<PreguntaData> ObtenerPreguntasPorID(string id)
     {
+        if (adoptantesPreguntas == null) return null;
+
         foreach (var grupo in adoptantesPreguntas)
         {
             if (grupo.idAdoptante == id)
