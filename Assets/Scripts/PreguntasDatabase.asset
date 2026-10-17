@@ -18,1167 +18,1504 @@ MonoBehaviour:
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: "Pues, parte del d\xEDa estamos trabajando"
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Si, hemos tenido perros antes
+      respuestaNPC: "S\xED, anteriormente hemos tenido perros en la familia, as\xED
+        que conocemos bien sus din\xE1micas."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: "Aunque el patio es peque\xF1o, creemos que le gustar\xE1"
+      respuestaNPC: "Vivimos en una casa acogedora con un patio peque\xF1o pero bien
+        aprovechado."
       esEspecial: 0
   - idAdoptante: 02
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: "Pasamos m\xE1s tiempo en casa que afuera"
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Hemos cuidado animales antes
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Nuestra casa tiene un patio amplio, apto para que se divierta
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
   - idAdoptante: 03
     viveSolo: 1
     preguntas:
     - enunciadoPregunta: "\xBFAl vivir solo/a, cu\xE1nto tiempo sueles tener disponible
         durante el d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 3
+      respuestaNPC: "\xA1Bastante! Al vivir solo maneja mis propios horarios y paso
+        mucho tiempo en casa, as\xED que dispongo de tiempo alto para cuidarlo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHas tenido antes un animal con necesidades similares
         haci\xE9ndote cargo t\xFA solo/a?"
-      respuestaNPC: Respuesta P2 del Adoptante 3
+      respuestaNPC: "S\xED, he vivido con gatos antes. Me encantan y conozco perfecto
+        sus cuidados e independencia."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal siendo
         tu residencia \xFAnica?"
-      respuestaNPC: Respuesta P3 del Adoptante 3
+      respuestaNPC: Vivo en un departamento mediano, muy tranquilo, limpio y bien
+        distribuido.
       esEspecial: 0
   - idAdoptante: 04
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 4
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 4
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 4
+      respuestaNPC: Vivimos en un departamento amplio y bien iluminado donde el ambiente
+        es calmo.
       esEspecial: 0
   - idAdoptante: 05
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 5
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 5
+      respuestaNPC: "Tenemos experiencia con animales bastante particulares que requieren
+        un cuidado m\xE1s met\xF3dico y espec\xEDfico."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 5
+      respuestaNPC: "En casa tenemos una habitaci\xF3n completa reservada y acondicionada
+        especialmente para el animal."
       esEspecial: 0
   - idAdoptante: 06
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 6
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 6
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 6
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
   - idAdoptante: 07
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 7
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 7
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 7
+      respuestaNPC: Es una casa rural en el campo con un terreno muy amplio alrededor.
       esEspecial: 0
   - idAdoptante: 08
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 8
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 8
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 8
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
   - idAdoptante: 09
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 9
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 9
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 9
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
   - idAdoptante: 10
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 10
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 10
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 10
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
   - idAdoptante: 11
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 11
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 11
+      respuestaNPC: "S\xED, ambas hemos tenido y cuidado roedores anteriormente,
+        nos resultan muy familiares."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 11
+      respuestaNPC: Vivimos en un departamento amplio y bien iluminado donde el ambiente
+        es calmo.
       esEspecial: 0
   - idAdoptante: 12
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 12
+      respuestaNPC: "Mire, la verdad es que ambos pasamos casi todo el d\xEDa fuera
+        trabajando o haciendo cosas, as\xED que nuestro tiempo es bastante bajo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 12
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 12
+      respuestaNPC: "Es un departamento tirando a peque\xF1o, pero ordenado."
       esEspecial: 0
   - idAdoptante: 13
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 13
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 13
+      respuestaNPC: "S\xED, en casa ya hemos tenido aves antes y sabemos c\xF3mo
+        cuidarlas adecuadamente."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 13
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
   - idAdoptante: 14
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 14
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 14
+      respuestaNPC: "S\xED, en casa ya hemos tenido aves antes y sabemos c\xF3mo
+        cuidarlas adecuadamente."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 14
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
   - idAdoptante: 15
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 15
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 15
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 15
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
   - idAdoptante: 16
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 16
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 16
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 16
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 16'
-      respuestaNPC: Respuesta especial del Adoptante 16.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFQui\xE9n permanece habitualmente
+        en casa durante el d\xEDa?"
+      respuestaNPC: "Uno de mis hermanos trabaja remoto desde la casa, as\xED que
+        casi siempre hay alguien acompa\xF1ando."
       esEspecial: 1
   - idAdoptante: 17
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 17
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 17
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 17
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 17'
-      respuestaNPC: Respuesta especial del Adoptante 17.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 esperan de la convivencia con
+        el animal?"
+      respuestaNPC: "Nuestra hija tiene conocimientos b\xE1sicos en equinos y queremos
+        que participe activamente en sus cuidados."
       esEspecial: 1
   - idAdoptante: 18
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 18
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 18
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 18
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 18'
-      respuestaNPC: Respuesta especial del Adoptante 18.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFCu\xE1nto tiempo estimado calculan
+        para sus cuidados diarios?"
+      respuestaNPC: La verdad... no hemos calculado al detalle las horas de trabajo
+        pesado que conlleva un animal grande.
       esEspecial: 1
   - idAdoptante: 19
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 19
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 19
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 19
+      respuestaNPC: Vivimos en un departamento amplio y bien iluminado donde el ambiente
+        es calmo.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 19'
-      respuestaNPC: Respuesta especial del Adoptante 19.
+    - enunciadoPregunta: "[Investigaci\xF3n I] Pregunta especial de seguimiento."
+      respuestaNPC: Tenemos todo preparado para ofrecerle un espacio adecuado.
       esEspecial: 1
   - idAdoptante: 20
     viveSolo: 1
     preguntas:
     - enunciadoPregunta: "\xBFAl vivir solo/a, cu\xE1nto tiempo sueles tener disponible
         durante el d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 20
+      respuestaNPC: "\xA1Bastante! Al vivir solo maneja mis propios horarios y paso
+        mucho tiempo en casa, as\xED que dispongo de tiempo alto para cuidarlo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHas tenido antes un animal con necesidades similares
         haci\xE9ndote cargo t\xFA solo/a?"
-      respuestaNPC: Respuesta P2 del Adoptante 20
+      respuestaNPC: "He estado investigando y leyendo mucho sobre animales peque\xF1os
+        y sus necesidades particulares."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal siendo
         tu residencia \xFAnica?"
-      respuestaNPC: Respuesta P3 del Adoptante 20
+      respuestaNPC: "Es un departamento bastante amplio, tranquilo y seguro, ideal
+        para estar c\xF3modos."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 20'
-      respuestaNPC: Respuesta especial del Adoptante 20.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFEn qu\xE9 momento del d\xEDa esperan
+        interactuar principalmente con el animal?"
+      respuestaNPC: "Como tengo horarios nocturnos, suelo estar despierto y activo
+        por las noches, ideal para hacerle compa\xF1\xEDa."
       esEspecial: 1
   - idAdoptante: 21
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 21
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 21
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 21
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 21'
-      respuestaNPC: Respuesta especial del Adoptante 21.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFC\xF3mo es normalmente el ambiente
+        dentro de la casa?"
+      respuestaNPC: Uff, la casa es bastante ruidosa y concurrida; somos muchos y
+        constantemente llegan visitas.
       esEspecial: 1
   - idAdoptante: 22
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 22
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 22
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 22
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 22'
-      respuestaNPC: Respuesta especial del Adoptante 22.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFHan considerado los gastos especiales
+        que podr\xEDa requerir el animal?"
+      respuestaNPC: "S\xED, afortunadamente contamos con presupuesto holgado para
+        cubrir alimentaci\xF3n y veterinarios especializados."
       esEspecial: 1
   - idAdoptante: 23
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 23
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 23
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 23
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 23'
-      respuestaNPC: Respuesta especial del Adoptante 23.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFEl terreno est\xE1 completamente
+        preparado para evitar accidentes?"
+      respuestaNPC: "El terreno es grande, pero siendo sinceros, a\xFAn hay varias
+        zonas que debemos reparar y cercar bien."
       esEspecial: 1
   - idAdoptante: 24
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 24
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 24
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 24
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 24'
-      respuestaNPC: Respuesta especial del Adoptante 24.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Admitimos que subestimamos un poco el tiempo y el espacio real
+        que exige un animal de este tama\xF1o."
       esEspecial: 1
   - idAdoptante: 25
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 25
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 25
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 25
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 25'
-      respuestaNPC: Respuesta especial del Adoptante 25.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFHan considerado cu\xE1nto tiempo
+        requieren sus cuidados diarios?"
+      respuestaNPC: Tenemos un terreno muy amplio y protegido, ideal para que se
+        mueva con total libertad.
       esEspecial: 1
   - idAdoptante: 26
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 26
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 26
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 26
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 26'
-      respuestaNPC: Respuesta especial del Adoptante 26.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFQu\xE9 han preparado para mantener
+        al animal ocupado?"
+      respuestaNPC: "No hab\xEDamos pensado mucho en la cantidad de est\xEDmulos
+        o juguetes que necesita para no aburrirse."
       esEspecial: 1
   - idAdoptante: 27
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 27
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 27
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 27
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 27'
-      respuestaNPC: Respuesta especial del Adoptante 27.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFQui\xE9n permanece habitualmente
+        en casa durante el d\xEDa?"
+      respuestaNPC: Yo trabajo desde casa la mayor parte del tiempo, por lo que el
+        ambiente se mantiene muy tranquilo.
       esEspecial: 1
   - idAdoptante: 28
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 28
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 28
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 28
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 28'
-      respuestaNPC: Respuesta especial del Adoptante 28.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "As\xED es, ya construimos y acondicionamos un refugio exclusivo
+        con todo lo necesario en la parcela."
       esEspecial: 1
   - idAdoptante: 29
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 29
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 29
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 29
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 29'
-      respuestaNPC: Respuesta especial del Adoptante 29.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 es lo que m\xE1s les atrae de
+        este animal?"
+      respuestaNPC: Nos encanta su apariencia, pero asumimos que no requiere tantos
+        cuidados complejos como otros animales.
       esEspecial: 1
   - idAdoptante: 30
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 30
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 30
+      respuestaNPC: "Tenemos mucha experiencia acumulada cuidando animales de gran
+        tama\xF1o a lo largo de los a\xF1os."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 30
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 30'
-      respuestaNPC: Respuesta especial del Adoptante 30.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: El terreno es amplio, pero sabemos que debemos reforzar los cierres
+        perimetrales antes de recibirlo.
       esEspecial: 1
   - idAdoptante: 31
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 31
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 31
+      respuestaNPC: "Tenemos mucha experiencia acumulada cuidando animales de gran
+        tama\xF1o a lo largo de los a\xF1os."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 31
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 31'
-      respuestaNPC: Respuesta especial del Adoptante 31.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 tipo de comportamiento o v\xEDnculo
+        esperan del animal?"
+      respuestaNPC: "Buscamos un compa\xF1ero tranquilo y calmado; no podr\xEDamos
+        manejar un animal demasiado hiperactivo."
       esEspecial: 1
   - idAdoptante: 32
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 32
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 32
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 32
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 32'
-      respuestaNPC: Respuesta especial del Adoptante 32.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFC\xF3mo han acondicionado los
+        espacios para evitar escapes?"
+      respuestaNPC: "Hemos sellado posibles v\xEDas de escape y acondicionado el
+        patio para que est\xE9 bien protegido."
       esEspecial: 1
   - idAdoptante: 33
     viveSolo: 1
     preguntas:
     - enunciadoPregunta: "\xBFAl vivir solo/a, cu\xE1nto tiempo sueles tener disponible
         durante el d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 33
+      respuestaNPC: "\xA1Bastante! Al vivir solo maneja mis propios horarios y paso
+        mucho tiempo en casa, as\xED que dispongo de tiempo alto para cuidarlo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHas tenido antes un animal con necesidades similares
         haci\xE9ndote cargo t\xFA solo/a?"
-      respuestaNPC: Respuesta P2 del Adoptante 33
+      respuestaNPC: "Tengo muy buena experiencia previa cuidando animales peque\xF1os,
+        s\xE9 exactamente qu\xE9 requieren."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal siendo
         tu residencia \xFAnica?"
-      respuestaNPC: Respuesta P3 del Adoptante 33
+      respuestaNPC: "Es un departamento bastante amplio, tranquilo y seguro, ideal
+        para estar c\xF3modos."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 33'
-      respuestaNPC: Respuesta especial del Adoptante 33.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFC\xF3mo es su rutina diaria habitual?"
+      respuestaNPC: Mantengo una rutina diaria muy organizada y estable, lo que me
+        da margen de sobra para atenderlo.
       esEspecial: 1
   - idAdoptante: 34
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 34
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 34
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 34
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 34'
-      respuestaNPC: Respuesta especial del Adoptante 34.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 tipo de ambiente buscan para
+        el animal?"
+      respuestaNPC: "Queremos mantener un entorno muy sereno y hogare\xF1o, evitando
+        ruidos fuertes o sobresaltos."
       esEspecial: 1
   - idAdoptante: 35
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 35
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 35
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 35
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 35'
-      respuestaNPC: Respuesta especial del Adoptante 35.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Uno de mis hermanos conoce bastante sobre la alimentaci\xF3n
+        y los cuidados espec\xEDficos que requiere."
       esEspecial: 1
   - idAdoptante: 36
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 36
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 36
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 36
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 36'
-      respuestaNPC: Respuesta especial del Adoptante 36.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFQu\xE9 zonas de la propiedad podr\xEDa
+        utilizar el animal?"
+      respuestaNPC: "Tenemos varias zonas delimitadas en la propiedad donde el animal
+        podr\xE1 explorar de forma segura."
       esEspecial: 1
   - idAdoptante: 37
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 37
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 37
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 37
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 37'
-      respuestaNPC: Respuesta especial del Adoptante 37.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 actividades realizan habitualmente
+        en familia?"
+      respuestaNPC: Nos encanta hacer salidas al aire libre y caminatas en familia
+        los fines de semana.
       esEspecial: 1
   - idAdoptante: 38
     viveSolo: 1
     preguntas:
     - enunciadoPregunta: "\xBFAl vivir solo/a, cu\xE1nto tiempo sueles tener disponible
         durante el d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 38
+      respuestaNPC: "\xA1Bastante! Al vivir solo maneja mis propios horarios y paso
+        mucho tiempo en casa, as\xED que dispongo de tiempo alto para cuidarlo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHas tenido antes un animal con necesidades similares
         haci\xE9ndote cargo t\xFA solo/a?"
-      respuestaNPC: Respuesta P2 del Adoptante 38
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal siendo
         tu residencia \xFAnica?"
-      respuestaNPC: Respuesta P3 del Adoptante 38
+      respuestaNPC: "Es un departamento bastante amplio, tranquilo y seguro, ideal
+        para estar c\xF3modos."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 38'
-      respuestaNPC: Respuesta especial del Adoptante 38.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFC\xF3mo ser\xEDa un d\xEDa normal
+        para usted y el animal?"
+      respuestaNPC: "Trabajo desde casa casi toda la semana, as\xED que compartir\xEDamos
+        un d\xEDa a d\xEDa tranquilo e integrado."
       esEspecial: 1
   - idAdoptante: 39
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 39
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 39
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 39
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 39'
-      respuestaNPC: Respuesta especial del Adoptante 39.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFC\xF3mo reaccionan los ni\xF1os
+        frente a los animales?"
+      respuestaNPC: "Los ni\xF1os son muy educados con los animales; saben respetarlos
+        y darles su espacio sin molestarlos."
       esEspecial: 1
   - idAdoptante: 40
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 40
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 40
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 40
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 40'
-      respuestaNPC: Respuesta especial del Adoptante 40.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Hemos preparado varios m\xF3dulos, cuerdas y elementos de enriquecimiento
+        ambiental en el patio."
       esEspecial: 1
   - idAdoptante: 41
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 41
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 41
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 41
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 41'
-      respuestaNPC: Respuesta especial del Adoptante 41.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFCon qu\xE9 frecuencia reciben
+        visitas o ruidos en casa?"
+      respuestaNPC: Organizamos reuniones familiares muy seguidas y la casa suele
+        estar llena de gente los fines de semana.
       esEspecial: 1
   - idAdoptante: 42
     viveSolo: 1
     preguntas:
     - enunciadoPregunta: "\xBFAl vivir solo/a, cu\xE1nto tiempo sueles tener disponible
         durante el d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 42
+      respuestaNPC: "\xA1Bastante! Al vivir solo maneja mis propios horarios y paso
+        mucho tiempo en casa, as\xED que dispongo de tiempo alto para cuidarlo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHas tenido antes un animal con necesidades similares
         haci\xE9ndote cargo t\xFA solo/a?"
-      respuestaNPC: Respuesta P2 del Adoptante 42
+      respuestaNPC: A decir verdad, tengo poquita experiencia propia, pero he estado
+        leyendo e investigando por mi cuenta.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal siendo
         tu residencia \xFAnica?"
-      respuestaNPC: Respuesta P3 del Adoptante 42
+      respuestaNPC: "Es un departamento bastante amplio, tranquilo y seguro, ideal
+        para estar c\xF3modos."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 42'
-      respuestaNPC: Respuesta especial del Adoptante 42.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 tipo de rutina espera tener con
+        el animal?"
+      respuestaNPC: "Tengo h\xE1bitos nocturnos, por lo que paso la noche despierto
+        en casa haciendo compa\xF1\xEDa en calma."
       esEspecial: 1
   - idAdoptante: 43
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 43
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 43
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 43
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 43'
-      respuestaNPC: Respuesta especial del Adoptante 43.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Tenemos mucha facilidad para la construcci\xF3n y podemos adaptar
+        o construir el refugio necesario."
       esEspecial: 1
   - idAdoptante: 44
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 44
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 44
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 44
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 44'
-      respuestaNPC: Respuesta especial del Adoptante 44.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFCu\xE1nta interacci\xF3n esperan tener
+        diariamente con el animal?"
+      respuestaNPC: "Preferimos un animal independiente que no exija interacci\xF3n
+        afectiva constante durante el d\xEDa."
       esEspecial: 1
   - idAdoptante: 45
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 45
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 45
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 45
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 45'
-      respuestaNPC: Respuesta especial del Adoptante 45.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFEn qu\xE9 horarios suelen estar
+        activos en casa?"
+      respuestaNPC: "Ambos trabajamos en turno de noche, por lo que la casa est\xE1
+        activa principalmente tarde y noche."
       esEspecial: 1
   - idAdoptante: 46
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 46
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 46
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 46
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 46'
-      respuestaNPC: Respuesta especial del Adoptante 46.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "El per\xEDmetro del terreno est\xE1 completamente cercado con
+        malla alta y portones de seguridad."
       esEspecial: 1
   - idAdoptante: 47
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 47
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 47
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 47
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 47'
-      respuestaNPC: Respuesta especial del Adoptante 47.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFLas instalaciones se encuentran
+        listas actualmente?"
+      respuestaNPC: Tenemos bastante experiencia en mantener terrenos rurales seguros
+        y protegidos contra escapes.
       esEspecial: 1
   - idAdoptante: 48
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 48
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 48
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 48
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 48'
-      respuestaNPC: Respuesta especial del Adoptante 48.
+    - enunciadoPregunta: "[Empat\xEDa II] \xBFC\xF3mo manejar\xEDan la relaci\xF3n
+        de los ni\xF1os con el animal?"
+      respuestaNPC: "Le ense\xF1amos a los ni\xF1os a ser cuidadosos y tratarlos
+        con paciencia para no asustarlos."
       esEspecial: 1
   - idAdoptante: 49
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 49
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 49
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 49
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 49'
-      respuestaNPC: Respuesta especial del Adoptante 49.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFLas instalaciones se encuentran
+        listas actualmente?"
+      respuestaNPC: Ya tenemos corrales e instalaciones listas y techadas en la parcela.
       esEspecial: 1
   - idAdoptante: 50
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 50
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 50
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 50
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 50'
-      respuestaNPC: Respuesta especial del Adoptante 50.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: Conocemos bien las dietas de campo y nos repartimos las tareas
+        diarias entre los miembros de la familia.
       esEspecial: 1
   - idAdoptante: 51
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 51
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 51
+      respuestaNPC: "Tenemos much\xEDsima experiencia en el ambiente rural y cuidando
+        toda clase de animales de campo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 51
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 51'
-      respuestaNPC: Respuesta especial del Adoptante 51.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 actividades esperan realizar
+        con el animal?"
+      respuestaNPC: "Buscamos un compa\xF1ero tranquilo; por nuestra edad no podemos
+        realizar esfuerzos f\xEDsicos exigentes."
       esEspecial: 1
   - idAdoptante: 52
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 52
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 52
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 52
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 52'
-      respuestaNPC: Respuesta especial del Adoptante 52.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: Contamos con los recursos y el espacio amplio necesario para
+        adaptar la infraestructura que pida.
       esEspecial: 1
   - idAdoptante: 53
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 53
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 53
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 53
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 53'
-      respuestaNPC: Respuesta especial del Adoptante 53.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFCu\xE1nto tiempo real pueden dedicarle
+        al d\xEDa?"
+      respuestaNPC: "Disponemos del tiempo y la dedicaci\xF3n diaria requerida para
+        brindarle compa\xF1\xEDa constante."
       esEspecial: 1
   - idAdoptante: 54
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 54
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 54
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 54
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 54'
-      respuestaNPC: Respuesta especial del Adoptante 54.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "El terreno es espacioso, pero debemos realizar varias obras
+        de adaptaci\xF3n antes de alojarlo."
       esEspecial: 1
   - idAdoptante: 55
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 55
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 55
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 55
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 55'
-      respuestaNPC: Respuesta especial del Adoptante 55.
+    - enunciadoPregunta: "[Empat\xEDa II] \xBFC\xF3mo manejar\xEDan la relaci\xF3n
+        de los ni\xF1os con el animal?"
+      respuestaNPC: "Los ni\xF1os son muy activos y debemos ense\xF1arles a respetar
+        los momentos en que necesite calma."
       esEspecial: 1
   - idAdoptante: 56
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 56
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 56
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 56
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 56'
-      respuestaNPC: Respuesta especial del Adoptante 56.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: Hemos investigado a fondo sobre la especie y conocemos sus necesidades
+        de espacio y dieta.
       esEspecial: 1
   - idAdoptante: 57
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 57
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 57
+      respuestaNPC: "S\xED, en la familia tenemos experiencia cuidando animales de
+        campo y de trabajo rural."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 57
+      respuestaNPC: Vivimos en una parcela bastante amplia con terreno abierto y
+        natural.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 57'
-      respuestaNPC: Respuesta especial del Adoptante 57.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFC\xF3mo es su rutina diaria habitual?"
+      respuestaNPC: Tenemos una rutina semanal muy bien estructurada que nos permite
+        cubrir todos sus cuidados.
       esEspecial: 1
   - idAdoptante: 58
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 58
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 58
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 58
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 58'
-      respuestaNPC: Respuesta especial del Adoptante 58.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: La verdad es que nos atrae su presencia, pero desconocemos la
+        cantidad real de cuidados que exige.
       esEspecial: 1
   - idAdoptante: 59
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 59
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 59
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 59
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 59'
-      respuestaNPC: Respuesta especial del Adoptante 59.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Preparamos un per\xEDmetro amplio y bien delimitado para evitar
+        cualquier tipo de accidente."
       esEspecial: 1
   - idAdoptante: 60
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 60
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 60
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 60
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 60'
-      respuestaNPC: Respuesta especial del Adoptante 60.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFCon qu\xE9 frecuencia reciben
+        visitas o ruidos en casa?"
+      respuestaNPC: La casa suele ser ruidosa y recibimos visitas de forma muy frecuente
+        durante la semana.
       esEspecial: 1
   - idAdoptante: 61
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 61
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 61
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 61
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 61'
-      respuestaNPC: Respuesta especial del Adoptante 61.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 tipo de comportamiento o v\xEDnculo
+        esperan del animal?"
+      respuestaNPC: "Uno de nosotros trabaja desde casa, asegurando presencia y atenci\xF3n
+        casi todo el d\xEDa."
       esEspecial: 1
   - idAdoptante: 62
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 62
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 62
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 62
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 62'
-      respuestaNPC: Respuesta especial del Adoptante 62.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFQu\xE9 actividades realizan normalmente?"
+      respuestaNPC: Realizamos actividades y caminatas al aire libre con regularidad
+        en nuestro tiempo libre.
       esEspecial: 1
   - idAdoptante: 63
     viveSolo: 1
     preguntas:
     - enunciadoPregunta: "\xBFAl vivir solo/a, cu\xE1nto tiempo sueles tener disponible
         durante el d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 63
+      respuestaNPC: "\xA1Bastante! Al vivir solo maneja mis propios horarios y paso
+        mucho tiempo en casa, as\xED que dispongo de tiempo alto para cuidarlo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHas tenido antes un animal con necesidades similares
         haci\xE9ndote cargo t\xFA solo/a?"
-      respuestaNPC: Respuesta P2 del Adoptante 63
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal siendo
         tu residencia \xFAnica?"
-      respuestaNPC: Respuesta P3 del Adoptante 63
+      respuestaNPC: "Vivo en una casita peque\xF1a pero con un bonito patio completamente
+        cerrado."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 63'
-      respuestaNPC: Respuesta especial del Adoptante 63.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFC\xF3mo est\xE1 protegido el espacio
+        exterior?"
+      respuestaNPC: "El patio exterior est\xE1 totalmente cerrado con muros altos
+        y puerta de seguridad."
       esEspecial: 1
   - idAdoptante: 64
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 64
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 64
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 64
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 64'
-      respuestaNPC: Respuesta especial del Adoptante 64.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "No sab\xEDamos que este tipo de animal requer\xEDa un h\xE1bitat
+        y cuidados tan espec\xEDficos."
       esEspecial: 1
   - idAdoptante: 65
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 65
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 65
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 65
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 65'
-      respuestaNPC: Respuesta especial del Adoptante 65.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFQu\xE9 ocurre con el animal cuando
+        salen de viaje?"
+      respuestaNPC: Viajamos algunos fines de semana fuera de la ciudad por trabajo
+        o descanso.
       esEspecial: 1
   - idAdoptante: 66
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 66
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 66
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 66
+      respuestaNPC: Contamos con un terreno sumamente espacioso y extenso alrededor
+        de la vivienda.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 66'
-      respuestaNPC: Respuesta especial del Adoptante 66.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "El terreno est\xE1 cercado, pero debemos revisar la altura de
+        las mallas para este tipo de animal."
       esEspecial: 1
   - idAdoptante: 67
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 67
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 67
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 67
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 67'
-      respuestaNPC: Respuesta especial del Adoptante 67.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Estamos totalmente dispuestos a modificar y adaptar el patio
+        seg\xFAn las recomendaciones que nos den."
       esEspecial: 1
   - idAdoptante: 68
     viveSolo: 1
     preguntas:
     - enunciadoPregunta: "\xBFAl vivir solo/a, cu\xE1nto tiempo sueles tener disponible
         durante el d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 68
+      respuestaNPC: "\xA1Bastante! Al vivir solo maneja mis propios horarios y paso
+        mucho tiempo en casa, as\xED que dispongo de tiempo alto para cuidarlo."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHas tenido antes un animal con necesidades similares
         haci\xE9ndote cargo t\xFA solo/a?"
-      respuestaNPC: Respuesta P2 del Adoptante 68
+      respuestaNPC: "S\xED, tenemos buena experiencia previa cuidando aves y conocemos
+        sus necesidades de descanso."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal siendo
         tu residencia \xFAnica?"
-      respuestaNPC: Respuesta P3 del Adoptante 68
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 68'
-      respuestaNPC: Respuesta especial del Adoptante 68.
+    - enunciadoPregunta: "[Investigaci\xF3n I] \xBFEn qu\xE9 horarios suelen estar
+        activos en casa?"
+      respuestaNPC: "Tengo turno laboral nocturno, por lo que mi descanso es de d\xEDa
+        y estoy activo por las noches."
       esEspecial: 1
   - idAdoptante: 69
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 69
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 69
+      respuestaNPC: "S\xED, tenemos buena experiencia previa cuidando aves y conocemos
+        sus necesidades de descanso."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 69
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 69'
-      respuestaNPC: Respuesta especial del Adoptante 69.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Disponemos de una habitaci\xF3n trasera muy silenciosa y aislada
+        para que descanse sin ruidos."
       esEspecial: 1
   - idAdoptante: 70
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 70
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 70
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 70
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 70'
-      respuestaNPC: Respuesta especial del Adoptante 70.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Hemos estado leyendo e investigando varios art\xEDculos sobre
+        su comportamiento e historia."
       esEspecial: 1
   - idAdoptante: 71
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 71
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 71
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 71
+      respuestaNPC: Nuestra casa cuenta con un patio amplio y seguro donde hay buen
+        espacio.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 71'
-      respuestaNPC: Respuesta especial del Adoptante 71.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: Solemos recibir bastantes visitas en casa y el ambiente suele
+        ser muy concurrido.
       esEspecial: 1
   - idAdoptante: 72
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 72
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 72
+      respuestaNPC: "Hemos tenido y cuidado animales anteriormente en casa, as\xED
+        que no somos novatos en esto."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 72
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 72'
-      respuestaNPC: Respuesta especial del Adoptante 72.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: Estamos dispuestos a realizar los cambios de infraestructura
+        que sean necesarios en la casa.
       esEspecial: 1
   - idAdoptante: 73
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 73
+      respuestaNPC: "Como familia tenemos un tiempo medio disponible. Nos organizamos
+        entre nosotros para cubrir lo necesario durante el d\xEDa."
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 73
+      respuestaNPC: Sinceramente tenemos poca experiencia previa con este tipo de
+        animales, pero tenemos muchas ganas de aprender.
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 73
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 73'
-      respuestaNPC: Respuesta especial del Adoptante 73.
+    - enunciadoPregunta: "[Empat\xEDa I] \xBFQu\xE9 tipo de comportamiento o v\xEDnculo
+        esperan del animal?"
+      respuestaNPC: "Nos llam\xF3 mucho la atenci\xF3n su aspecto visual, pero no
+        conocemos bien sus necesidades reales."
       esEspecial: 1
   - idAdoptante: 74
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 74
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 74
+      respuestaNPC: "S\xED, tenemos buena experiencia previa cuidando aves y conocemos
+        sus necesidades de descanso."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 74
+      respuestaNPC: "Es una casa bastante amplia y c\xF3moda con buen espacio interior
+        y exterior."
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 74'
-      respuestaNPC: Respuesta especial del Adoptante 74.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Uno de los miembros de la familia tiene conocimientos t\xE9cnicos
+        espec\xEDficos sobre el cuidado de aves."
       esEspecial: 1
   - idAdoptante: 75
     viveSolo: 0
     preguntas:
     - enunciadoPregunta: "\xBFCu\xE1nto tiempo suelen tener disponible durante el
         d\xEDa para cuidar al animal?"
-      respuestaNPC: Respuesta P1 del Adoptante 75
+      respuestaNPC: Tenemos bastante tiempo disponible, siempre hay alguien en casa
+        dispuesto a hacerse cargo y cuidarlo como corresponde.
       esEspecial: 0
     - enunciadoPregunta: "\xBFHan tenido antes un animal con necesidades similares?"
-      respuestaNPC: Respuesta P2 del Adoptante 75
+      respuestaNPC: "S\xED, en nuestra familia hemos criado y cuidado aves de corral
+        anteriormente."
       esEspecial: 0
     - enunciadoPregunta: "\xBFC\xF3mo es el espacio donde vivir\xEDa el animal?"
-      respuestaNPC: Respuesta P3 del Adoptante 75
+      respuestaNPC: Es una casa con un patio muy bien protegido y separado de otros
+        espacios.
       esEspecial: 0
-    - enunciadoPregunta: '[ESPECIAL] Pregunta clave sobre el caso del adoptante 75'
-      respuestaNPC: Respuesta especial del Adoptante 75.
+    - enunciadoPregunta: "[Investigaci\xF3n II] \xBFQu\xE9 espacio o preparaci\xF3n
+        espec\xEDfica tienen actualmente para el animal?"
+      respuestaNPC: "Tenemos un \xE1rea protegida y completamente separada de otros
+        animales para evitar conflictos."
       esEspecial: 1
