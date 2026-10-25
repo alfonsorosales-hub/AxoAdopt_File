@@ -4,66 +4,64 @@ public class PuntoEntrevistaTrigger : MonoBehaviour
 {
     [Header("Referencias OBLIGATORIAS")]
     [SerializeField] private EntrevistaUIManager entrevistaUIManager;
-    [SerializeField] private AdoptanteData adoptanteDatabase; // Arrastra aquí tu ScriptableObject AdoptanteData
 
     [Header("Configuración de NPC")]
     [SerializeField] private string tagNPC = "NPC";
 
     private void OnTriggerEnter(Collider other)
     {
-        // 1. Validar que lo que entra es el NPC
-        if (!string.IsNullOrEmpty(tagNPC) && !other.CompareTag(tagNPC) && (other.transform.root == null || !other.transform.root.CompareTag(tagNPC)))
+        bool esNPC = string.IsNullOrEmpty(tagNPC) || 
+                     other.CompareTag(tagNPC) || 
+                     (other.transform.root != null && other.transform.root.CompareTag(tagNPC));
+
+        if (!esNPC) return;
+
+        if (entrevistaUIManager == null)
         {
+            Debug.LogError("[PuntoEntrevistaTrigger] Falta asignar EntrevistaUIManager en el Inspector.");
             return;
         }
 
-        // 2. Validar referencias
-        if (entrevistaUIManager == null || adoptanteDatabase == null)
-        {
-            Debug.LogError("[PuntoEntrevistaTrigger] Faltan asignaciones en el Inspector.");
-            return;
-        }
+        string idDetectada = ExtraerIDNumerica(other.gameObject);
 
-        // 3. Obtener la ID directamente de la base de datos AdoptanteData
-        string idParaCargar = ObtenerIDDesdeDatabase();
-
-        if (!string.IsNullOrEmpty(idParaCargar))
+        if (!string.IsNullOrEmpty(idDetectada))
         {
-            Debug.Log($"[Trigger] Activando panel para la ID de AdoptanteData: {idParaCargar}");
-            entrevistaUIManager.CargarEntrevistaPorID(idParaCargar);
+            Debug.Log($"<color=green>[Trigger] NPC detectado con ID: '{idDetectada}'</color>");
+            entrevistaUIManager.CargarEntrevistaPorID(idDetectada);
         }
         else
         {
-            Debug.LogError("[Trigger] No se pudo obtener una ID válida desde AdoptanteData.");
+            Debug.LogWarning($"[Trigger] El objeto '{other.gameObject.name}' no tiene una ID válida (01 a 75).");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(tagNPC) || (other.transform.root != null && other.transform.root.CompareTag(tagNPC)))
+        bool esNPC = string.IsNullOrEmpty(tagNPC) || 
+                     other.CompareTag(tagNPC) || 
+                     (other.transform.root != null && other.transform.root.CompareTag(tagNPC));
+
+        if (esNPC && entrevistaUIManager != null)
         {
-            if (entrevistaUIManager != null)
-            {
-                entrevistaUIManager.OcultarPaneles();
-            }
+            entrevistaUIManager.OcultarPaneles();
         }
     }
 
-    /// Lee la ID del adoptante directamente desde AdoptanteData
-    private string ObtenerIDDesdeDatabase()
+    private string ExtraerIDNumerica(GameObject obj)
     {
-        if (adoptanteDatabase == null || adoptanteDatabase.adoptantesList == null || adoptanteDatabase.adoptantesList.Count == 0)
+        string nombreObjeto = obj.name.Trim();
+        if (int.TryParse(nombreObjeto, out int numObjeto) && numObjeto >= 1 && numObjeto <= 75)
         {
-            return null;
+            return numObjeto < 10 ? $"0{numObjeto}" : $"{numObjeto}";
         }
 
-        // Si tu AdoptanteData guarda el índice del NPC actual que camina (ej. un contador o índice actual)
-        // o si los busca en la lista, aquí lee el primer valor disponible o el elemento actual:
-        var adoptanteActual = adoptanteDatabase.adoptantesList[0]; // Lee el objeto actual de la lista
-
-        if (adoptanteActual != null && !string.IsNullOrEmpty(adoptanteActual.id))
+        if (obj.transform.root != null)
         {
-            return adoptanteActual.id;
+            string nombreRaiz = obj.transform.root.name.Trim();
+            if (int.TryParse(nombreRaiz, out int numRaiz) && numRaiz >= 1 && numRaiz <= 75)
+            {
+                return numRaiz < 10 ? $"0{numRaiz}" : $"{numRaiz}";
+            }
         }
 
         return null;
