@@ -4,64 +4,66 @@ public class PuntoEntrevistaTrigger : MonoBehaviour
 {
     [Header("Referencias OBLIGATORIAS")]
     [SerializeField] private EntrevistaUIManager entrevistaUIManager;
+    [SerializeField] private AdoptanteData adoptanteDatabase; // Arrastra aquí tu ScriptableObject AdoptanteData
 
     [Header("Configuración de NPC")]
     [SerializeField] private string tagNPC = "NPC";
 
     private void OnTriggerEnter(Collider other)
     {
-        bool esNPC = string.IsNullOrEmpty(tagNPC) || 
-                     other.CompareTag(tagNPC) || 
-                     (other.transform.root != null && other.transform.root.CompareTag(tagNPC));
-
-        if (!esNPC) return;
-
-        if (entrevistaUIManager == null)
+        // 1. Validar que lo que entra es el NPC
+        if (!string.IsNullOrEmpty(tagNPC) && !other.CompareTag(tagNPC) && (other.transform.root == null || !other.transform.root.CompareTag(tagNPC)))
         {
-            Debug.LogError("[PuntoEntrevistaTrigger] Falta asignar EntrevistaUIManager en el Inspector.");
             return;
         }
 
-        string idDetectada = ExtraerIDNumerica(other.gameObject);
-
-        if (!string.IsNullOrEmpty(idDetectada))
+        // 2. Validar referencias
+        if (entrevistaUIManager == null || adoptanteDatabase == null)
         {
-            Debug.Log($"<color=green>[Trigger] NPC detectado con ID: '{idDetectada}'</color>");
-            entrevistaUIManager.CargarEntrevistaPorID(idDetectada);
+            Debug.LogError("[PuntoEntrevistaTrigger] Faltan asignaciones en el Inspector.");
+            return;
+        }
+
+        // 3. Obtener la ID directamente de la base de datos AdoptanteData
+        string idParaCargar = ObtenerIDDesdeDatabase();
+
+        if (!string.IsNullOrEmpty(idParaCargar))
+        {
+            Debug.Log($"[Trigger] Activando panel para la ID de AdoptanteData: {idParaCargar}");
+            entrevistaUIManager.CargarEntrevistaPorID(idParaCargar);
         }
         else
         {
-            Debug.LogWarning($"[Trigger] El objeto '{other.gameObject.name}' no tiene una ID válida (01 a 75).");
+            Debug.LogError("[Trigger] No se pudo obtener una ID válida desde AdoptanteData.");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        bool esNPC = string.IsNullOrEmpty(tagNPC) || 
-                     other.CompareTag(tagNPC) || 
-                     (other.transform.root != null && other.transform.root.CompareTag(tagNPC));
-
-        if (esNPC && entrevistaUIManager != null)
+        if (other.CompareTag(tagNPC) || (other.transform.root != null && other.transform.root.CompareTag(tagNPC)))
         {
-            entrevistaUIManager.OcultarPaneles();
+            if (entrevistaUIManager != null)
+            {
+                entrevistaUIManager.OcultarPaneles();
+            }
         }
     }
 
-    private string ExtraerIDNumerica(GameObject obj)
+    /// Lee la ID del adoptante directamente desde AdoptanteData
+    private string ObtenerIDDesdeDatabase()
     {
-        string nombreObjeto = obj.name.Trim();
-        if (int.TryParse(nombreObjeto, out int numObjeto) && numObjeto >= 1 && numObjeto <= 75)
+        if (adoptanteDatabase == null || adoptanteDatabase.adoptantesList == null || adoptanteDatabase.adoptantesList.Count == 0)
         {
-            return numObjeto < 10 ? $"0{numObjeto}" : $"{numObjeto}";
+            return null;
         }
 
-        if (obj.transform.root != null)
+        // Si tu AdoptanteData guarda el índice del NPC actual que camina (ej. un contador o índice actual)
+        // o si los busca en la lista, aquí lee el primer valor disponible o el elemento actual:
+        var adoptanteActual = adoptanteDatabase.adoptantesList[0]; // Lee el objeto actual de la lista
+
+        if (adoptanteActual != null && !string.IsNullOrEmpty(adoptanteActual.id))
         {
-            string nombreRaiz = obj.transform.root.name.Trim();
-            if (int.TryParse(nombreRaiz, out int numRaiz) && numRaiz >= 1 && numRaiz <= 75)
-            {
-                return numRaiz < 10 ? $"0{numRaiz}" : $"{numRaiz}";
-            }
+            return adoptanteActual.id;
         }
 
         return null;
