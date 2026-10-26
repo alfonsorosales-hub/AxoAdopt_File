@@ -1,43 +1,104 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class MainMenuManager : MonoBehaviour
 {
-    [Header("Configuración de Escenas")]
-    [Tooltip("Nombre exacto de la escena del juego principal")]
-    [SerializeField] private string gameSceneName = "GameScene";
+    [Header("Configuración de Escena")]
+    #if UNITY_EDITOR
+    [Tooltip("Arrastra aquí tu escena de Gameplay desde la carpeta Assets")]
+    [SerializeField] private SceneAsset gameplaySceneAsset;
+    #endif
 
-    // 1. Iniciar Juego (Empieza una nueva partida)
+    // Se guarda automáticamente el nombre de la escena elegida
+    [HideInInspector]
+    [SerializeField] private string sceneName;
+
+    [Header("Referencias de UI")]
+    [SerializeField] private Button continueButton;
+    [SerializeField] private GameObject optionsPanel;
+
+    private void OnValidate()
+    {
+        #if UNITY_EDITOR
+        // Actualiza el nombre de la escena de forma automática al asignarla en el Inspector
+        if (gameplaySceneAsset != null)
+        {
+            sceneName = gameplaySceneAsset.name;
+        }
+        #endif
+    }
+
+    private void Start()
+    {
+        CheckSaveFile();
+    }
+
+    private void CheckSaveFile()
+    {
+        bool hasSave = PlayerPrefs.GetInt("HasSaveFile", 0) == 1;
+
+        if (continueButton != null)
+        {
+            continueButton.interactable = hasSave;
+        }
+    }
+
+    // 1. INICIAR PARTIDA
     public void StartNewGame()
     {
-        // Opcional: Borrar datos previas si se quiere empezar totalmente de cero
-        // PlayerPrefs.DeleteAll(); 
+        if (string.IsNullOrEmpty(sceneName))
+        {
+            Debug.LogError("¡No has asignado ninguna escena en el Inspector!");
+            return;
+        }
 
-        SceneManager.LoadScene(gameSceneName);
+        PlayerPrefs.SetInt("IsContinuing", 0);
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene(sceneName);
     }
 
-    // 2. Continuar Partida (Carga el juego existente)
+    // 2. CONTINUAR
     public void ContinueGame()
     {
-        // Verifica si existe algún guardado antes de intentar cargar
-        if (PlayerPrefs.HasKey("SavedLevel") || PlayerPrefs.HasKey("SaveData"))
+        if (string.IsNullOrEmpty(sceneName))
         {
-            // Carga la escena del juego (o la escena guardada específica)
-            string sceneToLoad = PlayerPrefs.GetString("SavedLevel", gameSceneName);
-            SceneManager.LoadScene(sceneToLoad);
+            Debug.LogError("¡No has asignado ninguna escena en el Inspector!");
+            return;
         }
-        else
-        {
-            Debug.LogWarning("No se encontró ninguna partida guardada.");
 
+        PlayerPrefs.SetInt("IsContinuing", 1);
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene(sceneName);
+    }
+
+    // 3. OPCIONES
+    public void OpenOptions()
+    {
+        if (optionsPanel != null)
+        {
+            optionsPanel.SetActive(true);
         }
     }
 
-    // 3. Salir del Juego
+    public void CloseOptions()
+    {
+        if (optionsPanel != null)
+        {
+            optionsPanel.SetActive(false);
+        }
+    }
+
+    // 4. SALIR
     public void QuitGame()
     {
         Debug.Log("Saliendo del juego...");
-        // Cierra la aplicación (solo funciona en builds ejecutables, no en el editor)
         Application.Quit();
     }
 }

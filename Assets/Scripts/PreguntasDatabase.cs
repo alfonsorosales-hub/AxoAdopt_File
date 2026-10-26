@@ -50,7 +50,7 @@ public class PreguntasDatabase : ScriptableObject
             };
 
             // Definir textos de las preguntas generales
-            string p1Text = viveSolo 
+            string p1Text = viveSolo
                 ? "¿Al vivir solo/a, cuánto tiempo sueles tener disponible durante el día para cuidar al animal?"
                 : "¿Cuánto tiempo suelen tener disponible durante el día para cuidar al animal?";
 
@@ -88,15 +88,28 @@ public class PreguntasDatabase : ScriptableObject
 
             adoptantesPreguntas.Add(grupo);
         }
+
+#if UNITY_EDITOR
+        // Marca el asset como modificado para que Unity guarde los datos generados
+        UnityEditor.EditorUtility.SetDirty(this);
+#endif
     }
 
     public List<PreguntaData> ObtenerPreguntasPorID(string id)
     {
-        if (adoptantesPreguntas == null) return null;
+        // Si el asset llegó vacío, se genera en memoria para no devolver null
+        if (adoptantesPreguntas == null || adoptantesPreguntas.Count == 0)
+        {
+            Debug.LogWarning("[PreguntasDatabase] La lista estaba vacía; se generó en memoria. Regenera el asset desde el Inspector para guardarla.");
+            GenerarEstructura75Adoptantes();
+        }
+
+        // La ID se compara como número, así "1" y "01" son equivalentes
+        if (!int.TryParse(id, out int buscado)) return null;
 
         foreach (var grupo in adoptantesPreguntas)
         {
-            if (grupo.idAdoptante == id)
+            if (int.TryParse(grupo.idAdoptante, out int actual) && actual == buscado)
             {
                 return grupo.preguntas;
             }
@@ -114,14 +127,14 @@ public class PreguntasDatabase : ScriptableObject
         switch (num)
         {
             case 12: return "Mire, la verdad es que ambos pasamos casi todo el día fuera trabajando o haciendo cosas, así que nuestro tiempo es bastante bajo.";
-            case 1: case 5: case 10: case 14: case 18: case 21: case 24: case 26: case 29: case 32: 
+            case 1: case 5: case 10: case 14: case 18: case 21: case 24: case 26: case 29: case 32:
             case 36: case 41: case 44: case 54: case 58: case 60: case 65: case 73:
-                return viveSolo 
-                    ? "Tengo un tiempo medio al día; entre el trabajo y mis pendientes me organizo para dedicarle un par de horas fijas." 
+                return viveSolo
+                    ? "Tengo un tiempo medio al día; entre el trabajo y mis pendientes me organizo para dedicarle un par de horas fijas."
                     : "Como familia tenemos un tiempo medio disponible. Nos organizamos entre nosotros para cubrir lo necesario durante el día.";
             default:
-                return viveSolo 
-                    ? "¡Bastante! Al vivir solo maneja mis propios horarios y paso mucho tiempo en casa, así que dispongo de tiempo alto para cuidarlo." 
+                return viveSolo
+                    ? "¡Bastante! Al vivir solo maneja mis propios horarios y paso mucho tiempo en casa, así que dispongo de tiempo alto para cuidarlo."
                     : "Tenemos bastante tiempo disponible, siempre hay alguien en casa dispuesto a hacerse cargo y cuidarlo como corresponde.";
         }
     }
@@ -137,8 +150,8 @@ public class PreguntasDatabase : ScriptableObject
             case 7: case 15: case 17: case 23: case 25: case 28: case 39: case 48: case 49: case 50: case 57:
                 return "Sí, en la familia tenemos experiencia cuidando animales de campo y de trabajo rural.";
             case 10: case 12: case 18: case 26: case 29: case 32: case 42: case 58: case 64: case 73:
-                return viveSolo 
-                    ? "A decir verdad, tengo poquita experiencia propia, pero he estado leyendo e investigando por mi cuenta." 
+                return viveSolo
+                    ? "A decir verdad, tengo poquita experiencia propia, pero he estado leyendo e investigando por mi cuenta."
                     : "Sinceramente tenemos poca experiencia previa con este tipo de animales, pero tenemos muchas ganas de aprender.";
             case 11: return "Sí, ambas hemos tenido y cuidado roedores anteriormente, nos resultan muy familiares.";
             case 13: case 14: return "Sí, en casa ya hemos tenido aves antes y sabemos cómo cuidarlas adecuadamente.";
@@ -159,13 +172,13 @@ public class PreguntasDatabase : ScriptableObject
         switch (num)
         {
             case 1: return "Vivimos en una casa acogedora con un patio pequeño pero bien aprovechado.";
-            case 2: case 10: case 14: case 26: case 29: case 32: case 36: case 40: case 43: case 44: 
+            case 2: case 10: case 14: case 26: case 29: case 32: case 36: case 40: case 43: case 44:
             case 60: case 62: case 64: case 65: case 71:
                 return "Nuestra casa cuenta con un patio amplio y seguro donde hay buen espacio.";
             case 3: return "Vivo en un departamento mediano, muy tranquilo, limpio y bien distribuido.";
             case 4: case 11: case 19: case 20: case 33: case 38: case 42:
-                return viveSolo 
-                    ? "Es un departamento bastante amplio, tranquilo y seguro, ideal para estar cómodos." 
+                return viveSolo
+                    ? "Es un departamento bastante amplio, tranquilo y seguro, ideal para estar cómodos."
                     : "Vivimos en un departamento amplio y bien iluminado donde el ambiente es calmo.";
             case 5: return "En casa tenemos una habitación completa reservada y acondicionada especialmente para el animal.";
             case 7: return "Es una casa rural en el campo con un terreno muy amplio alrededor.";
@@ -198,7 +211,7 @@ public class PreguntasDatabase : ScriptableObject
             case 25: return "[Investigación I] ¿Han considerado cuánto tiempo requieren sus cuidados diarios?";
             case 26: return "[Investigación I] ¿Qué han preparado para mantener al animal ocupado?";
             case 29: return "[Empatía I] ¿Qué es lo que más les atrae de este animal?";
-            case 31: case 61: ReturnEmpatia: return "[Empatía I] ¿Qué tipo de comportamiento o vínculo esperan del animal?";
+            case 31: case 61: case 73: return "[Empatía I] ¿Qué tipo de comportamiento o vínculo esperan del animal?";
             case 32: return "[Investigación I] ¿Cómo han acondicionado los espacios para evitar escapes?";
             case 33: case 57: return "[Investigación I] ¿Cómo es su rutina diaria habitual?";
             case 34: return "[Empatía I] ¿Qué tipo de ambiente buscan para el animal?";
@@ -217,7 +230,6 @@ public class PreguntasDatabase : ScriptableObject
             case 62: return "[Investigación I] ¿Qué actividades realizan normalmente?";
             case 63: return "[Investigación I] ¿Cómo está protegido el espacio exterior?";
             case 65: return "[Investigación I] ¿Qué ocurre con el animal cuando salen de viaje?";
-            case 73: goto ReturnEmpatia;
             default: return "[Investigación I] Pregunta especial de seguimiento.";
         }
     }

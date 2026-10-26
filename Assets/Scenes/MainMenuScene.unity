@@ -422,7 +422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68404e00838247040960aa3744e76fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
-  gameSceneName: MainMenuScene
+  gameplaySceneAsset: {fileID: 102900000, guid: 3e735e44e25a6d04d95d2e8c88424ec1, type: 3}
+  sceneName: Mapa Beta
+  continueButton: {fileID: 1330037745}
+  optionsPanel: {fileID: 0}
 --- !u!4 &392812172
 Transform:
   m_ObjectHideFlags: 0

@@ -1,69 +1,111 @@
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class PuntoEntrevistaTrigger : MonoBehaviour
 {
-    [Header("Referencias OBLIGATORIAS")]
-    [SerializeField] private EntrevistaUIManager entrevistaUIManager;
-    [SerializeField] private AdoptanteData adoptanteDatabase; // Arrastra aquí tu ScriptableObject AdoptanteData
+    [Header("Referencias UI")]
+    [SerializeField] private EntrevistaUIManager uiManager;
 
-    [Header("Configuración de NPC")]
+    [Header("Configuración de Filtro")]
     [SerializeField] private string tagNPC = "NPC";
+
+    private Transform npcActual;
+
+    private void Awake()
+    {
+        if (uiManager == null)
+            uiManager = UnityEngine.Object.FindFirstObjectByType<EntrevistaUIManager>(FindObjectsInactive.Include);
+
+        if (uiManager == null)
+            Debug.LogError("[TRIGGER] No hay EntrevistaUIManager asignado en la escena.");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        // 1. Validar que lo que entra es el NPC
-        if (!string.IsNullOrEmpty(tagNPC) && !other.CompareTag(tagNPC) && (other.transform.root == null || !other.transform.root.CompareTag(tagNPC)))
+        Transform raiz = ObtenerRaizNPC(other.transform);
+        if (raiz == null) return;          // No es un NPC
+        if (raiz == npcActual) return;     // Mismo NPC ya procesado
+
+        // Obtener la ID del NPC
+        string idAdoptante = ObtenerIDDesdeNPC(raiz) ?? ObtenerIDDesdeNPC(other.transform);
+
+        if (string.IsNullOrEmpty(idAdoptante))
         {
+            Debug.LogError($"[TRIGGER] No se encontró una ID válida de 2 dígitos (01-75) para '{raiz.name}'.");
             return;
         }
 
-        // 2. Validar referencias
-        if (entrevistaUIManager == null || adoptanteDatabase == null)
-        {
-            Debug.LogError("[PuntoEntrevistaTrigger] Faltan asignaciones en el Inspector.");
-            return;
-        }
+        npcActual = raiz;
+        Debug.Log($"<color=green>[TRIGGER] ¡ID leída con éxito! ID: '{idAdoptante}'</color>");
 
-        // 3. Obtener la ID directamente de la base de datos AdoptanteData
-        string idParaCargar = ObtenerIDDesdeDatabase();
-
-        if (!string.IsNullOrEmpty(idParaCargar))
+        if (uiManager != null) 
         {
-            Debug.Log($"[Trigger] Activando panel para la ID de AdoptanteData: {idParaCargar}");
-            entrevistaUIManager.CargarEntrevistaPorID(idParaCargar);
-        }
-        else
-        {
-            Debug.LogError("[Trigger] No se pudo obtener una ID válida desde AdoptanteData.");
+            uiManager.CargarEntrevistaPorID(idAdoptante);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(tagNPC) || (other.transform.root != null && other.transform.root.CompareTag(tagNPC)))
-        {
-            if (entrevistaUIManager != null)
-            {
-                entrevistaUIManager.OcultarPaneles();
-            }
-        }
+        Transform raiz = ObtenerRaizNPC(other.transform);
+        if (raiz == null || raiz != npcActual) return;
+
+        npcActual = null;
+        if (uiManager != null) uiManager.OcultarPaneles();
     }
 
-    /// Lee la ID del adoptante directamente desde AdoptanteData
-    private string ObtenerIDDesdeDatabase()
+    private Transform ObtenerRaizNPC(Transform t)
     {
-        if (adoptanteDatabase == null || adoptanteDatabase.adoptantesList == null || adoptanteDatabase.adoptantesList.Count == 0)
+        Transform encontrado = null;
+        while (t != null)
         {
-            return null;
+            if (t.CompareTag(tagNPC)) encontrado = t;
+            t = t.parent;
+        }
+        return encontrado;
+    }
+
+    /// <summary>
+    /// Escanea los datos adjuntos en la jerarquía del NPC para obtener su ID numérica (01 a 75).
+    /// </summary>
+    private string ObtenerIDDesdeNPC(Transform objetivo)
+    {
+        if (objetivo == null) return null;
+
+        // 1. Probar en los componentes adjuntos
+        Component[] componentes = objetivo.GetComponentsInChildren<Component>(true);
+
+        for (int i = 0; i < componentes.Length; i++)
+        {
+            Component comp = componentes[i];
+            if (comp == null || comp == this) continue;
+
+            // Extraer ID si el nombre del componente o sus datos guardan el número
+            string idValida = ExtraerNumeroID(comp.ToString());
+            if (!string.IsNullOrEmpty(idValida)) return idValida;
         }
 
-        // Si tu AdoptanteData guarda el índice del NPC actual que camina (ej. un contador o índice actual)
-        // o si los busca en la lista, aquí lee el primer valor disponible o el elemento actual:
-        var adoptanteActual = adoptanteDatabase.adoptantesList[0]; // Lee el objeto actual de la lista
+        // 2. Probar en el nombre del objeto raíz del NPC instanciado en escena
+        string idRaiz = ExtraerNumeroID(objetivo.name);
+        if (!string.IsNullOrEmpty(idRaiz)) return idRaiz;
 
-        if (adoptanteActual != null && !string.IsNullOrEmpty(adoptanteActual.id))
+        return null;
+    }
+
+    private string ExtraerNumeroID(string texto)
+    {
+        if (string.IsNullOrEmpty(texto)) return null;
+
+        // Omitir nombres que contengan palabras reservadas de los assets si no son la ID
+        string limpio = texto.Replace("(Clone)", "").Trim();
+
+        MatchCollection coincidencias = Regex.Matches(limpio, @"\d+");
+
+        for (int i = coincidencias.Count - 1; i >= 0; i--)
         {
-            return adoptanteActual.id;
+            if (int.TryParse(coincidencias[i].Value, out int num) && num >= 1 && num <= 75)
+            {
+                return num.ToString("00"); // Asegura formato "01" a "75"
+            }
         }
 
         return null;

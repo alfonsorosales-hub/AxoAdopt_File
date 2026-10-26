@@ -15,7 +15,7 @@ MonoBehaviour:
   adoptantesList:
   - id: 01
     modelPrefab: {fileID: 0}
-    adopterName: "Los P\xE9rez"
+    adopterName: "Familia P\xE9rez"
     speciesStat: Perros
     photo: {fileID: 0}
     compositionStat: Pareja Joven
@@ -26,7 +26,7 @@ MonoBehaviour:
     commentStat: "Buscan compa\xF1\xEDa para sus actividades al aire libre."
   - id: 02
     modelPrefab: {fileID: 0}
-    adopterName: "Los Gonz\xE1les"
+    adopterName: "Familia Gonz\xE1les"
     speciesStat: Perros
     photo: {fileID: 0}
     compositionStat: Pareja con una Hija
