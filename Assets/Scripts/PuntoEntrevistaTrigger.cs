@@ -1,113 +1,116 @@
 using UnityEngine;
-using System.Text.RegularExpressions;
 
 public class PuntoEntrevistaTrigger : MonoBehaviour
 {
-    [Header("Referencias UI")]
-    [SerializeField] private EntrevistaUIManager uiManager;
-
-    [Header("Configuración de Filtro")]
-    [SerializeField] private string tagNPC = "NPC";
+    [Header("Referencias OBLIGATORIAS")]
+    [SerializeField] private EntrevistaUIManager entrevistaUIManager;
+    [SerializeField] private AdoptanteData adoptanteDatabase;
 
     private Transform npcActual;
+    private int collidersDentro = 0;
 
-    private void Awake()
+    private void Start()
     {
-        if (uiManager == null)
-            uiManager = UnityEngine.Object.FindFirstObjectByType<EntrevistaUIManager>(FindObjectsInactive.Include);
-
-        if (uiManager == null)
-            Debug.LogError("[TRIGGER] No hay EntrevistaUIManager asignado en la escena.");
+        var col = GetComponent<Collider>();
+        Debug.Log($"[Trigger] Start en '{name}'. " +
+                  $"Collider: {(col != null ? "isTrigger=" + col.isTrigger : "NO HAY COLLIDER")}. " +
+                  $"Manager: {entrevistaUIManager != null}. Database: {adoptanteDatabase != null}");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Transform raiz = ObtenerRaizNPC(other.transform);
-        if (raiz == null) return;          // No es un NPC
-        if (raiz == npcActual) return;     // Mismo NPC ya procesado
+        // Log ANTES de cualquier validación
+        Debug.Log($"[Trigger] OnTriggerEnter con '{other.name}' (root '{other.transform.root.name}')");
 
-        // Obtener la ID del NPC
-        string idAdoptante = ObtenerIDDesdeNPC(raiz) ?? ObtenerIDDesdeNPC(other.transform);
-
-        if (string.IsNullOrEmpty(idAdoptante))
+        if (entrevistaUIManager == null || adoptanteDatabase == null)
         {
-            Debug.LogError($"[TRIGGER] No se encontró una ID válida de 2 dígitos (01-75) para '{raiz.name}'.");
+            Debug.LogError("[Trigger] Faltan asignaciones en el Inspector (Manager o Database).");
             return;
         }
 
-        npcActual = raiz;
-        Debug.Log($"<color=green>[TRIGGER] ¡ID leída con éxito! ID: '{idAdoptante}'</color>");
-
-        if (uiManager != null) 
+        if (!EncontrarNPC(other.transform, out Transform npcRoot, out string id))
         {
-            uiManager.CargarEntrevistaPorID(idAdoptante);
+            Debug.LogWarning($"[Trigger] Ignorado '{other.name}': ningún objeto de su jerarquía coincide con un modelPrefab del database.");
+            return;
         }
+
+        collidersDentro++;
+
+        if (npcActual == npcRoot)
+        {
+            Debug.Log($"[Trigger] '{npcRoot.name}' ya estaba registrado, otro collider suyo entró (total: {collidersDentro}).");
+            return;
+        }
+
+        npcActual = npcRoot;
+        Debug.Log($"[Trigger] NPC '{npcRoot.name}' -> ID '{id}'. Llamando CargarEntrevistaPorID...");
+        entrevistaUIManager.CargarEntrevistaPorID(id);
+        Debug.Log("[Trigger] CargarEntrevistaPorID terminó sin errores.");
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Transform raiz = ObtenerRaizNPC(other.transform);
-        if (raiz == null || raiz != npcActual) return;
+        Debug.Log($"[Trigger] OnTriggerExit con '{other.name}'");
 
+        if (!EncontrarNPC(other.transform, out Transform npcRoot, out string id))
+        {
+            Debug.Log($"[Trigger] Exit ignorado: '{other.name}' no es un NPC del database.");
+            return;
+        }
+
+        if (npcRoot != npcActual)
+        {
+            Debug.Log($"[Trigger] Exit ignorado: '{npcRoot.name}' no es el NPC actual ('{(npcActual != null ? npcActual.name : "ninguno")}').");
+            return;
+        }
+
+        collidersDentro--;
+
+        if (collidersDentro > 0)
+        {
+            Debug.Log($"[Trigger] Salió un collider de '{npcRoot.name}', pero quedan {collidersDentro} dentro. No se oculta.");
+            return;
+        }
+
+        Debug.Log($"[Trigger] '{npcRoot.name}' salió por completo. Ocultando paneles.");
         npcActual = null;
-        if (uiManager != null) uiManager.OcultarPaneles();
-    }
+        collidersDentro = 0;
 
-    private Transform ObtenerRaizNPC(Transform t)
-    {
-        Transform encontrado = null;
-        while (t != null)
+        if (entrevistaUIManager == null)
         {
-            if (t.CompareTag(tagNPC)) encontrado = t;
-            t = t.parent;
-        }
-        return encontrado;
-    }
-
-    /// <summary>
-    /// Escanea los datos adjuntos en la jerarquía del NPC para obtener su ID numérica (01 a 75).
-    /// </summary>
-    private string ObtenerIDDesdeNPC(Transform objetivo)
-    {
-        if (objetivo == null) return null;
-
-        // 1. Probar en los componentes adjuntos
-        Component[] componentes = objetivo.GetComponentsInChildren<Component>(true);
-
-        for (int i = 0; i < componentes.Length; i++)
-        {
-            Component comp = componentes[i];
-            if (comp == null || comp == this) continue;
-
-            // Extraer ID si el nombre del componente o sus datos guardan el número
-            string idValida = ExtraerNumeroID(comp.ToString());
-            if (!string.IsNullOrEmpty(idValida)) return idValida;
+            Debug.LogError("[Trigger] No se pueden ocultar los paneles: falta el Manager.");
+            return;
         }
 
-        // 2. Probar en el nombre del objeto raíz del NPC instanciado en escena
-        string idRaiz = ExtraerNumeroID(objetivo.name);
-        if (!string.IsNullOrEmpty(idRaiz)) return idRaiz;
-
-        return null;
+        entrevistaUIManager.OcultarPaneles();
     }
 
-    private string ExtraerNumeroID(string texto)
+    /// Sube por la jerarquía desde el collider hasta encontrar un objeto
+    /// cuyo nombre coincida con el modelPrefab de algún adoptante.
+    private bool EncontrarNPC(Transform desde, out Transform npcRoot, out string id)
     {
-        if (string.IsNullOrEmpty(texto)) return null;
+        npcRoot = null;
+        id = null;
 
-        // Omitir nombres que contengan palabras reservadas de los assets si no son la ID
-        string limpio = texto.Replace("(Clone)", "").Trim();
-
-        MatchCollection coincidencias = Regex.Matches(limpio, @"\d+");
-
-        for (int i = coincidencias.Count - 1; i >= 0; i--)
+        for (Transform t = desde; t != null; t = t.parent)
         {
-            if (int.TryParse(coincidencias[i].Value, out int num) && num >= 1 && num <= 75)
+            string nombre = t.name.Replace("(Clone)", "").Trim();
+
+            foreach (var adoptante in adoptanteDatabase.adoptantesList)
             {
-                return num.ToString("00"); // Asegura formato "01" a "75"
+                if (adoptante == null || adoptante.modelPrefab == null) continue;
+
+                if (adoptante.modelPrefab.name == nombre)
+                {
+                    npcRoot = t;
+                    id = adoptante.id;
+                    return true;
+                }
             }
         }
 
-        return null;
+        return false;
     }
 }
+
+

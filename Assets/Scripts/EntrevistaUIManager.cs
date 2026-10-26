@@ -1,206 +1,119 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class EntrevistaUIManager : MonoBehaviour
 {
-    [Header("Base de Datos Oficial")]
+    [Header("Bases de Datos")]
     [SerializeField] private PreguntasDatabase preguntasDB;
 
     [Header("Paneles de Interfaz")]
     [SerializeField] private GameObject panel3Preguntas;
     [SerializeField] private GameObject panel4Preguntas;
 
-    [Header("Panel 3 Preguntas")]
-    [SerializeField] private Button[] botonesPreguntasPanel3;
-    [SerializeField] private TextMeshProUGUI respuestaUnicaPanel3;
+    [Header("Textos Panel 3 Preguntas")]
+    [SerializeField] private TextMeshProUGUI[] preguntasTextoPanel3;
+    [SerializeField] private TextMeshProUGUI[] respuestasTextoPanel3;
 
-    [Header("Panel 4 Preguntas")]
-    [SerializeField] private Button[] botonesPreguntasPanel4;
-    [SerializeField] private TextMeshProUGUI respuestaUnicaPanel4;
+    [Header("Textos Panel 4 Preguntas")]
+    [SerializeField] private TextMeshProUGUI[] preguntasTextoPanel4;
+    [SerializeField] private TextMeshProUGUI[] respuestasTextoPanel4;
 
-    private List<PreguntaData> listaPreguntasActuales = new List<PreguntaData>();
-    private TextMeshProUGUI campoRespuestaActivo = null;
-
-    private void Awake()
-    {
-        ApagarAmbosPaneles();
-    }
-
-    /// <summary>
-    /// Invoca la entrevista al entrar en contacto con el Trigger pasando la ID del NPC
-    /// </summary>
     public void CargarEntrevistaPorID(string idAdoptante)
     {
-        Debug.Log($"[Entrevista] Solicitud recibida con ID: '{idAdoptante}'");
+        Debug.Log($"[UI] CargarEntrevistaPorID('{idAdoptante}')");
+        OcultarPaneles();
 
-        ApagarAmbosPaneles();
-
-        if (preguntasDB == null)
+        if (!int.TryParse(idAdoptante != null ? idAdoptante.Trim() : null, out int idNumerica))
         {
-            Debug.LogError("[Entrevista] preguntasDB no está asignada en el Inspector.");
+            Debug.LogError($"[UI] La ID '{idAdoptante}' no es numérica.");
             return;
         }
 
-        if (string.IsNullOrEmpty(idAdoptante))
+        // Normalizar a 2 dígitos ("1" -> "01"), que es el formato de PreguntasDatabase
+        string idFormateada = idNumerica.ToString("00");
+        if (idFormateada != idAdoptante)
+            Debug.LogWarning($"[UI] ID '{idAdoptante}' normalizada a '{idFormateada}'. Conviene corregirla en AdoptanteData.");
+
+        if (idNumerica >= 1 && idNumerica <= 15)
         {
-            Debug.LogWarning("[Entrevista] La ID recibida está vacía.");
-            return;
+            MostrarPanel(panel3Preguntas, "Panel 3 preguntas");
+            CargarPreguntasYRespuestas(preguntasTextoPanel3, respuestasTextoPanel3, idFormateada);
         }
-
-        List<PreguntaData> preguntasObtenidas = BuscarPreguntas(idAdoptante);
-
-        if (preguntasObtenidas == null || preguntasObtenidas.Count == 0)
+        else if (idNumerica >= 16 && idNumerica <= 75)
         {
-            Debug.LogWarning($"[Entrevista] No se encontraron preguntas para la ID '{idAdoptante}'. Revisa cómo está escrita la ID en PreguntasDatabase.");
-            return;
-        }
-
-        listaPreguntasActuales = new List<PreguntaData>(preguntasObtenidas);
-        int totalPreguntas = listaPreguntasActuales.Count;
-        Debug.Log($"[Entrevista] {totalPreguntas} preguntas encontradas.");
-
-        // 4 o más preguntas -> panel de 4; 1 a 3 preguntas -> panel de 3
-        if (totalPreguntas >= 4)
-        {
-            ActivarConPadres(panel4Preguntas);
-            campoRespuestaActivo = respuestaUnicaPanel4;
-            ConfigurarPanelDirecto(botonesPreguntasPanel4, respuestaUnicaPanel4);
+            MostrarPanel(panel4Preguntas, "Panel 4 preguntas");
+            CargarPreguntasYRespuestas(preguntasTextoPanel4, respuestasTextoPanel4, idFormateada);
         }
         else
         {
-            ActivarConPadres(panel3Preguntas);
-            campoRespuestaActivo = respuestaUnicaPanel3;
-            ConfigurarPanelDirecto(botonesPreguntasPanel3, respuestaUnicaPanel3);
+            Debug.LogWarning($"[UI] La ID {idNumerica} está fuera del rango 1-75. No se muestra ningún panel.");
         }
     }
 
-    /// <summary>
-    /// Prueba varios formatos de ID ("1", "01", tal cual) hasta encontrar preguntas.
-    /// </summary>
-    private List<PreguntaData> BuscarPreguntas(string idOriginal)
+    private void MostrarPanel(GameObject panel, string nombre)
     {
-        string idLimpia = idOriginal.Trim();
-        List<string> candidatos = new List<string> { idLimpia };
-
-        if (int.TryParse(idLimpia, out int numID))
+        if (panel == null)
         {
-            candidatos.Add(numID.ToString("00")); // "01"
-            candidatos.Add(numID.ToString());     // "1"
-        }
-
-        foreach (string candidato in candidatos)
-        {
-            List<PreguntaData> resultado = preguntasDB.ObtenerPreguntasPorID(candidato);
-            if (resultado != null && resultado.Count > 0)
-            {
-                Debug.Log($"[Entrevista] ID encontrada con el formato '{candidato}'.");
-                return resultado;
-            }
-        }
-
-        return null;
-    }
-
-    /// <summary>
-    /// Activa el objeto y todos sus padres, por si alguno quedó desactivado.
-    /// </summary>
-    private void ActivarConPadres(GameObject objetivo)
-    {
-        if (objetivo == null)
-        {
-            Debug.LogError("[Entrevista] Falta asignar un panel en el Inspector.");
+            Debug.LogError($"[UI] '{nombre}' NO está asignado en el Inspector.");
             return;
         }
 
-        Transform t = objetivo.transform;
-        while (t != null)
-        {
-            if (!t.gameObject.activeSelf) t.gameObject.SetActive(true);
-            t = t.parent;
-        }
+        panel.SetActive(true);
+        Debug.Log($"[UI] '{nombre}' ({panel.name}) activeSelf={panel.activeSelf}, activeInHierarchy={panel.activeInHierarchy}");
+
+        if (!panel.activeInHierarchy)
+            Debug.LogWarning($"[UI] '{panel.name}' está activo pero un padre está desactivado, por eso no se ve.");
     }
 
-    private void ConfigurarPanelDirecto(Button[] botones, TextMeshProUGUI campoRespuesta)
+    private void CargarPreguntasYRespuestas(TextMeshProUGUI[] camposPreguntas, TextMeshProUGUI[] camposRespuestas, string idAdoptante)
     {
-        if (campoRespuesta != null)
-        {
-            campoRespuesta.gameObject.SetActive(true);
-            campoRespuesta.text = "";
-        }
+        for (int i = 0; i < camposPreguntas.Length; i++)
+            if (camposPreguntas[i] != null) camposPreguntas[i].text = "";
+        for (int i = 0; i < camposRespuestas.Length; i++)
+            if (camposRespuestas[i] != null) camposRespuestas[i].text = "";
 
-        if (botones == null || botones.Length == 0)
+        if (preguntasDB == null)
         {
-            Debug.LogError("[Entrevista] El arreglo de botones del panel está vacío en el Inspector.");
+            Debug.LogError("[UI] Falta asignar PreguntasDatabase en el Inspector.");
             return;
         }
 
-        // Resetear listeners y estado de todos los botones
-        for (int i = 0; i < botones.Length; i++)
+        List<PreguntaData> lista = preguntasDB.ObtenerPreguntasPorID(idAdoptante);
+
+        if (lista == null || lista.Count == 0)
         {
-            if (botones[i] != null)
-            {
-                botones[i].onClick.RemoveAllListeners();
-                botones[i].gameObject.SetActive(false);
-            }
+            Debug.LogWarning($"[UI] PreguntasDatabase no devolvió preguntas para la ID '{idAdoptante}'. " +
+                             $"Revisa que el asset tenga los 75 grupos (menú contextual > Regenerar).");
+            return;
         }
 
-        // Asignación de preguntas a los botones
-        for (int i = 0; i < listaPreguntasActuales.Count; i++)
+        Debug.Log($"[UI] ID '{idAdoptante}': {lista.Count} preguntas.");
+
+        for (int i = 0; i < lista.Count; i++)
         {
-            if (i >= botones.Length)
+            PreguntaData dato = lista[i];
+            if (dato == null)
             {
-                Debug.LogWarning($"[Entrevista] Hay más preguntas ({listaPreguntasActuales.Count}) que botones ({botones.Length}).");
-                break;
+                Debug.LogWarning($"[UI] El elemento {i} de la lista es null.");
+                continue;
             }
 
-            if (botones[i] == null) continue;
+            if (i < camposPreguntas.Length && camposPreguntas[i] != null)
+                camposPreguntas[i].text = dato.enunciadoPregunta;
 
-            int indiceFijo = i;
-            PreguntaData data = listaPreguntasActuales[i];
+            if (i < camposRespuestas.Length && camposRespuestas[i] != null)
+                camposRespuestas[i].text = dato.respuestaNPC;
 
-            botones[i].gameObject.SetActive(true);
-
-            TextMeshProUGUI textoInterno = botones[i].GetComponentInChildren<TextMeshProUGUI>(true);
-            if (textoInterno != null)
-            {
-                textoInterno.gameObject.SetActive(true);
-                textoInterno.text = data.enunciadoPregunta;
-            }
-            else
-            {
-                Debug.LogWarning($"[Entrevista] El botón '{botones[i].name}' no tiene un TextMeshProUGUI hijo.");
-            }
-
-            botones[i].onClick.AddListener(() => MostrarRespuesta(indiceFijo));
+            Debug.Log($"[UI] #{i}: '{dato.enunciadoPregunta}'");
         }
-    }
 
-    public void MostrarRespuesta(int indice)
-    {
-        if (indice < 0 || indice >= listaPreguntasActuales.Count) return;
-
-        if (campoRespuestaActivo != null)
-        {
-            campoRespuestaActivo.gameObject.SetActive(true);
-            campoRespuestaActivo.text = listaPreguntasActuales[indice].respuestaNPC;
-        }
+        if (lista.Count > camposPreguntas.Length)
+            Debug.LogWarning($"[UI] Hay {lista.Count} preguntas pero el panel solo tiene {camposPreguntas.Length} campos.");
     }
 
     public void OcultarPaneles()
     {
-        ApagarAmbosPaneles();
-    }
-
-    private void ApagarAmbosPaneles()
-    {
-        listaPreguntasActuales.Clear();
-        campoRespuestaActivo = null;
-
-        if (respuestaUnicaPanel3 != null) respuestaUnicaPanel3.text = "";
-        if (respuestaUnicaPanel4 != null) respuestaUnicaPanel4.text = "";
-
         if (panel3Preguntas != null) panel3Preguntas.SetActive(false);
         if (panel4Preguntas != null) panel4Preguntas.SetActive(false);
     }
