@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // Si usas el Text clásico de Unity, cambia 'TextMeshProUGUI' por 'Text'
+using TMPro;
 
 public class EntrevistaUIManager : MonoBehaviour
 {
@@ -28,7 +28,6 @@ public class EntrevistaUIManager : MonoBehaviour
             return;
         }
 
-        // Seleccionar panel según el rango de ID (01-15: 3 preguntas, 16-75: 4 preguntas)
         if (idNumerica >= 1 && idNumerica <= 15)
         {
             if (panel3Preguntas != null) panel3Preguntas.SetActive(true);
@@ -43,7 +42,6 @@ public class EntrevistaUIManager : MonoBehaviour
 
     private void CargarPreguntasYRespuestas(TextMeshProUGUI[] camposPreguntas, TextMeshProUGUI[] camposRespuestas, string idAdoptante)
     {
-        // 1. Limpiar los textos en la interfaz
         for (int i = 0; i < camposPreguntas.Length; i++)
         {
             if (camposPreguntas[i] != null) camposPreguntas[i].text = "";
@@ -55,43 +53,68 @@ public class EntrevistaUIManager : MonoBehaviour
 
         if (preguntasDB == null)
         {
-            Debug.LogError("[EntrevistaUIManager] Falta asignar PreguntasDatabase en el Inspector.");
+            Debug.LogError("[EntrevistaUIManager] Falta asignar PreguntasDatabase.");
             return;
         }
 
-        // 2. Cargar los datos desde PreguntasDatabase usando la ID
         var datosEntrevista = preguntasDB.ObtenerPreguntasPorID(idAdoptante);
 
         if (datosEntrevista != null)
         {
-            // Asignar las preguntas a los botones
-            if (datosEntrevista.preguntas != null)
+            for (int i = 0; i < datosEntrevista.Count; i++)
             {
-                for (int i = 0; i < camposPreguntas.Length && i < datosEntrevista.preguntas.Count; i++)
-                {
-                    if (camposPreguntas[i] != null)
-                    {
-                        camposPreguntas[i].text = datosEntrevista.preguntas[i];
-                    }
-                }
-            }
+                var item = datosEntrevista[i];
+                if (item == null) continue;
 
-            // Asignar las respuestas correspondientes
-            if (datosEntrevista.respuestas != null)
-            {
-                for (int i = 0; i < camposRespuestas.Length && i < datosEntrevista.respuestas.Count; i++)
+                // Asignar Texto de Pregunta
+                if (i < camposPreguntas.Length && camposPreguntas[i] != null)
                 {
-                    if (camposRespuestas[i] != null)
-                    {
-                        camposRespuestas[i].text = datosEntrevista.respuestas[i];
-                    }
+                    camposPreguntas[i].text = ObtenerTextoPregunta(item);
+                }
+
+                // Asignar Texto de Respuesta
+                if (i < camposRespuestas.Length && camposRespuestas[i] != null)
+                {
+                    camposRespuestas[i].text = ObtenerTextoRespuesta(item);
                 }
             }
         }
-        else
+    }
+
+    /// Lee de forma segura el texto de la pregunta sin importar el nombre exacto del campo
+    private string ObtenerTextoPregunta(PreguntaData item)
+    {
+        var tipo = item.GetType();
+        var campoPregunta = tipo.GetField("pregunta") ?? tipo.GetField("textoPregunta") ?? tipo.GetField("Pregunta");
+        if (campoPregunta != null) return campoPregunta.GetValue(item)?.ToString() ?? "";
+
+        var propPregunta = tipo.GetProperty("pregunta") ?? tipo.GetProperty("textoPregunta") ?? tipo.GetProperty("Pregunta");
+        if (propPregunta != null) return propPregunta.GetValue(item)?.ToString() ?? "";
+
+        return "";
+    }
+
+    /// Lee de forma segura la respuesta sin importar el nombre exacto del campo
+    private string ObtenerTextoRespuesta(PreguntaData item)
+    {
+        var tipo = item.GetType();
+
+        // Probar nombres comunes de campos de respuesta
+        var campoRespuesta = tipo.GetField("respuesta") ?? tipo.GetField("textoRespuesta") ?? tipo.GetField("respuestaCorrecta") ?? tipo.GetField("Respuesta");
+        if (campoRespuesta != null) return campoRespuesta.GetValue(item)?.ToString() ?? "";
+
+        var propRespuesta = tipo.GetProperty("respuesta") ?? tipo.GetProperty("textoRespuesta") ?? tipo.GetProperty("respuestaCorrecta") ?? tipo.GetProperty("Respuesta");
+        if (propRespuesta != null) return propRespuesta.GetValue(item)?.ToString() ?? "";
+
+        // Si es una lista interna de respuestas dentro de PreguntaData
+        var campoListaRespuestas = tipo.GetField("respuestas") ?? tipo.GetField("Respuestas");
+        if (campoListaRespuestas != null)
         {
-            Debug.LogWarning($"[EntrevistaUIManager] No se encontraron preguntas registradas en PreguntasDatabase para la ID: '{idAdoptante}'.");
+            var lista = campoListaRespuestas.GetValue(item) as System.Collections.IList;
+            if (lista != null && lista.Count > 0) return lista[0]?.ToString() ?? "";
         }
+
+        return "";
     }
 
     public void OcultarPaneles()
