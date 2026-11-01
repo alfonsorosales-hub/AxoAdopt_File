@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: teddy+bear+3d+model
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e9e565716df8d3458b2a0957e1a2635, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

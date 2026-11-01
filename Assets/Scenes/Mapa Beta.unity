@@ -1434,10 +1434,26 @@ MonoBehaviour:
   preguntasDB: {fileID: 11400000, guid: 202b902710efefa49bab60ba35e3e07a, type: 2}
   panel3Preguntas: {fileID: 1974608585}
   panel4Preguntas: {fileID: 1568281914}
-  preguntasTextoPanel3: []
-  respuestasTextoPanel3: []
-  preguntasTextoPanel4: []
-  respuestasTextoPanel4: []
+  botonesPreguntasPanel3:
+  - {fileID: 431676814}
+  - {fileID: 1819184518}
+  - {fileID: 1176437921}
+  textosPreguntasPanel3:
+  - {fileID: 658447882}
+  - {fileID: 1273306448}
+  - {fileID: 1048489095}
+  respuestaUnicaPanel3: {fileID: 2023810331}
+  botonesPreguntasPanel4:
+  - {fileID: 731122829}
+  - {fileID: 771804178}
+  - {fileID: 1662586442}
+  - {fileID: 2007752593}
+  textosPreguntasPanel4:
+  - {fileID: 13904281}
+  - {fileID: 134102217}
+  - {fileID: 1231872719}
+  - {fileID: 221062595}
+  respuestaUnicaPanel4: {fileID: 2023810331}
 --- !u!1 &251687546
 GameObject:
   m_ObjectHideFlags: 0
@@ -11129,8 +11145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffb689697e3f634b80f30555e641c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuntoEntrevistaTrigger
-  entrevistaUIManager: {fileID: 0}
-  adoptanteDatabase: {fileID: 0}
+  entrevistaUIManager: {fileID: 225361656}
+  adoptanteDatabase: {fileID: 11400000, guid: 9917ae554419a154eb383f1b5b9fd872, type: 2}
 --- !u!4 &2097834814
 Transform:
   m_ObjectHideFlags: 0
