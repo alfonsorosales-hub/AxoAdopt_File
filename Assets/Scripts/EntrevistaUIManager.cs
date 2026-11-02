@@ -65,28 +65,32 @@ public class EntrevistaUIManager : MonoBehaviour
         if (datosEntrevista != null)
         {
             // Asignar las preguntas a los botones
-            if (datosEntrevista.preguntas != null)
+            if (datosEntrevista.Count > 0)
             {
-                for (int i = 0; i < camposPreguntas.Length && i < datosEntrevista.preguntas.Count; i++)
+                for (int i = 0; i < camposPreguntas.Length && i < datosEntrevista.Count; i++)
                 {
                     if (camposPreguntas[i] != null)
                     {
-                        camposPreguntas[i].text = datosEntrevista.preguntas[i];
+                        camposPreguntas[i].text = datosEntrevista[i].enunciadoPregunta;
+                    }
+                }
+
+                for (int i = 0; i < camposRespuestas.Length && i < datosEntrevista.Count; i++)
+                {
+                    if (camposRespuestas[i] != null)
+                    {
+                        camposRespuestas[i].text = datosEntrevista[i].respuestaNPC;
                     }
                 }
             }
 
+            /*
             // Asignar las respuestas correspondientes
             if (datosEntrevista.respuestas != null)
             {
-                for (int i = 0; i < camposRespuestas.Length && i < datosEntrevista.respuestas.Count; i++)
-                {
-                    if (camposRespuestas[i] != null)
-                    {
-                        camposRespuestas[i].text = datosEntrevista.respuestas[i];
-                    }
-                }
+               
             }
+            */
         }
         else
         {

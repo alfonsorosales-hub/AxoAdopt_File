@@ -68,8 +68,9 @@ public class CicloNPC : MonoBehaviour
             direccion.y = 0; 
             if (direccion != Vector3.zero)
             {
-                Quaternion rotacionObjetivo = Quaternion.LookRotation(direccion);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObjetivo, Time.deltaTime * VelocidadRotacion);
+                //Quaternion rotacionObjetivo = Quaternion.LookRotation(direccion);
+                // mirar hacia donde se camina
+                //transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObjetivo, Time.deltaTime * VelocidadRotacion);
             }
 
             // Desplazar el NPC hacia el objetivo
