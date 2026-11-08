@@ -208,131 +208,34 @@ public class EntrevistaUIManager : MonoBehaviour
 
         if (panel == null)
         {
-            Debug.LogError($"[UI] {nombre}: el panel NO está asignado en el Inspector.");
-            return ui;
+            // Asignar las preguntas a los botones
+            if (datosEntrevista.preguntas != null)
+            {
+                for (int i = 0; i < camposPreguntas.Length && i < datosEntrevista.preguntas.Count; i++)
+                {
+                    if (camposPreguntas[i] != null)
+                    {
+                        camposPreguntas[i].text = datosEntrevista.preguntas[i];
+                    }
+                }
+            }
+
+            // Asignar las respuestas correspondientes
+            if (datosEntrevista.respuestas != null)
+            {
+                for (int i = 0; i < camposRespuestas.Length && i < datosEntrevista.respuestas.Count; i++)
+                {
+                    if (camposRespuestas[i] != null)
+                    {
+                        camposRespuestas[i].text = datosEntrevista.respuestas[i];
+                    }
+                }
+            }
         }
-
-        bool botonesAsignados = botonesInspector != null && botonesInspector.Length > 0;
-        ui.botones = botonesAsignados ? botonesInspector : DetectarBotones(ui);
-
-        // Texto de cada pregunta: el asignado en el Inspector; si falta, el TextMeshPro hijo del botón
-        ui.textosPregunta = new TextMeshProUGUI[ui.botones.Length];
-        for (int i = 0; i < ui.botones.Length; i++)
+        else
         {
-            TextMeshProUGUI texto = (textosInspector != null && i < textosInspector.Length) ? textosInspector[i] : null;
-
-            if (texto == null && ui.botones[i] != null)
-                texto = ui.botones[i].GetComponentInChildren<TextMeshProUGUI>(true);
-
-            ui.textosPregunta[i] = texto;
+            Debug.LogWarning($"[EntrevistaUIManager] No se encontraron preguntas registradas en PreguntasDatabase para la ID: '{idAdoptante}'.");
         }
-
-        ui.respuesta = respuestaInspector != null ? respuestaInspector : DetectarRespuesta(ui);
-
-        Validar(ui);
-        return ui;
-    }
-
-    /// <summary>Busca los botones de pregunta dentro del panel.</summary>
-    private Button[] DetectarBotones(PanelUI ui)
-    {
-        var candidatos = new List<Button>();
-        var nombrados = new List<Button>();
-
-        foreach (Button b in ui.panel.GetComponentsInChildren<Button>(true))
-        {
-            TextMeshProUGUI t = b.GetComponentInChildren<TextMeshProUGUI>(true);
-            if (t == null || EsBotonDeAccion(b, t)) continue;
-
-            candidatos.Add(b);
-            if (Contiene(b.name, "pregunta") || Contiene(t.name, "pregunta")) nombrados.Add(b);
-        }
-
-        // Si algunos se llaman "pregunta", se usan solo esos
-        if (nombrados.Count > 0) candidatos = nombrados;
-
-        if (candidatos.Count > ui.esperado)
-        {
-            Debug.LogWarning($"[UI] {ui.nombre}: se encontraron {candidatos.Count} botones y se usarán los primeros {ui.esperado}. " +
-                             "Si no son los correctos, asígnalos en el Inspector.");
-            candidatos = candidatos.GetRange(0, ui.esperado);
-        }
-
-        return candidatos.ToArray();
-    }
-
-    /// <summary>Busca el TextMeshPro único de respuesta: el que no está dentro de un botón.</summary>
-    private TextMeshProUGUI DetectarRespuesta(PanelUI ui)
-    {
-        // Todo texto que esté dentro de cualquier botón queda excluido
-        var excluidos = new HashSet<TextMeshProUGUI>();
-        foreach (Button b in ui.panel.GetComponentsInChildren<Button>(true))
-            foreach (TextMeshProUGUI t in b.GetComponentsInChildren<TextMeshProUGUI>(true))
-                excluidos.Add(t);
-
-        var porNombre = new List<TextMeshProUGUI>();
-        var restantes = new List<TextMeshProUGUI>();
-
-        foreach (TextMeshProUGUI t in ui.panel.GetComponentsInChildren<TextMeshProUGUI>(true))
-        {
-            if (excluidos.Contains(t)) continue;
-            if (Contiene(t.name, "respuesta") || Contiene(t.name, "answer")) porNombre.Add(t);
-            else restantes.Add(t);
-        }
-
-        if (porNombre.Count >= 1)
-        {
-            if (porNombre.Count > 1)
-                Debug.LogWarning($"[UI] {ui.nombre}: hay {porNombre.Count} textos de respuesta; se usará '{porNombre[0].name}'. Asígnalo en el Inspector si no es el correcto.");
-            return porNombre[0];
-        }
-
-        if (restantes.Count == 1) return restantes[0];   // único texto fuera de los botones
-
-        return null;   // ambiguo: Validar() lo informa
-    }
-
-    private static bool EsBotonDeAccion(Button b, TextMeshProUGUI texto)
-    {
-        string[] palabras = { "cerrar", "close", "salir", "exit", "volver", "back", "adoptar", "rechazar", "aceptar", "decision" };
-        foreach (string p in palabras)
-            if (Contiene(b.name, p) || Contiene(texto.text, p)) return true;
-        return false;
-    }
-
-    private static bool Contiene(string texto, string palabra)
-    {
-        return !string.IsNullOrEmpty(texto) && texto.IndexOf(palabra, System.StringComparison.OrdinalIgnoreCase) >= 0;
-    }
-
-    // ---------------------------------------------------------------------
-    // Validación: solo escribe en la consola; nunca impide que un panel se muestre.
-    // ---------------------------------------------------------------------
-    private void Validar(PanelUI ui)
-    {
-        int botonesValidos = 0;
-        foreach (Button b in ui.botones) if (b != null) botonesValidos++;
-
-        if (botonesValidos < ui.esperado || ui.respuesta == null)
-        {
-            var sb = new StringBuilder();
-            sb.Append($"[UI] {ui.nombre}: encontré {botonesValidos} botones de pregunta (se necesitan {ui.esperado}) ");
-            sb.Append(ui.respuesta != null ? "y el texto de respuesta. " : "y NO encontré el texto de respuesta. ");
-            sb.Append("Asígnalos en el Inspector de EntrevistaUIManager (botones y respuesta única). ");
-
-            sb.Append("TextMeshPro dentro del panel: ");
-            foreach (TextMeshProUGUI t in ui.panel.GetComponentsInChildren<TextMeshProUGUI>(true))
-                sb.Append($"'{t.name}', ");
-
-            sb.Append("| Botones: ");
-            foreach (Button b in ui.panel.GetComponentsInChildren<Button>(true))
-                sb.Append($"'{b.name}', ");
-
-            Debug.LogError(sb.ToString());
-            return;
-        }
-
-        Debug.Log($"[UI] {ui.nombre} listo: {botonesValidos} botones de pregunta y respuesta en '{ui.respuesta.name}'.");
     }
 
     public void OcultarPaneles()

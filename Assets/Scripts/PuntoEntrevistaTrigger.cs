@@ -1,176 +1,239 @@
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UnityEngine;
 
+/// <summary>
+/// Abre el panel de entrevista del NPC que entra en el área de este objeto.
+/// La ID sale del componente NPCAdoptante de cada NPC (la asigna el spawner con AsignarID).
+///
+/// No depende de OnTriggerEnter ni de Rigidbody: revisa periódicamente la posición de todos los
+/// NPCAdoptante de la escena (y sus colliders, si tienen) para saber si están dentro del área.
+/// Si un NPC no tiene ID, no se abre ningún panel y se avisa en la consola.
+/// </summary>
 public class PuntoEntrevistaTrigger : MonoBehaviour
 {
     [Header("Referencias OBLIGATORIAS")]
     [SerializeField] private EntrevistaUIManager entrevistaUIManager;
-    [SerializeField] private AdoptanteData adoptanteDatabase;
 
-    // Quita "(Clone)" y sufijos del editor como " (1)" para comparar nombres de modelo
-    private static readonly Regex SufijosNombre = new Regex(@"\s*\(Clone\)|\s*\(\d+\)", RegexOptions.IgnoreCase);
+    [Header("Paneles (opcional: se los pasa al manager al iniciar)")]
+    [SerializeField] private GameObject panel3Preguntas;
+    [SerializeField] private GameObject panel4Preguntas;
 
-    // nombre normalizado del modelPrefab -> ID del adoptante
-    private Dictionary<string, string> idPorModelo;
+    [Header("Detección del NPC")]
+    [Tooltip("Cada cuántos segundos se revisa si hay un NPC dentro del área.")]
+    [SerializeField] private float intervaloRevision = 0.1f;
+    [Tooltip("Si no está vacío, solo cuentan los NPC con este tag. Déjalo vacío para aceptar cualquier NPCAdoptante.")]
+    [SerializeField] private string tagNPC = "NPC";
 
-    private Transform npcActual;
-    private int collidersDentro = 0;
+    private static readonly float[] Alturas = { 0f, 0.5f, 1f, 1.5f };
 
-    private static string NormalizarNombre(string nombre)
+    private Collider areaCollider;
+    private readonly List<NPCAdoptante> npcs = new List<NPCAdoptante>();
+    private readonly HashSet<string> avisados = new HashSet<string>();
+
+    private float proximaRevision;
+    private float proximoRefresco;
+    private int cantidadAnterior = -1;
+    private bool tagValido;
+
+    private NPCAdoptante npcActual;
+    private string idActual;
+
+    // Los mensajes van a la consola y, si hay Manager, también a la pantalla del juego
+    private void Registrar(string mensaje, int nivel)
     {
-        return SufijosNombre.Replace(nombre ?? "", "").Trim();
+        if (entrevistaUIManager != null) { entrevistaUIManager.Diagnostico(mensaje, nivel); return; }
+
+        if (nivel == 2) Debug.LogError(mensaje);
+        else if (nivel == 1) Debug.LogWarning(mensaje);
+        else Debug.Log(mensaje);
     }
+
+    private void Info(string mensaje) { Registrar(mensaje, 0); }
+    private void Aviso(string mensaje) { Registrar(mensaje, 1); }
+    private void Error(string mensaje) { Registrar(mensaje, 2); }
 
     private void Start()
     {
-        var col = GetComponent<Collider>();
-        Debug.Log($"[Trigger] Start en '{name}'. " +
-                  $"Collider: {(col != null ? "isTrigger=" + col.isTrigger : "NO HAY COLLIDER")}. " +
-                  $"Manager: {entrevistaUIManager != null}. Database: {adoptanteDatabase != null}");
+        areaCollider = GetComponent<Collider>();
+        if (areaCollider == null) areaCollider = GetComponentInChildren<Collider>();
 
-        ConstruirIndice();
+        if (entrevistaUIManager == null) entrevistaUIManager = BuscarManager();
+
+        Info($"[Trigger] Start en '{name}'. " +
+             $"Área: {(areaCollider != null ? areaCollider.GetType().Name + (areaCollider.enabled ? "" : " (DESACTIVADO)") : "NO HAY COLLIDER")}. " +
+             $"Manager: {entrevistaUIManager != null}.");
+
+        if (areaCollider == null)
+            Error("[Trigger] Este objeto necesita un Collider (BoxCollider, por ejemplo) que marque el área de la entrevista.");
+        else
+            Info($"[Trigger] Área en {areaCollider.bounds.center} con tamaño {areaCollider.bounds.size}.");
+
+        if (entrevistaUIManager == null)
+            Error("[Trigger] Falta el EntrevistaUIManager: asígnalo en el Inspector.");
+
+        tagValido = TagExiste(tagNPC);
+        if (!string.IsNullOrEmpty(tagNPC) && !tagValido)
+            Aviso($"[Trigger] El tag '{tagNPC}' no existe en el proyecto: se ignora el filtro de tag.");
+
+        // Si se asignaron paneles aquí, se le pasan al manager
+        if (entrevistaUIManager != null && (panel3Preguntas != null || panel4Preguntas != null))
+            entrevistaUIManager.AsignarPaneles(panel3Preguntas, panel4Preguntas);
     }
 
-    /// <summary>
-    /// Arma la tabla modelo -> ID y avisa si un mismo modelo está asignado a varias IDs
-    /// (en ese caso el trigger no puede saber cuál de ellas es el NPC).
-    /// </summary>
-    private void ConstruirIndice()
+    private EntrevistaUIManager BuscarManager()
     {
-        idPorModelo = new Dictionary<string, string>(System.StringComparer.OrdinalIgnoreCase);
-        if (adoptanteDatabase == null) return;
-
-        var idsPorModelo = new Dictionary<string, List<string>>(System.StringComparer.OrdinalIgnoreCase);
-
-        foreach (var adoptante in adoptanteDatabase.adoptantesList)
-        {
-            if (adoptante == null || adoptante.modelPrefab == null) continue;
-
-            string modelo = NormalizarNombre(adoptante.modelPrefab.name);
-            if (!idsPorModelo.TryGetValue(modelo, out List<string> ids))
-            {
-                ids = new List<string>();
-                idsPorModelo[modelo] = ids;
-            }
-            if (!ids.Contains(adoptante.id)) ids.Add(adoptante.id);
-        }
-
-        foreach (var par in idsPorModelo)
-        {
-            idPorModelo[par.Key] = par.Value[0];
-
-            if (par.Value.Count > 1)
-            {
-                Debug.LogError($"[Trigger] El modelo '{par.Key}' está asignado a varias IDs ({string.Join(", ", par.Value)}). " +
-                               $"El trigger siempre usará '{par.Value[0]}', por eso verás preguntas que no corresponden. " +
-                               $"Cada ID necesita su propio modelPrefab en AdoptanteData.");
-            }
-        }
-
-        Debug.Log($"[Trigger] Índice de modelos listo: {idPorModelo.Count} modelos distintos.");
+        foreach (EntrevistaUIManager m in Resources.FindObjectsOfTypeAll<EntrevistaUIManager>())
+            if (m != null && m.gameObject.scene.IsValid()) return m;
+        return null;
     }
 
     private void Update()
     {
-        // Si el NPC se destruye o se desactiva dentro del trigger, Unity no siempre llama a OnTriggerExit
-        if (collidersDentro > 0 && (npcActual == null || !npcActual.gameObject.activeInHierarchy))
+        if (Time.unscaledTime < proximaRevision) return;
+        proximaRevision = Time.unscaledTime + Mathf.Max(0.02f, intervaloRevision);
+
+        if (Time.unscaledTime >= proximoRefresco)
         {
-            CerrarEntrevista("El NPC desapareció o se desactivó dentro del trigger.");
+            proximoRefresco = Time.unscaledTime + 0.5f;
+            RefrescarNPCs();
+        }
+
+        RevisarArea();
+    }
+
+    /// <summary>Lista de todos los NPCAdoptante activos de la escena.</summary>
+    private void RefrescarNPCs()
+    {
+        npcs.Clear();
+
+        foreach (NPCAdoptante n in Resources.FindObjectsOfTypeAll<NPCAdoptante>())
+            if (n != null && n.gameObject.scene.IsValid() && n.gameObject.activeInHierarchy)
+                npcs.Add(n);
+
+        if (npcs.Count != cantidadAnterior)
+        {
+            cantidadAnterior = npcs.Count;
+
+            if (npcs.Count == 0)
+                Aviso("[Trigger] No hay ningún NPC con el componente NPCAdoptante en la escena. " +
+                      "El spawner debe agregarlo al instanciar el NPC y llamar a AsignarID(id).");
+            else
+                Info($"[Trigger] NPC con NPCAdoptante en la escena: {npcs.Count}.");
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void RevisarArea()
     {
-        Debug.Log($"[Trigger] OnTriggerEnter con '{other.name}' (root '{other.transform.root.name}')");
+        if (areaCollider == null || entrevistaUIManager == null) return;
 
-        if (entrevistaUIManager == null || adoptanteDatabase == null)
+        // ¿El NPC de la entrevista abierta sigue dentro?
+        if (idActual != null)
         {
-            Debug.LogError("[Trigger] Faltan asignaciones en el Inspector (Manager o Database).");
+            bool sigue = npcActual != null && npcActual.isActiveAndEnabled && NpcEnArea(npcActual);
+            if (sigue) return;
+
+            CerrarEntrevista(npcActual == null ? "El NPC desapareció." : $"'{npcActual.name}' salió del área.");
+        }
+
+        // Buscar un NPC nuevo dentro del área (el más cercano al centro)
+        NPCAdoptante elegido = null;
+        float mejor = float.MaxValue;
+        Vector3 centro = areaCollider.bounds.center;
+
+        foreach (NPCAdoptante npc in npcs)
+        {
+            if (npc == null || !npc.isActiveAndEnabled) continue;
+
+            if (!TagCorrecto(npc))
+            {
+                AvisarUnaVez(npc, "tag", $"[Trigger] '{npc.name}' tiene NPCAdoptante pero su tag es '{npc.tag}' y se esperaba '{tagNPC}': se ignora. " +
+                                         "Cámbiale el tag o vacía el campo 'Tag NPC' del trigger.");
+                continue;
+            }
+
+            if (!NpcEnArea(npc)) continue;
+
+            float d = (npc.transform.position - centro).sqrMagnitude;
+            if (d < mejor)
+            {
+                mejor = d;
+                elegido = npc;
+            }
+        }
+
+        if (elegido == null) return;
+
+        string id = elegido.IdAdoptante;
+
+        if (string.IsNullOrEmpty(id))
+        {
+            AvisarUnaVez(elegido, "sinid", $"[Trigger] El NPC '{elegido.name}' entró al área pero no tiene ID asignada. " +
+                                           "El spawner debe llamar a NPCAdoptante.AsignarID(id) al crearlo.");
             return;
         }
 
-        if (!EncontrarNPC(other.transform, out Transform npcRoot, out string id))
-        {
-            Debug.LogWarning($"[Trigger] Ignorado '{other.name}': ningún objeto de su jerarquía coincide con un modelPrefab del database.");
-            return;
-        }
+        npcActual = elegido;
+        idActual = id;
 
-        if (npcRoot == npcActual)
-        {
-            collidersDentro++;
-            Debug.Log($"[Trigger] Otro collider de '{npcRoot.name}' entró (total: {collidersDentro}).");
-            return;
-        }
-
-        // NPC distinto al que estaba (o ninguno): se reinicia el conteo y se carga su entrevista
-        npcActual = npcRoot;
-        collidersDentro = 1;
-        Debug.Log($"[Trigger] NPC '{npcRoot.name}' -> ID '{id}'. Cargando entrevista...");
+        Info($"[Trigger] NPC '{elegido.name}' entró con ID '{id}'. Cargando entrevista...");
         entrevistaUIManager.CargarEntrevistaPorID(id);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (!EncontrarNPC(other.transform, out Transform npcRoot, out string id)) return;
-
-        if (npcRoot != npcActual)
-        {
-            Debug.Log($"[Trigger] Exit ignorado: '{npcRoot.name}' no es el NPC actual ('{(npcActual != null ? npcActual.name : "ninguno")}').");
-            return;
-        }
-
-        collidersDentro--;
-
-        if (collidersDentro > 0)
-        {
-            Debug.Log($"[Trigger] Salió un collider de '{npcRoot.name}', pero quedan {collidersDentro} dentro. No se oculta.");
-            return;
-        }
-
-        CerrarEntrevista($"'{npcRoot.name}' salió por completo.");
     }
 
     private void CerrarEntrevista(string motivo)
     {
-        Debug.Log($"[Trigger] Cerrando entrevista. {motivo}");
+        Info($"[Trigger] Cerrando entrevista. {motivo}");
         npcActual = null;
-        collidersDentro = 0;
+        idActual = null;
 
         if (entrevistaUIManager != null) entrevistaUIManager.OcultarPaneles();
-        else Debug.LogError("[Trigger] No se pueden ocultar los paneles: falta el Manager.");
+        else Error("[Trigger] No se pueden ocultar los paneles: falta el Manager.");
     }
 
-    /// <summary>
-    /// Sube por la jerarquía desde el collider hasta encontrar un objeto
-    /// cuyo nombre coincida con el modelPrefab de algún adoptante.
-    /// </summary>
-    private bool EncontrarNPC(Transform desde, out Transform npcRoot, out string id)
+    private void AvisarUnaVez(NPCAdoptante npc, string clave, string mensaje)
     {
-        npcRoot = null;
-        id = null;
+        if (avisados.Add($"{npc.GetInstanceID()}:{clave}")) Aviso(mensaje);
+    }
 
-        if (adoptanteDatabase == null) return false;
+    // =====================================================================
+    // ¿ESTÁ EL NPC DENTRO DEL ÁREA?
+    // =====================================================================
+    private bool TagCorrecto(NPCAdoptante npc)
+    {
+        return string.IsNullOrEmpty(tagNPC) || !tagValido || npc.CompareTag(tagNPC);
+    }
 
-        // Se consulta la lista en vivo (sin copia en caché): si el database se llena o cambia
-        // en tiempo de ejecución, el trigger siempre ve los datos actuales.
-        for (Transform t = desde; t != null; t = t.parent)
-        {
-            string nombre = NormalizarNombre(t.name);
+    /// <summary>Dentro si su posición (a varias alturas) está en el área, o si alguno de sus colliders la toca.</summary>
+    private bool NpcEnArea(NPCAdoptante npc)
+    {
+        Vector3 pos = npc.transform.position;
 
-            foreach (var adoptante in adoptanteDatabase.adoptantesList)
-            {
-                if (adoptante == null || adoptante.modelPrefab == null) continue;
+        foreach (float altura in Alturas)
+            if (PuntoEnArea(pos + Vector3.up * altura)) return true;
 
-                if (string.Equals(NormalizarNombre(adoptante.modelPrefab.name), nombre, System.StringComparison.OrdinalIgnoreCase))
-                {
-                    npcRoot = t;
-                    id = adoptante.id;
-                    return true;
-                }
-            }
-        }
+        Bounds area = areaCollider.bounds;
+        if (area.SqrDistance(pos) > 25f) return false;   // a más de 5 m no hace falta mirar sus colliders
+
+        foreach (Collider c in npc.GetComponentsInChildren<Collider>())
+            if (c != null && c.enabled && c != areaCollider && c.bounds.Intersects(area)) return true;
 
         return false;
+    }
+
+    private bool PuntoEnArea(Vector3 punto)
+    {
+        MeshCollider malla = areaCollider as MeshCollider;
+        if (malla != null && !malla.convex) return areaCollider.bounds.Contains(punto);
+
+        Vector3 masCercano = areaCollider.ClosestPoint(punto);
+        return (masCercano - punto).sqrMagnitude < 0.0025f;
+    }
+
+    /// <summary>Comprueba una sola vez que el tag exista en el proyecto (CompareTag falla si no existe).</summary>
+    private static bool TagExiste(string tag)
+    {
+        if (string.IsNullOrEmpty(tag)) return false;
+
+        try { GameObject.FindWithTag(tag); return true; }
+        catch (UnityException) { return false; }
     }
 }
