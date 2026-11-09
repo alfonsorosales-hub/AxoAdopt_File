@@ -136,12 +136,12 @@ public class PuntoEntrevistaTrigger : MonoBehaviour
 
     private void CerrarEntrevista(string motivo)
     {
-        Info($"[Trigger] Cerrando entrevista. {motivo}");
+        //Info($"[Trigger] Cerrando entrevista. {motivo}");
         npcActual = null;
-        idActual = null;
+        //idActual = null;
 
         if (entrevistaUIManager != null) entrevistaUIManager.OcultarPaneles();
-        else Error("[Trigger] No se pueden ocultar los paneles: falta el Manager.");
+        else Debug.LogError("[Trigger] No se pueden ocultar los paneles: falta el Manager.");
     }
 
     /// <summary>
