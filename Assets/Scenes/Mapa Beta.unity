@@ -2445,6 +2445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cute+squirrel+3d+model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5982446222385382116, guid: 36a3ca38790c6fb4a9fc7d3a69626cec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6363088779084355678, guid: 36a3ca38790c6fb4a9fc7d3a69626cec, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.117033
@@ -3660,6 +3664,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  desactivarModelosNoListados: 0
   puntoDestino: {fileID: 0}
   velocidad: 5
   VelocidadRotacion: 15
@@ -5490,6 +5495,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9550cca54f685be4db6010c69c098a74, type: 3}
       propertyPath: m_Name
       value: tripo_convert_4b12158b-d14d-4682-b20e-2de630e33843
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9550cca54f685be4db6010c69c098a74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9550cca54f685be4db6010c69c098a74, type: 3}
       propertyPath: m_TagString
@@ -8598,6 +8607,10 @@ PrefabInstance:
       value: zebra+character+3d+model
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7240a3f875dfdb459880e1d0785b9fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d7240a3f875dfdb459880e1d0785b9fd, type: 3}
       propertyPath: m_TagString
       value: NPC
       objectReference: {fileID: 0}
@@ -9459,6 +9472,7 @@ GameObject:
   - component: {fileID: 1299819216}
   - component: {fileID: 1299819215}
   - component: {fileID: 1299819214}
+  - component: {fileID: 1299819217}
   m_Layer: 5
   m_Name: AdoptableInfo
   m_TagString: Untagged
@@ -9529,7 +9543,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1299819215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1299819217}
+        m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
+        m_MethodName: CargarEscenaPorNombre
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AdoptableMenuScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1299819215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9568,6 +9594,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299819212}
   m_CullTransparentMesh: 1
+--- !u!114 &1299819217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299819212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8a37e54e641b442b027f6be63ec462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CambiarEscena
 --- !u!1 &1300614539
 GameObject:
   m_ObjectHideFlags: 0
@@ -14239,6 +14277,7 @@ MonoBehaviour:
   - {fileID: 7578793548521563978, guid: ed0423049c84e7d4eb187ce92efcbc9b, type: 3}
   - {fileID: 4796334228288570719, guid: 506774cec4455b1498a391517ab2b2a4, type: 3}
   - {fileID: 5409444622747672290, guid: 5157facb9cb9412419f48f997b467c4f, type: 3}
+  desactivarModelosNoListados: 0
   puntoDestino: {fileID: 1097777375}
   velocidad: 2
   VelocidadRotacion: 10
