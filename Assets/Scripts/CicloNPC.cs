@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class CicloNPC : MonoBehaviour
 {
     [Header("Configuración de Skins (Modelos Hijos)")]
-    [Tooltip("Arrastra aquí los modelos 3D que están DENTRO del NPC en la escena (hijos del NPC, no archivos de Project).")]
+    [Tooltip("Los modelos 3D del NPC. Pueden ser los hijos de la escena o los prefabs de Project: " +
+             "si son prefabs, el script usa el hijo que tenga el mismo nombre (o lo crea si no existe).")]
     public GameObject[] skins;
-    [Tooltip("Si está activo, al cambiar de skin se desactivan TODOS los hijos del NPC que tengan renderer y no estén en la lista. " +
-             "Úsalo si ves 2 modelos a la vez porque hay un modelo hijo que no está en la lista 'Skins'.")]
-    [SerializeField] private bool desactivarModelosNoListados = false;
     private int indiceSkinActual = -1;
+
+    // Los modelos reales de la escena (hijos de este NPC), en el mismo orden que 'skins'
+    private GameObject[] modelos = new GameObject[0];
+
+    // Quita "(Clone)" y sufijos del editor como " (1)" para comparar nombres
+    private static readonly Regex Sufijos = new Regex(@"\s*\(Clone\)|\s*\(\d+\)", RegexOptions.IgnoreCase);
 
     [Header("Configuración de Movimiento")]
     [Tooltip("Objeto vacío en la escena que marca hacia dónde debe ir el NPC")]
@@ -26,9 +31,16 @@ public class CicloNPC : MonoBehaviour
     /// <summary>True mientras el NPC está en el punto destino esperando la decisión final.</summary>
     public bool EsperandoEvento => esperandoEvento;
 
+    private static string Normalizar(string nombre)
+    {
+        return Sufijos.Replace(nombre ?? "", "").Trim();
+    }
+
     void Awake()
     {
-        Diagnosticar();
+        DesactivarSkinNPC();
+        ResolverSkins();
+        AvisarNPCDuplicados();
     }
 
     void Start()
@@ -47,6 +59,163 @@ public class CicloNPC : MonoBehaviour
         }
     }
 
+    // =====================================================================
+    // SKINS
+    // =====================================================================
+
+    /// <summary>
+    /// SkinNPC también activa/desactiva modelos con su propia lista y deja un segundo modelo encendido.
+    /// Este script se encarga de las skins, así que SkinNPC se apaga antes de que corra su Start.
+    /// </summary>
+    void DesactivarSkinNPC()
+    {
+        foreach (SkinNPC otro in GetComponentsInChildren<SkinNPC>(true))
+        {
+            if (otro != null && otro.enabled)
+            {
+                otro.enabled = false;
+                Debug.Log($"[CicloNPC] Se desactivó SkinNPC en '{otro.name}': CicloNPC controla las skins.", this);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Convierte la lista 'skins' en los hijos reales del NPC. Si un elemento es un prefab de Project
+    /// (o un objeto de otro lado), se busca entre los hijos el que se llame igual; si no existe, se crea.
+    /// </summary>
+    void ResolverSkins()
+    {
+        if (skins == null || skins.Length == 0)
+        {
+            Debug.LogWarning("[CicloNPC] La lista 'Skins' está vacía: no se cambiará de modelo.", this);
+            modelos = new GameObject[0];
+            return;
+        }
+
+        if (skins.Length < 2)
+            Debug.LogWarning("[CicloNPC] 'Skins' tiene un solo modelo: nunca va a cambiar. Agrega los demás.", this);
+
+        modelos = new GameObject[skins.Length];
+        var usados = new HashSet<GameObject>();
+        Transform[] descendientes = GetComponentsInChildren<Transform>(true);
+
+        for (int i = 0; i < skins.Length; i++)
+        {
+            GameObject s = skins[i];
+            if (s == null)
+            {
+                Debug.LogWarning($"[CicloNPC] Skins[{i}] está vacío.", this);
+                continue;
+            }
+
+            GameObject resuelto = null;
+
+            if (s != gameObject && s.scene.IsValid() && s.transform.IsChildOf(transform))
+            {
+                resuelto = s; // ya es un hijo de la escena
+            }
+            else
+            {
+                string buscado = Normalizar(s.name);
+                foreach (Transform t in descendientes)
+                {
+                    if (t == transform || usados.Contains(t.gameObject)) continue;
+
+                    if (string.Equals(Normalizar(t.name), buscado, System.StringComparison.OrdinalIgnoreCase))
+                    {
+                        resuelto = t.gameObject;
+                        break;
+                    }
+                }
+
+                if (resuelto != null)
+                {
+                    Debug.Log($"[CicloNPC] Skins[{i}] ('{s.name}') apuntaba a un prefab: se usa el hijo '{resuelto.name}' de la escena.", this);
+                }
+                else if (!s.scene.IsValid())
+                {
+                    resuelto = Instantiate(s, transform);
+                    resuelto.name = s.name;
+                    Debug.LogWarning($"[CicloNPC] Skins[{i}] ('{s.name}'): no había ningún hijo con ese nombre, se creó uno nuevo dentro del NPC.", this);
+                }
+                else
+                {
+                    resuelto = s;
+                    Debug.LogWarning($"[CicloNPC] Skins[{i}] ('{s.name}') no es hijo de '{name}'.", this);
+                }
+            }
+
+            if (!usados.Add(resuelto))
+                Debug.LogWarning($"[CicloNPC] Skins[{i}] ('{resuelto.name}') está repetida: nunca se verá un cambio entre esas posiciones.", this);
+
+            modelos[i] = resuelto;
+        }
+    }
+
+    void CambiarSkin()
+    {
+        if (modelos == null || modelos.Length == 0) return;
+
+        // Avanza al siguiente modelo de la lista (0, 1, 2... y vuelve a 0)
+        indiceSkinActual = (indiceSkinActual + 1) % modelos.Length;
+
+        // Activa solo la skin actual y desactiva todas las demás
+        for (int i = 0; i < modelos.Length; i++)
+        {
+            if (modelos[i] != null)
+            {
+                modelos[i].SetActive(i == indiceSkinActual);
+            }
+        }
+
+        ApagarModelosNoListados();
+
+        GameObject activa = modelos[indiceSkinActual];
+        Debug.Log($"[CicloNPC] '{name}': skin {indiceSkinActual + 1}/{modelos.Length} -> '{(activa != null ? activa.name : "VACÍA")}'", this);
+    }
+
+    /// <summary>Apaga cualquier otro hijo con modelo que no esté en la lista (así nunca se ven 2 a la vez).</summary>
+    void ApagarModelosNoListados()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform hijo = transform.GetChild(i);
+            if (!hijo.gameObject.activeSelf) continue;
+
+            bool esSkinOContieneUna = false;
+            foreach (GameObject m in modelos)
+            {
+                if (m != null && (m == hijo.gameObject || m.transform.IsChildOf(hijo)))
+                {
+                    esSkinOContieneUna = true;
+                    break;
+                }
+            }
+            if (esSkinOContieneUna) continue;
+
+            if (hijo.GetComponentInChildren<Renderer>(true) != null)
+            {
+                Debug.Log($"[CicloNPC] Se apaga '{hijo.name}': tiene modelo y no está en la lista 'Skins'.", this);
+                hijo.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    void AvisarNPCDuplicados()
+    {
+        CicloNPC[] todos = FindObjectsByType<CicloNPC>(FindObjectsSortMode.None);
+        if (todos.Length > 1)
+        {
+            var nombres = new List<string>();
+            foreach (CicloNPC n in todos) nombres.Add(n.name);
+            Debug.LogWarning($"[CicloNPC] Hay {todos.Length} objetos con CicloNPC en la escena ({string.Join(", ", nombres)}). " +
+                             "Si solo debe haber un NPC, borra o desactiva los demás.", this);
+        }
+    }
+
+    // =====================================================================
+    // CICLO
+    // =====================================================================
     IEnumerator RutinaPrincipalNPC()
     {
         // Bucle infinito para que el ciclo se repita siempre
@@ -99,100 +268,6 @@ public class CicloNPC : MonoBehaviour
 
         // Ajustar a la posición exacta al llegar
         transform.position = destino;
-    }
-
-    void CambiarSkin()
-    {
-        if (skins == null || skins.Length == 0) return;
-
-        // Avanza al siguiente modelo de la lista (0, 1, 2... y vuelve a 0)
-        indiceSkinActual = (indiceSkinActual + 1) % skins.Length;
-
-        // Activa solo la skin actual y desactiva todas las demás
-        for (int i = 0; i < skins.Length; i++)
-        {
-            if (skins[i] != null)
-            {
-                skins[i].SetActive(i == indiceSkinActual);
-            }
-        }
-
-        if (desactivarModelosNoListados) DesactivarModelosNoListados();
-
-        Debug.Log($"[CicloNPC] '{name}': skin {indiceSkinActual + 1}/{skins.Length} -> " +
-                  $"'{(skins[indiceSkinActual] != null ? skins[indiceSkinActual].name : "VACÍA")}'", this);
-    }
-
-    /// <summary>Apaga los hijos con Renderer que no estén en la lista de skins ni sean parte de la skin activa.</summary>
-    void DesactivarModelosNoListados()
-    {
-        GameObject activa = skins[indiceSkinActual];
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Transform hijo = transform.GetChild(i);
-            bool enLista = System.Array.IndexOf(skins, hijo.gameObject) >= 0;
-            if (enLista) continue;
-            if (activa != null && (hijo == activa.transform || activa.transform.IsChildOf(hijo))) continue;
-
-            if (hijo.GetComponentInChildren<Renderer>(true) != null && hijo.gameObject.activeSelf)
-            {
-                Debug.Log($"[CicloNPC] Se desactiva '{hijo.name}' porque tiene modelo y no está en la lista 'Skins'.", this);
-                hijo.gameObject.SetActive(false);
-            }
-        }
-    }
-
-    /// <summary>Avisa de los problemas más comunes (2 modelos a la vez, skin que no cambia, NPC duplicado).</summary>
-    void Diagnosticar()
-    {
-        // 1) Más de un NPC con este script en la escena = "aparecen 2 prefab"
-        CicloNPC[] todos = FindObjectsByType<CicloNPC>(FindObjectsSortMode.None);
-        if (todos.Length > 1)
-        {
-            var nombres = new List<string>();
-            foreach (CicloNPC n in todos) nombres.Add(n.name);
-            Debug.LogWarning($"[CicloNPC] Hay {todos.Length} objetos con CicloNPC en la escena ({string.Join(", ", nombres)}). " +
-                             "Si solo debe haber un NPC, borra o desactiva los demás.", this);
-        }
-
-        if (skins == null || skins.Length == 0)
-        {
-            Debug.LogWarning("[CicloNPC] La lista 'Skins' está vacía: no se cambiará de modelo.", this);
-            return;
-        }
-
-        if (skins.Length < 2)
-            Debug.LogWarning("[CicloNPC] 'Skins' tiene un solo modelo: nunca va a cambiar. Agrega los demás.", this);
-
-        var vistos = new HashSet<GameObject>();
-        for (int i = 0; i < skins.Length; i++)
-        {
-            GameObject s = skins[i];
-            if (s == null) { Debug.LogWarning($"[CicloNPC] Skins[{i}] está vacío.", this); continue; }
-
-            // 2) Archivos de Project (prefabs sin instanciar): SetActive no los muestra ni los oculta
-            if (!s.scene.IsValid())
-                Debug.LogError($"[CicloNPC] Skins[{i}] ('{s.name}') es un prefab de Project, no un objeto de la escena. " +
-                               "Arrastra el hijo del NPC desde la Hierarchy.", this);
-            // 3) No es hijo de este NPC
-            else if (!s.transform.IsChildOf(transform))
-                Debug.LogWarning($"[CicloNPC] Skins[{i}] ('{s.name}') no es hijo de '{name}'.", this);
-
-            // 4) Repetida: el modelo "no cambia" porque dos posiciones son el mismo objeto
-            if (!vistos.Add(s))
-                Debug.LogWarning($"[CicloNPC] Skins[{i}] ('{s.name}') está repetida en la lista.", this);
-        }
-
-        // 5) Hijos con modelo que están activos y no están en la lista = segundo modelo visible
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Transform hijo = transform.GetChild(i);
-            if (System.Array.IndexOf(skins, hijo.gameObject) >= 0) continue;
-            if (hijo.gameObject.activeSelf && hijo.GetComponentInChildren<Renderer>(true) != null)
-                Debug.LogWarning($"[CicloNPC] El hijo '{hijo.name}' tiene modelo, está activo y NO está en 'Skins': " +
-                                 "se verá junto a la skin activa. Agrégalo a la lista o activa 'Desactivar Modelos No Listados'.", this);
-        }
     }
 
     // --- MÉTODO PÚBLICO PARA ACTIVAR EL REGRESO ---
