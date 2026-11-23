@@ -8,7 +8,8 @@ using TMPro;
 
 /// <summary>
 /// Gestiona la pantalla de carga visual con transiciones suaves de entrada (Fade In)
-/// y salida (Fade Out), carga asíncrona de escenas, barra de progreso y consejos aleatorios.
+/// y salida (Fade Out), carga asíncrona de escenas, barra de progreso, consejos aleatorios
+/// y validación de escenas en Build Profiles / Build Settings.
 /// </summary>
 public class LoadingManager : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class LoadingManager : MonoBehaviour
     [SerializeField] private List<string> listaConsejos = new List<string>();
 
     [Header("Nombres de Escenas")]
-    [Tooltip("Nombre exacto de la escena para Iniciar Partida (debe estar en Build Settings).")]
+    [Tooltip("Nombre exacto de la escena para Iniciar Partida (debe estar en Build Profiles).")]
     [SerializeField] private string escenaNuevaPartida = "Nivel1";
 
     [Tooltip("Nombre exacto de la escena por defecto al Cargar Partida guardada.")]
@@ -68,42 +69,78 @@ public class LoadingManager : MonoBehaviour
 
     /// <summary>
     /// Método público para asignar al evento OnClick() del botón "Cargar / Continuar Partida".
+    /// Verifica si la escena guardada en PlayerPrefs sigue existiendo; si no, usa la escena por defecto.
     /// </summary>
     public void BotonCargarPartida()
     {
         if (estaCargando) return;
 
-        // Busca si existe una escena guardada en PlayerPrefs; si no, usa la escena por defecto
-        string guardada = PlayerPrefs.GetString("EscenaGuardada", "");
-        string escenaDestino = string.IsNullOrWhiteSpace(guardada) ? escenaCargarPartida.Trim() : guardada.Trim();
+        // 1. Leemos la escena guardada en PlayerPrefs (si existe)
+        string guardada = PlayerPrefs.GetString("EscenaGuardada", "").Trim();
+        string escenaPorDefecto = escenaCargarPartida.Trim();
+        string escenaDestino = escenaPorDefecto;
+
+        // 2. Comprobamos si hay algo guardado Y si esa escena realmente existe en Build Profiles
+        if (!string.IsNullOrWhiteSpace(guardada))
+        {
+            if (Application.CanStreamedLevelBeLoaded(guardada))
+            {
+                // La escena guardada es válida y existe en el proyecto
+                escenaDestino = guardada;
+            }
+            else
+            {
+                // La escena guardada (ej. "Menu Beta") ya no existe: borramos el dato obsoleto
+                Debug.LogWarning($"[LoadingManager] La escena guardada '{guardada}' ya no existe en Build Profiles. Limpiando registro y cargando '{escenaPorDefecto}'.");
+                PlayerPrefs.DeleteKey("EscenaGuardada");
+                PlayerPrefs.Save();
+                escenaDestino = escenaPorDefecto;
+            }
+        }
 
         StartCoroutine(ProcesoCompletoDeCarga(escenaDestino, false));
     }
 
     /// <summary>
+    /// Método extra opcional por si quieres cargar cualquier escena específica desde otro botón
+    /// pasando su nombre por parámetro en el Inspector.
+    /// </summary>
+    public void CargarEscenaEspecifica(string nombreEscena)
+    {
+        if (estaCargando || string.IsNullOrWhiteSpace(nombreEscena)) return;
+        StartCoroutine(ProcesoCompletoDeCarga(nombreEscena.Trim(), false));
+    }
+
+    /// <summary>
     /// Corrutina principal que controla toda la secuencia:
-    /// 1. Preparación de Canvas persistente -> 2. Fade In -> 3. Carga de escena -> 4. Fade Out -> 5. Limpieza.
+    /// 0. Validación de escena -> 1. Canvas persistente -> 2. Fade In -> 3. Carga -> 4. Fade Out -> 5. Limpieza.
     /// </summary>
     private IEnumerator ProcesoCompletoDeCarga(string nombreEscena, bool esNuevaPartida)
     {
-        // Verificación de seguridad por si falta asignar el panel en el Inspector
+        // --- PASO 0: VALIDACIÓN DE SEGURIDAD ANTES DE TOCAR LA UI ---
         if (panelPantallaCarga == null)
         {
             Debug.LogError("[LoadingManager] Falta asignar 'Panel Pantalla Carga' en el Inspector.");
             yield break;
         }
 
+        // Verificamos que la escena exista en File -> Build Profiles antes de iniciar la transición
+        if (!Application.CanStreamedLevelBeLoaded(nombreEscena))
+        {
+            Debug.LogError($"[LoadingManager] ERROR: La escena '{nombreEscena}' no existe o no está agregada en 'File -> Build Profiles'. Revisa el Inspector del LoadingManager.");
+            yield break; // Detiene la ejecución limpia sin congelar la pantalla
+        }
+
         estaCargando = true;
         Time.timeScale = 1f; // Garantiza que el tiempo del juego no esté pausado
 
         // --- PASO 1: CREAR UN CANVAS PERSISTENTE EXCLUSIVO PARA LA CARGA ---
-        // Creamos un objeto raíz limpio para que DontDestroyOnLoad nunca falle ni toque tu Canvas del menú
         GameObject objetoCanvasCarga = new GameObject("Canvas_TransicionCarga");
         Canvas canvasCarga = objetoCanvasCarga.AddComponent<Canvas>();
         canvasCarga.renderMode = RenderMode.ScreenSpaceOverlay;
         canvasCarga.sortingOrder = 9999; // Asegura que se dibuje por encima de absolutamente todo
 
-        // Copiamos la configuración de escalado de tu Canvas original para que no cambie el tamaño de la UI
+        // Copiamos la configuración de escalado de tu Canvas original para mantener proporciones
         CanvasScaler scalerOriginal = panelPantallaCarga.GetComponentInParent<CanvasScaler>();
         CanvasScaler nuevoScaler = objetoCanvasCarga.AddComponent<CanvasScaler>();
         if (scalerOriginal != null)
@@ -119,7 +156,7 @@ public class LoadingManager : MonoBehaviour
         // Movemos únicamente el panel de carga dentro de este nuevo Canvas persistente
         panelPantallaCarga.transform.SetParent(objetoCanvasCarga.transform, false);
 
-        // Hacemos persistentes tanto el Canvas temporal como este LoadingManager (asegurando que sea raíz)
+        // Hacemos persistentes tanto el Canvas temporal como este LoadingManager
         transform.SetParent(null);
         DontDestroyOnLoad(objetoCanvasCarga);
         DontDestroyOnLoad(gameObject);
@@ -142,7 +179,6 @@ public class LoadingManager : MonoBehaviour
             textoPorcentaje.text = "0%";
         }
 
-        // Activamos el panel ya listo dentro de su propio Canvas
         panelPantallaCarga.SetActive(true);
 
         // --- PASO 3: TRANSICIÓN DE ENTRADA (FADE IN) ---
@@ -160,7 +196,6 @@ public class LoadingManager : MonoBehaviour
             graficos[i].color = c;
         }
 
-        // Aumentamos gradualmente la opacidad desde 0 hasta su valor original
         float relojFadeIn = 0f;
         while (relojFadeIn < duracionFadeEntrada)
         {
@@ -179,7 +214,7 @@ public class LoadingManager : MonoBehaviour
             yield return null;
         }
 
-        // Aseguramos que todos queden en su opacidad exacta al finalizar el Fade In
+        // Aseguramos opacidad exacta al finalizar el Fade In
         for (int i = 0; i < graficos.Length; i++)
         {
             if (graficos[i] != null)
@@ -192,20 +227,26 @@ public class LoadingManager : MonoBehaviour
 
         // --- PASO 4: CARGA ASÍNCRONA DE LA ESCENA Y BARRA DE PROGRESO ---
         AsyncOperation operacion = SceneManager.LoadSceneAsync(nombreEscena);
-        if (operacion != null)
+        if (operacion == null)
         {
-            operacion.allowSceneActivation = false;
+            // Respaldo de emergencia si Unity aborta la operación asíncrona
+            Debug.LogError($"[LoadingManager] No se pudo iniciar la carga asíncrona de '{nombreEscena}'.");
+            Destroy(objetoCanvasCarga);
+            estaCargando = false;
+            yield break;
         }
+
+        operacion.allowSceneActivation = false;
 
         float relojCarga = 0f;
         float duracion = Mathf.Max(tiempoMinimoCarga, 0.5f);
 
-        while (relojCarga < duracion || (operacion != null && operacion.progress < 0.9f))
+        while (relojCarga < duracion || operacion.progress < 0.9f)
         {
             relojCarga += Time.unscaledDeltaTime;
 
             float progresoTiempo = Mathf.Clamp01(relojCarga / duracion);
-            float progresoUnity = (operacion != null) ? Mathf.Clamp01(operacion.progress / 0.9f) : 1f;
+            float progresoUnity = Mathf.Clamp01(operacion.progress / 0.9f);
             float progresoVisual = Mathf.Min(progresoTiempo, progresoUnity);
 
             if (barraProgreso != null)
@@ -248,22 +289,13 @@ public class LoadingManager : MonoBehaviour
         }
 
         // Activamos la nueva escena y esperamos a que termine de cargar
-        if (operacion != null)
+        operacion.allowSceneActivation = true;
+        while (!operacion.isDone)
         {
-            operacion.allowSceneActivation = true;
-            while (!operacion.isDone)
-            {
-                yield return null;
-            }
-        }
-        else
-        {
-            SceneManager.LoadScene(nombreEscena);
             yield return null;
         }
 
         // --- PASO 6: TRANSICIÓN FINAL DE SALIDA (FADE OUT) EN LA NUEVA ESCENA ---
-        // Desactivamos el bloqueo de clics para que el jugador ya pueda interactuar mientras desaparece
         for (int i = 0; i < graficos.Length; i++)
         {
             if (graficos[i] != null) graficos[i].raycastTarget = false;
@@ -290,7 +322,6 @@ public class LoadingManager : MonoBehaviour
         }
 
         // --- PASO 7: LIMPIEZA DE OBJETOS TEMPORALES ---
-        // Destruimos el Canvas temporal y este LoadingManager al terminar el desvanecimiento
         Destroy(objetoCanvasCarga);
         Destroy(gameObject);
     }

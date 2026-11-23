@@ -183,6 +183,10 @@ public class EntrevistaUIManager : MonoBehaviour
 
         // Formato de PreguntasDatabase: "01" ... "75"
         string idFormateada = idNumerica.ToString("00");
+
+        // Se guarda la ID del NPC en pantalla: la escena de las 3 opciones la lee para elegir sus mascotas
+        SelectorOpcionesAdopcion.IdAdoptanteActual = idFormateada;
+
         if (idFormateada != idAdoptante)
             Debug.LogWarning($"[UI] ID '{idAdoptante}' normalizada a '{idFormateada}'. Conviene corregirla en AdoptanteData.");
 
