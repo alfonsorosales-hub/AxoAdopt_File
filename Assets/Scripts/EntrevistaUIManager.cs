@@ -18,11 +18,20 @@ public class EntrevistaUIManager : MonoBehaviour
     [SerializeField] private Button[] botonesPreguntasPanel3;
     [SerializeField] private TextMeshProUGUI[] textosPreguntasPanel3;   // el TextMeshPro de cada botón, en el mismo orden
     [SerializeField] private TextMeshProUGUI respuestaUnicaPanel3;
+    [Tooltip("Imagen que sirve de cuadro de texto detrás de la respuesta (opcional). Se muestra y se oculta junto con el texto de respuesta.")]
+    [SerializeField] private GameObject cuadroRespuestaPanel3;
 
     [Header("Panel 4 Preguntas (opcional: si se dejan vacíos se buscan dentro del panel)")]
     [SerializeField] private Button[] botonesPreguntasPanel4;
     [SerializeField] private TextMeshProUGUI[] textosPreguntasPanel4;   // el TextMeshPro de cada botón, en el mismo orden
     [SerializeField] private TextMeshProUGUI respuestaUnicaPanel4;
+    [Tooltip("Imagen que sirve de cuadro de texto detrás de la respuesta (opcional). Se muestra y se oculta junto con el texto de respuesta.")]
+    [SerializeField] private GameObject cuadroRespuestaPanel4;
+
+    [Header("Cuadro de respuesta")]
+    [Tooltip("Marcado: el cuadro y el texto de respuesta empiezan ocultos y aparecen cada vez que el jugador elige una pregunta. "
+           + "Desmarcado: se muestran en cuanto se abre el panel del NPC. En ambos casos se ocultan cuando el NPC se aleja.")]
+    [SerializeField] private bool mostrarRespuestaAlSeleccionar = true;
 
     [Header("Pruebas sin NPC (en Play: clic derecho en el título del componente)")]
     [SerializeField] private string idDePrueba = "01";
@@ -39,6 +48,7 @@ public class EntrevistaUIManager : MonoBehaviour
         public int esperado;
         public Button[] botones = new Button[0];
         public TextMeshProUGUI[] textosPregunta = new TextMeshProUGUI[0];   // el TextMeshPro de cada pregunta
+        public GameObject cuadro;                                           // imagen del cuadro de texto de la respuesta (opcional)
         public TextMeshProUGUI respuesta;                                   // un único campo de respuesta
     }
 
@@ -120,8 +130,8 @@ public class EntrevistaUIManager : MonoBehaviour
         if (panel3Preguntas == null) panel3Preguntas = BuscarPanelPorNombre("3");
         if (panel4Preguntas == null) panel4Preguntas = BuscarPanelPorNombre("4");
 
-        ui3 = Resolver("Panel 3", panel3Preguntas, 3, botonesPreguntasPanel3, textosPreguntasPanel3, respuestaUnicaPanel3);
-        ui4 = Resolver("Panel 4", panel4Preguntas, 4, botonesPreguntasPanel4, textosPreguntasPanel4, respuestaUnicaPanel4);
+        ui3 = Resolver("Panel 3", panel3Preguntas, 3, botonesPreguntasPanel3, textosPreguntasPanel3, respuestaUnicaPanel3, cuadroRespuestaPanel3);
+        ui4 = Resolver("Panel 4", panel4Preguntas, 4, botonesPreguntasPanel4, textosPreguntasPanel4, respuestaUnicaPanel4, cuadroRespuestaPanel4);
     }
 
     /// <summary>Busca un objeto de escena cuyo nombre contenga "panel", "pregunta" y el número.</summary>
@@ -199,7 +209,7 @@ public class EntrevistaUIManager : MonoBehaviour
         MostrarPanel(uiActivo.panel, uiActivo.nombre);
 
         // 2) Preguntas (en los botones) y respuesta (campo único) se cargan después
-        if (uiActivo.respuesta != null) uiActivo.respuesta.text = "";
+        PrepararRespuesta(uiActivo);   // texto vacío; cuadro y texto ocultos hasta elegir una pregunta (si la opción está marcada)
         LimpiarBotones(uiActivo);
 
         if (preguntasDB == null)
@@ -275,8 +285,46 @@ public class EntrevistaUIManager : MonoBehaviour
             return;
         }
 
-        uiActivo.respuesta.gameObject.SetActive(true);
+        // Cada vez que se elige una pregunta aparecen el cuadro (primero, el texto puede ser su hijo) y el texto
+        SetRespuestaVisible(uiActivo, true);
         uiActivo.respuesta.text = listaActual[indice].respuestaNPC;
+    }
+
+    /// <summary>
+    /// Deja la respuesta lista para un NPC nuevo: texto vacío y, si la opción 'Mostrar Respuesta Al Seleccionar'
+    /// está marcada, cuadro y texto ocultos hasta que el jugador elija una pregunta.
+    /// </summary>
+    private void PrepararRespuesta(PanelUI ui)
+    {
+        if (ui == null) return;
+
+        if (ui.respuesta != null) ui.respuesta.text = "";
+        SetRespuestaVisible(ui, !mostrarRespuestaAlSeleccionar);
+    }
+
+    /// <summary>Muestra u oculta a la vez el cuadro de texto (la imagen) y el TextMeshPro de la respuesta.</summary>
+    private void SetRespuestaVisible(PanelUI ui, bool visible)
+    {
+        if (ui == null) return;
+
+        if (visible)
+        {
+            // Primero el cuadro y después el texto: si el texto es hijo del cuadro, necesita que el cuadro ya esté activo
+            if (ui.cuadro != null) ActivarConPadres(ui.cuadro);
+            if (ui.respuesta != null) ActivarConPadres(ui.respuesta.gameObject);
+        }
+        else
+        {
+            if (ui.respuesta != null) ui.respuesta.gameObject.SetActive(false);
+            if (ui.cuadro != null) ui.cuadro.SetActive(false);
+        }
+    }
+
+    /// <summary>Activa el objeto y los padres que estén desactivados (el cuadro puede estar fuera del panel).</summary>
+    private static void ActivarConPadres(GameObject objeto)
+    {
+        for (Transform t = objeto.transform; t != null; t = t.parent)
+            if (!t.gameObject.activeSelf) t.gameObject.SetActive(true);
     }
 
     private void LimpiarBotones(PanelUI ui)
@@ -364,9 +412,10 @@ public class EntrevistaUIManager : MonoBehaviour
     // RESOLUCIÓN DE ELEMENTOS: Inspector primero; si está vacío, se busca dentro del panel
     // =====================================================================
     private PanelUI Resolver(string nombre, GameObject panel, int esperado, Button[] botonesInspector,
-                             TextMeshProUGUI[] textosInspector, TextMeshProUGUI respuestaInspector)
+                             TextMeshProUGUI[] textosInspector, TextMeshProUGUI respuestaInspector,
+                             GameObject cuadroInspector)
     {
-        var ui = new PanelUI { nombre = nombre, panel = panel, esperado = esperado };
+        var ui = new PanelUI { nombre = nombre, panel = panel, esperado = esperado, cuadro = cuadroInspector };
 
         if (panel == null)
         {
@@ -391,8 +440,39 @@ public class EntrevistaUIManager : MonoBehaviour
 
         ui.respuesta = respuestaInspector != null ? respuestaInspector : DetectarRespuesta(ui);
 
+        // El cuadro de texto se comprueba al final, cuando ya se conocen el panel y los botones
+        ui.cuadro = ValidarCuadro(ui, cuadroInspector);
+
         Validar(ui);
         return ui;
+    }
+
+    /// <summary>
+    /// Comprueba que ocultar el cuadro no oculte también cosas que deben seguir visibles:
+    /// el propio panel o los botones de las preguntas.
+    /// </summary>
+    private GameObject ValidarCuadro(PanelUI ui, GameObject cuadro)
+    {
+        if (cuadro == null) return null;
+
+        if (ui.panel != null && (cuadro == ui.panel || ui.panel.transform.IsChildOf(cuadro.transform)))
+        {
+            Debug.LogError($"[UI] {ui.nombre}: el cuadro de respuesta '{cuadro.name}' es el panel o contiene al panel. " +
+                           "Asigna solo la imagen del cuadro de texto; se ignora.");
+            return null;
+        }
+
+        foreach (Button b in ui.botones)
+        {
+            if (b != null && b.transform.IsChildOf(cuadro.transform))
+            {
+                Debug.LogError($"[UI] {ui.nombre}: el botón '{b.name}' está dentro del cuadro de respuesta '{cuadro.name}'. " +
+                               "Al ocultar el cuadro desaparecerían las preguntas; se ignora el cuadro.");
+                return null;
+            }
+        }
+
+        return cuadro;
     }
 
     /// <summary>Busca los botones de pregunta dentro del panel.</summary>
@@ -494,7 +574,8 @@ public class EntrevistaUIManager : MonoBehaviour
             return;
         }
 
-        Debug.Log($"[UI] {ui.nombre} listo: {botonesValidos} botones de pregunta y respuesta en '{ui.respuesta.name}'.");
+        Debug.Log($"[UI] {ui.nombre} listo: {botonesValidos} botones de pregunta y respuesta en '{ui.respuesta.name}'" +
+                  (ui.cuadro != null ? $", cuadro de texto '{ui.cuadro.name}'." : ", sin cuadro de texto asignado."));
     }
 
     // =====================================================================
@@ -564,5 +645,9 @@ public class EntrevistaUIManager : MonoBehaviour
         listaActual.Clear();
         if (panel3Preguntas != null) panel3Preguntas.SetActive(false);
         if (panel4Preguntas != null) panel4Preguntas.SetActive(false);
+
+        // El cuadro de texto y el texto de respuesta también se ocultan (pueden estar fuera del panel)
+        SetRespuestaVisible(ui3, false);
+        SetRespuestaVisible(ui4, false);
     }
 }
