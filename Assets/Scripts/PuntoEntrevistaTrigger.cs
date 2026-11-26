@@ -1,77 +1,37 @@
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UnityEngine;
 
+/// <summary>
+/// Trigger del punto de entrevista.
+/// Cuando un NPC entra, lee SU ID (componente NpcAdoptanteID) y le pide al
+/// EntrevistaUIManager que cargue las preguntas/respuestas de esa ID.
+/// Cuando el NPC sale, oculta los paneles (y el cuadro de respuesta).
+///
+/// CAMBIO IMPORTANTE: antes la ID se adivinaba comparando el nombre del objeto con el
+/// "modelPrefab" del database. Como solo 5 adoptantes (23, 26, 30, 32, 40) tienen modelPrefab,
+/// los demás NPC caían siempre en la misma ID y se repetían las preguntas.
+/// Ahora la ID se lee directamente del NPC.
+/// </summary>
 public class PuntoEntrevistaTrigger : MonoBehaviour
 {
     [Header("Referencias OBLIGATORIAS")]
     [SerializeField] private EntrevistaUIManager entrevistaUIManager;
+
+    // Ya no es necesario para identificar al NPC; se deja por si lo tenías asignado (puede quedar vacío)
     [SerializeField] private AdoptanteData adoptanteDatabase;
 
-    // Quita "(Clone)" y sufijos del editor como " (1)" para comparar nombres de modelo
-    private static readonly Regex SufijosNombre = new Regex(@"\s*\(Clone\)|\s*\(\d+\)", RegexOptions.IgnoreCase);
-
-    // nombre normalizado del modelPrefab -> ID del adoptante
-    private Dictionary<string, string> idPorModelo;
-
+    // NPC que está actualmente dentro del trigger y su ID
     private Transform npcActual;
+    private string idActual;
+
+    // Cantidad de colliders del NPC actual que están dentro (un NPC puede tener varios)
     private int collidersDentro = 0;
 
-    private static string NormalizarNombre(string nombre)
-    {
-        return SufijosNombre.Replace(nombre ?? "", "").Trim();
-    }
-
-    // =====================================================================
-    // INICIO
-    // =====================================================================
     private void Start()
     {
         var col = GetComponent<Collider>();
         Debug.Log($"[Trigger] Start en '{name}'. " +
                   $"Collider: {(col != null ? "isTrigger=" + col.isTrigger : "NO HAY COLLIDER")}. " +
-                  $"Manager: {entrevistaUIManager != null}. Database: {adoptanteDatabase != null}");
-
-        ConstruirIndice();
-    }
-
-    /// <summary>
-    /// Arma la tabla modelo -> ID y avisa si un mismo modelo está asignado a varias IDs
-    /// (en ese caso el trigger no puede saber cuál de ellas es el NPC).
-    /// </summary>
-    private void ConstruirIndice()
-    {
-        idPorModelo = new Dictionary<string, string>(System.StringComparer.OrdinalIgnoreCase);
-        if (adoptanteDatabase == null) return;
-
-        var idsPorModelo = new Dictionary<string, List<string>>(System.StringComparer.OrdinalIgnoreCase);
-
-        foreach (var adoptante in adoptanteDatabase.adoptantesList)
-        {
-            if (adoptante == null || adoptante.modelPrefab == null) continue;
-
-            string modelo = NormalizarNombre(adoptante.modelPrefab.name);
-            if (!idsPorModelo.TryGetValue(modelo, out List<string> ids))
-            {
-                ids = new List<string>();
-                idsPorModelo[modelo] = ids;
-            }
-            if (!ids.Contains(adoptante.id)) ids.Add(adoptante.id);
-        }
-
-        foreach (var par in idsPorModelo)
-        {
-            idPorModelo[par.Key] = par.Value[0];
-
-            if (par.Value.Count > 1)
-            {
-                Debug.LogError($"[Trigger] El modelo '{par.Key}' está asignado a varias IDs ({string.Join(", ", par.Value)}). " +
-                               $"El trigger siempre usará '{par.Value[0]}', por eso verás preguntas que no corresponden. " +
-                               $"Cada ID necesita su propio modelPrefab en AdoptanteData.");
-            }
-        }
-
-        Debug.Log($"[Trigger] Índice de modelos listo: {idPorModelo.Count} modelos distintos.");
+                  $"Manager: {entrevistaUIManager != null}");
     }
 
     private void Update()
@@ -85,95 +45,85 @@ public class PuntoEntrevistaTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"[Trigger] OnTriggerEnter con '{other.name}' (root '{other.transform.root.name}')");
-
-        if (entrevistaUIManager == null || adoptanteDatabase == null)
+        if (entrevistaUIManager == null)
         {
-            Debug.LogError("[Trigger] Faltan asignaciones en el Inspector (Manager o Database).");
+            Debug.LogError("[Trigger] Falta asignar el EntrevistaUIManager en el Inspector.");
             return;
         }
 
-        if (!EncontrarNPC(other.transform, out Transform npcRoot, out string id))
+        if (!BuscarIdNPC(other.transform, out Transform npcRoot, out string id))
         {
-            Debug.LogWarning($"[Trigger] Ignorado '{other.name}': ningún objeto de su jerarquía coincide con un modelPrefab del database.");
+            Debug.LogWarning($"[Trigger] Ignorado '{other.name}': no tiene el componente NpcAdoptanteID (ni en sus padres ni en sus hijos activos).");
             return;
         }
 
-        if (npcRoot == npcActual)
+        // Mismo NPC y misma ID: solo es otro collider suyo entrando
+        if (npcRoot == npcActual && id == idActual)
         {
             collidersDentro++;
-            Debug.Log($"[Trigger] Otro collider de '{npcRoot.name}' entró (total: {collidersDentro}).");
             return;
         }
 
-        // NPC distinto al que estaba (o ninguno): se reinicia el conteo y se carga su entrevista
+        // NPC distinto (o el mismo objeto pero con otra ID, por ejemplo si cambió de skin):
+        // se reinicia el conteo y se carga SU entrevista
         npcActual = npcRoot;
+        idActual = id;
         collidersDentro = 1;
+
         Debug.Log($"[Trigger] NPC '{npcRoot.name}' -> ID '{id}'. Cargando entrevista...");
         entrevistaUIManager.CargarEntrevistaPorID(id);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!EncontrarNPC(other.transform, out Transform npcRoot, out string id)) return;
+        if (!BuscarIdNPC(other.transform, out Transform npcRoot, out string id)) return;
 
-        if (npcRoot != npcActual)
-        {
-            Debug.Log($"[Trigger] Exit ignorado: '{npcRoot.name}' no es el NPC actual ('{(npcActual != null ? npcActual.name : "ninguno")}').");
-            return;
-        }
+        // Ignora la salida de objetos que no son el NPC actual
+        if (npcRoot != npcActual) return;
 
         collidersDentro--;
 
-        if (collidersDentro > 0)
-        {
-            Debug.Log($"[Trigger] Salió un collider de '{npcRoot.name}', pero quedan {collidersDentro} dentro. No se oculta.");
-            return;
-        }
+        // Aún quedan colliders del NPC dentro: no se oculta nada
+        if (collidersDentro > 0) return;
 
         CerrarEntrevista($"'{npcRoot.name}' salió por completo.");
     }
 
+    /// <summary>
+    /// Oculta los paneles y el cuadro de respuesta, y olvida al NPC actual.
+    /// </summary>
     private void CerrarEntrevista(string motivo)
     {
-        //Info($"[Trigger] Cerrando entrevista. {motivo}");
+        Debug.Log($"[Trigger] Cerrando entrevista. {motivo}");
         npcActual = null;
-        //idActual = null;
+        idActual = null;
+        collidersDentro = 0;
 
         if (entrevistaUIManager != null) entrevistaUIManager.OcultarPaneles();
         else Debug.LogError("[Trigger] No se pueden ocultar los paneles: falta el Manager.");
     }
 
     /// <summary>
-    /// Sube por la jerarquía desde el collider hasta encontrar un objeto
-    /// cuyo nombre coincida con el modelPrefab de algún adoptante.
+    /// Busca el componente NpcAdoptanteID:
+    /// 1) hacia arriba desde el collider (padres), y si no está,
+    /// 2) hacia abajo desde la raíz, solo entre hijos ACTIVOS (sirve si el NPC cambia de skin
+    ///    y cada skin lleva su propia ID).
     /// </summary>
-    private bool EncontrarNPC(Transform desde, out Transform npcRoot, out string id)
+    private bool BuscarIdNPC(Transform desde, out Transform npcRoot, out string id)
     {
         npcRoot = null;
         id = null;
 
-        if (adoptanteDatabase == null) return false;
+        NpcAdoptanteID comp = desde.GetComponentInParent<NpcAdoptanteID>();
 
-        // Se consulta la lista en vivo (sin copia en caché): si el database se llena o cambia
-        // en tiempo de ejecución, el trigger siempre ve los datos actuales.
-        for (Transform t = desde; t != null; t = t.parent)
-        {
-            string nombre = NormalizarNombre(t.name);
+        if (comp == null)
+            comp = desde.root.GetComponentInChildren<NpcAdoptanteID>(false); // false = ignora hijos desactivados
 
-            foreach (var adoptante in adoptanteDatabase.adoptantesList)
-            {
-                if (adoptante == null || adoptante.modelPrefab == null) continue;
+        if (comp == null || string.IsNullOrEmpty(comp.IdAdoptante)) return false;
 
-                if (string.Equals(NormalizarNombre(adoptante.modelPrefab.name), nombre, System.StringComparison.OrdinalIgnoreCase))
-                {
-                    npcRoot = t;
-                    id = adoptante.id;
-                    return true;
-                }
-            }
-        }
-
-        return false;
+        // La raíz del NPC es el objeto más alto con movimiento; se usa la raíz de la jerarquía
+        npcRoot = desde.root;
+        id = comp.IdAdoptante;
+        return true;
     }
 }
